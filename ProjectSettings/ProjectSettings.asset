@@ -604,12 +604,14 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 1
+    UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: 011b7203-8fc1-4b36-abb8-5e2204937e27
-  projectName: Labyrinthian (1)
-  organizationId: piinatsu
+  projectName: Labyrinthian
+  organizationId: diven-adrienne
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
