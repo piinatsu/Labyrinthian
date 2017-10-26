@@ -4,8 +4,20 @@ timeCreated: 1508907618
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
-  fileIDToRecycleName: {}
-  externalObjects: {}
+  fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: L1
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SVGMat_001
+    second: {fileID: 2100000, guid: 67fea17ae62eb0d4f8c30801d329885d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
