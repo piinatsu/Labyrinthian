@@ -7,7 +7,7 @@ public class enemyPatrolRaycast : MonoBehaviour {
 	public Vector3 velocity;
 	Vector3 originalPosition;
 	//public float distance = 5f;
-	public float speed = 5f;
+	public float speed = 1f;
 	//public float distFromStart;
 	bool isGoingLeft;
 	RaycastHit hit;
@@ -36,12 +36,14 @@ public class enemyPatrolRaycast : MonoBehaviour {
 			//print ("There is something in front of the object!");
 			//transform.Translate (-velocity.x * Time.deltaTime, 0, 0);
 			//velocity = -velocity;
-			speed = -speed;
+			//speed = -speed;
+			speed *= -1f;
 		}
 		if (Physics.Raycast (transform.position, transform.TransformDirection(Vector3.left), out hit, raycastdist)) {
 			//print ("There is something behind the object!");
 			//transform.Translate (velocity.x * Time.deltaTime, 0, 0);
-			speed = Mathf.Abs(speed);
+			//speed = Mathf.Abs(speed);
+			speed *= -1f;
 		}
 
 		Debug.DrawLine (transform.position, hit.point, Color.red);
