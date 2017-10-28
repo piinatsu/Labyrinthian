@@ -30,14 +30,14 @@ public class enemyPatrolEmptyObject : MonoBehaviour {
 			//transform.Translate (-velocity.x * Time.deltaTime, 0, 0);
 			//velocity = -velocity;
 			speed = -speed;
-			Debug.Log ("aaa");
+			///Debug.Log ("aaa");
 			//speed *= -1f;
 		}
 			if (Physics.Raycast (GORIGHT.transform.position, transform.TransformDirection(Vector3.left), out hit, raycastdist)) {
 			//print ("There is something behind the object!");
 			//transform.Translate (velocity.x * Time.deltaTime, 0, 0);
 			speed = Mathf.Abs(speed);
-			Debug.Log ("bbb");
+			///Debug.Log ("bbb");
 			//speed *= -1f;
 		}
 

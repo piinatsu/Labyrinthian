@@ -7,26 +7,55 @@ public class enemyPatrolLerp : MonoBehaviour {
 	Vector3 originalPosition;
 	public float speed = 2f;
 	public float timer = 1f;
-	public Transform position1;
-	public Transform position2;
-	public Transform destination;
+	public Transform pos1;
+	public Transform pos2;
+	Transform destination;
+	public float smoothing = 1f;
+	bool tgtReached = false;
 
 	// Use this for initialization
 	void Start () {
-		originalPosition = transform.position;
+		//StartCoroutine (coro (pos1, pos2));
 	}
 
 	// Update is called once per frame
 	void Update () {
-		transform.position = Vector3.Lerp (position1.position, position2.position, speed * timer);
+		
+		transform.position = Vector3.Lerp 
+			(pos1.position, pos2.position, speed * timer);
 
-		if (destination == position1) {
+		if (destination == pos1) {
 			timer = Mathf.Clamp (timer - Time.deltaTime, 0.0f, 1.0f / speed);
 		} else {
 			timer = Mathf.Clamp (timer + Time.deltaTime, 0.0f, 1.0f / speed);
 		}
+		if (transform.position == pos1.position)
+			destination = pos2;
+		else if (transform.position == pos2.position)
+			destination = pos1;
+
 	}
 
+	/*
+	IEnumerator coro (Transform p1, Transform p2) {
+		while (Vector3.Distance (transform.position, pos2.position) > 1f) {
+			transform.position = Vector3.Lerp (transform.position, pos2.position,
+				smoothing * Time.deltaTime);
+			yield return null;
+			tgtReached = false;
+		}
+
+		tgtReached = true;
+		if (tgtReached) {
+			smoothing *= -1;
+		}
+
+
+		print ("Target Reached");
+		yield return new WaitForSeconds (3f);
+		print ("Coroutine finished");
+	}
+	*/
 	void OnTriggerEnter(Collider target)
 	{
 		Debug.Log ("Collision Triggered");
