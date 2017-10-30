@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyPatrolRaycast : MonoBehaviour {
+public class PatrolRaycast : MonoBehaviour {
 
 	public Vector3 velocity;
 	Vector3 originalPosition;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyPatrolEmptyObject : MonoBehaviour {
+public class PatrolEmptyObject : MonoBehaviour {
 
 	public Vector3 velocity;
 	public float speed = 1f;

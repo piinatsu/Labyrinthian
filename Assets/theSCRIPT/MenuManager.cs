@@ -31,7 +31,7 @@ public class MenuManager : MonoBehaviour {
 	}
 
 	public void pauseTheGame () {
-		img.CrossFadeAlpha (128f, 1f, true);
+		//img.CrossFadeAlpha (190f, 0.5f, true);
 
 		//canvasPauseMenu.SetActive (true);
 		canvasPauseMenu.transform.GetChild(0).gameObject.SetActive (true);
@@ -41,8 +41,24 @@ public class MenuManager : MonoBehaviour {
 	public void resumeTheGame () {
 		Time.timeScale = 1;
 
-		img.CrossFadeAlpha (0.0f, 1f, true);
+		//img.CrossFadeAlpha (0.0f, 0.5f, true);
 		//canvasPauseMenu.SetActive (false);
 		canvasPauseMenu.transform.GetChild(0).gameObject.SetActive (false);
+	}
+
+	public void newGame () {
+		//move to scene of level one
+	}
+
+	public void selectLevel () {
+		//move to scene of level selection
+	}
+
+	public void viewAbout () {
+		//move to scene about/help
+	}
+
+	public void exitGame () {
+		//exit application
 	}
 }

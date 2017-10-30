@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyPatrolLerp : MonoBehaviour {
+public class PatrolLerp : MonoBehaviour {
 
 	Vector3 originalPosition;
 	public float speed = 2f;
