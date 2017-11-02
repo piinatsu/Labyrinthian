@@ -60,4 +60,17 @@ public class PatrolMultipleLerp : MonoBehaviour {
 			}
 		}
 	}
+
+	void OnTriggerEnter(Collider target)
+	{
+		Debug.Log ("Collision Triggered");
+		if (target.tag == "Player") 
+		{
+			string tgt = target.tag.ToString ();
+			Destroy (target.gameObject);
+			Debug.Log (tgt + " destroyed");
+			//pm.SetActive (true);
+			//pl.SetActive (false);
+		}
+	}
 }
