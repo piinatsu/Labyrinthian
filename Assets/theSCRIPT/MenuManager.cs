@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour {
+	
+	//private PatrolMultipleLerp[] pml;
 
 	private GameObject canvasPauseMenu;
 	private GameObject canvasSceneMenu;
@@ -13,6 +15,12 @@ public class MenuManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		// only get one object
+		// pml = (PatrolMultipleLerp) FindObjectsOfType (typeof(PatrolMultipleLerp));
+		//PatrolMultipleLerp[] pml = FindObjectsOfType 
+			//(typeof(PatrolMultipleLerp)) as PatrolMultipleLerp[];
+
 		canvasPauseMenu = GameObject.Find ("GOCanvasPauseMenu");
 		canvasSceneMenu = GameObject.Find ("CanvasSceneMenu");
 
@@ -61,4 +69,27 @@ public class MenuManager : MonoBehaviour {
 	public void exitGame () {
 		//exit application
 	}
+		
+	public void opthalos () {
+		StartCoroutine (opthalos2 ());
+	}
+
+	public void chronica () {
+
+	}
+
+	public void snaegel () {
+
+	}
+
+	IEnumerator opthalos2 ()
+	{
+		PatrolMultipleLerp.speed /= 2;
+		yield return new WaitForSeconds (5);
+		PatrolMultipleLerp.speed *= 2;
+		//foreach (PatrolMultipleLerp speed in pml) {
+			//pml.speed += 11;
+		//}
+	}
+
 }

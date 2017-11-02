@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PatrolMultipleLerp : MonoBehaviour {
-	public float speed = 1.0f;
+	public static float speed = 5.0f;
 	public Transform startpos, endpos;
 	public Transform[] waypoints;
 	int currentStartPoint = 0;
