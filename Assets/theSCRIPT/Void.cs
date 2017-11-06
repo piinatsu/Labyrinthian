@@ -17,16 +17,8 @@ public class Void : MonoBehaviour {
 		transform.Rotate (Axis * Velocity * Time.deltaTime);
 	}
 
-	void OnTriggerEnter(Collider target)
-	{
-		Debug.Log ("Collision Triggered");
-		if (target.tag == "Player") 
-		{
-			string tgt = target.tag.ToString ();
+	void OnTriggerEnter(Collider target) {
+		if (target.tag == "Player")
 			Destroy (target.gameObject);
-			Debug.Log (tgt + " destroyed");
-			//pm.SetActive (true);
-			//pl.SetActive (false);
-		}
 	}
 }

@@ -11,7 +11,7 @@ public class PatrolLerp : MonoBehaviour {
 	public Transform pos2;
 	Transform destination;
 	public float smoothing = 1f;
-	bool tgtReached = false;
+	//bool tgtReached = false;
 
 	// Use this for initialization
 	void Start () {

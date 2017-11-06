@@ -5,7 +5,7 @@ using UnityEngine;
 public class PatrolRaycast : MonoBehaviour {
 
 	public Vector3 velocity;
-	Vector3 originalPosition;
+	//Vector3 originalPosition;
 	//public float distance = 5f;
 	public float speed = 1f;
 	//public float distFromStart;
@@ -16,7 +16,7 @@ public class PatrolRaycast : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//gameObject.transform.position.x = speed;
-		originalPosition = transform.position;
+		//originalPosition = transform.position;
 		//transform = GetComponent<Transform> ();
 		velocity = new Vector3 (speed, 0, 0);
 		transform.Translate (velocity.x*Time.deltaTime, 0, 0);
