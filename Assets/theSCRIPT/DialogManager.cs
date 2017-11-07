@@ -12,8 +12,12 @@ public class DialogManager : MonoBehaviour {
 	public TextAsset textFile;
 	public string[] textLines;
 
+	//public int currentLine;
+	//public int endAtLine;
+
+	public int startLine;
+	public int endLine;
 	public int currentLine;
-	public int endAtLine;
 
 	// Use this for initialization
 	void Start () {
@@ -25,16 +29,18 @@ public class DialogManager : MonoBehaviour {
 			textLines = (textFile.text.Split ('\n'));
 		}
 
-		if (endAtLine == 0) {
-			endAtLine = textLines.Length - 1;
+		if (endLine == 0) {
+			endLine = textLines.Length - 1;
 		}
+
+		currentLine = startLine;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		theText.text = textLines [currentLine];
 
-		if (currentLine > endAtLine) {
+		if (currentLine > endLine) {
 			Time.timeScale = 1;
 			canvasDialogMenu.SetActive (false);
 		}
@@ -42,6 +48,10 @@ public class DialogManager : MonoBehaviour {
 
 	public void nextDialog () {
 		currentLine++;
+	}
+
+	public void previousDialog () {
+		currentLine--;
 	}
 
 	public static void canvasActivation (bool tof) {

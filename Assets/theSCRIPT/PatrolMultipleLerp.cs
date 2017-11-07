@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PatrolMultipleLerp : MonoBehaviour {
-	public static float speed = 5.0f;
+	public float speed;
+	public static float vSpeed;
 	public static float snaegelSpeed;
+	public static float chronicaSpeed;
 	public Transform startpos, endpos;
 	public Transform[] waypoints;
 	int currentStartPoint = 0;
@@ -12,6 +14,8 @@ public class PatrolMultipleLerp : MonoBehaviour {
 	bool goBack = false;
 
 	void Start () {
+		vSpeed = speed;
+		snaegelSpeed = vSpeed;
 		currentStartPoint = 0;
 		setPointsPlus();
 	}
@@ -33,7 +37,7 @@ public class PatrolMultipleLerp : MonoBehaviour {
 	}
 
 	void Update () {
-		float distCovered = (Time.time - startTime) * speed;
+		float distCovered = (Time.time - startTime) * vSpeed;
 		float fracJourney = distCovered / journeyLength;
 
 		if (goBack) {

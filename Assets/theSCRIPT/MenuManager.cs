@@ -19,6 +19,7 @@ public class MenuManager : MonoBehaviour {
 
 	int lastScene;
 	float snaegelSpeed;
+	float chronicaSpeed;
 
 	// Use this for initialization
 	void Start () {
@@ -99,29 +100,50 @@ public class MenuManager : MonoBehaviour {
 		//exit the application
 	}
 	//-----------------------------------------------------	
-	public void opthalos () {
-		StartCoroutine (opthalos2 ());
+	public void snaegel () {
+		StartCoroutine (snaegelCR ());
 	}
 
 	public void chronica () {
-
+		StartCoroutine (chronicaCR ());
 	}
 
-	public void snaegel () {
-
+	public void opthalos () {
+		StartCoroutine (opthalosCR ());
 	}
-
-	IEnumerator opthalos2 () {
-		while (snaegelSpeed <= 2f) {
+	//-----------------------------------------------------	
+	IEnumerator snaegelCR () {
+		for (float i = 1; i <= 2; i += 0.05f) {
+			snaegelSpeed = PatrolMultipleLerp.vSpeed;
+			snaegelSpeed /= i;
+			PatrolMultipleLerp.vSpeed = snaegelSpeed;
+			//yield return null;
+			yield return new WaitForSeconds(0.1f);
 		}
 		//PatrolMultipleLerp.speed /= 2;
-		yield return new WaitForSeconds (5);
-		PatrolMultipleLerp.speed *= 2;
+		yield return new WaitForSeconds (5f);
+		for (float i = 2; i >= 1; i -= 0.05f) {
+			snaegelSpeed = PatrolMultipleLerp.vSpeed;
+			snaegelSpeed /= i;
+			PatrolMultipleLerp.vSpeed = snaegelSpeed;
+			//yield return null;
+			yield return new WaitForSeconds(0.1f);
+		}
+		//PatrolMultipleLerp.speed *= 2;
+
 		//foreach (PatrolMultipleLerp speed in pml) {
-			//pml.speed += 11;
+		//pml.speed += 11;
 		//}
 	}
 
+	IEnumerator chronicaCR () {
+		yield return null;
+	}
+
+	IEnumerator opthalosCR () {
+		yield return null;
+	}
+	//-----------------------------------------------------
 	IEnumerator pausse (float waitTime) {
 		yield return new WaitForSeconds (waitTime);
 		canvasPauseMenu.SetActive (true);
