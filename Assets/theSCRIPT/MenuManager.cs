@@ -60,13 +60,11 @@ public class MenuManager : MonoBehaviour {
 	public void resumeTheGame () {
 		//Time.timeScale = 1;
 		StartCoroutine(unpausse(0.5f));
-		//StartCoroutine(waitOneSecond());
-
+		/*
 		//img.CrossFadeAlpha (0.0f, 0.5f, true);
-
 		//canvasPauseMenu.SetActive (false);
-
 		//canvasPauseMenu.transform.GetChild(0).gameObject.SetActive (false);
+		*/
 	}
 	//-----------------------------------------------------
 	public void newGame () {
@@ -178,14 +176,20 @@ public class MenuManager : MonoBehaviour {
 	}
 
 	IEnumerator opthalosCR () {
-		yield return null;
+		/*
+		GeneralManager.toggleWallMesh (true);
+		yield return new WaitForSeconds (skillDuration);
+		GeneralManager.toggleWallMesh (false);
+		*/
+		GeneralManager.wallCollisionDisable = true;
+		yield return new WaitForSeconds (skillDuration);
+		GeneralManager.wallCollisionDisable = false;
 	}
 	//-----------------------------------------------------
 	IEnumerator pausse (float waitTime) {
 		yield return new WaitForSeconds (waitTime);
 		canvasPauseMenu.SetActive (true);
 		Time.timeScale = 0f;
-
 	}
 
 	IEnumerator unpausse (float waitTime) {
