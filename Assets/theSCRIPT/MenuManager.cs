@@ -18,6 +18,7 @@ public class MenuManager : MonoBehaviour {
 	private Image img;
 
 	int lastScene;
+	float snaegelSpeed;
 
 	// Use this for initialization
 	void Start () {
@@ -111,7 +112,9 @@ public class MenuManager : MonoBehaviour {
 	}
 
 	IEnumerator opthalos2 () {
-		PatrolMultipleLerp.speed /= 2;
+		while (snaegelSpeed <= 2f) {
+		}
+		//PatrolMultipleLerp.speed /= 2;
 		yield return new WaitForSeconds (5);
 		PatrolMultipleLerp.speed *= 2;
 		//foreach (PatrolMultipleLerp speed in pml) {

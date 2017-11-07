@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PatrolMultipleLerp : MonoBehaviour {
 	public static float speed = 5.0f;
+	public static float snaegelSpeed;
 	public Transform startpos, endpos;
 	public Transform[] waypoints;
 	int currentStartPoint = 0;
