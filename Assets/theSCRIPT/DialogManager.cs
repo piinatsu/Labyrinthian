@@ -17,7 +17,7 @@ public class DialogManager : MonoBehaviour {
 
 	public int startLine;
 	public int endLine;
-	public int currentLine;
+	int currentLine;
 
 	// Use this for initialization
 	void Start () {

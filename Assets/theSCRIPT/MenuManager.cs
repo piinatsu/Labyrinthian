@@ -17,6 +17,7 @@ public class MenuManager : MonoBehaviour {
 	private Transform panelOfSceneMenu;
 	private Image img;
 
+	public float skillDuration;
 	int lastScene;
 	float snaegelSpeed;
 	float chronicaSpeed;
@@ -113,31 +114,67 @@ public class MenuManager : MonoBehaviour {
 	}
 	//-----------------------------------------------------	
 	IEnumerator snaegelCR () {
+		/*
 		for (float i = 1; i <= 2; i += 0.05f) {
-			snaegelSpeed = PatrolMultipleLerp.vSpeed;
+			snaegelSpeed = PatrolMultipleLerp.sSpeed;
 			snaegelSpeed /= i;
 			PatrolMultipleLerp.vSpeed = snaegelSpeed;
 			//yield return null;
-			yield return new WaitForSeconds(0.1f);
+			yield return new WaitForSeconds(0.2f);
 		}
 		//PatrolMultipleLerp.speed /= 2;
-		yield return new WaitForSeconds (5f);
+		yield return new WaitForSeconds (skillDuration);
 		for (float i = 2; i >= 1; i -= 0.05f) {
-			snaegelSpeed = PatrolMultipleLerp.vSpeed;
+			snaegelSpeed = PatrolMultipleLerp.sSpeed;
 			snaegelSpeed /= i;
 			PatrolMultipleLerp.vSpeed = snaegelSpeed;
 			//yield return null;
-			yield return new WaitForSeconds(0.1f);
+			yield return new WaitForSeconds(0.2f);
 		}
 		//PatrolMultipleLerp.speed *= 2;
 
 		//foreach (PatrolMultipleLerp speed in pml) {
 		//pml.speed += 11;
 		//}
+		*/
+		for (float i = 1f; i >= 0.5f; i -= 0.025f) {
+			snaegelSpeed = PatrolMultipleLerp.sSpeed;
+			snaegelSpeed *= i;
+			PatrolMultipleLerp.vSpeed = snaegelSpeed;
+			yield return new WaitForSeconds (0.2f);
+		}
+		yield return new WaitForSeconds (skillDuration);
+		for (float i = 0.5f; i <= 1f; i += 0.025f) {
+			snaegelSpeed = PatrolMultipleLerp.sSpeed;
+			snaegelSpeed *= i;
+			PatrolMultipleLerp.vSpeed = snaegelSpeed;
+			yield return new WaitForSeconds(0.2f);
+		}
 	}
 
 	IEnumerator chronicaCR () {
-		yield return null;
+		/*
+		for (float i = 1f; i >= 0.0f; i -= 0.025f) {
+			chronicaSpeed = PatrolMultipleLerp.sSpeed;
+			chronicaSpeed *= i;
+			chronicaSpeed = (Mathf.Round(chronicaSpeed * 100))/100;
+			PatrolMultipleLerp.vSpeed = chronicaSpeed;
+			print (chronicaSpeed);
+			//yield return null;
+			yield return new WaitForSeconds(0.05f);
+		}
+		yield return new WaitForSeconds (skillDuration);
+		for (float i = 0.0f; i <= 1f; i += 0.025f) {
+			chronicaSpeed = PatrolMultipleLerp.sSpeed;
+			chronicaSpeed *= i;
+			PatrolMultipleLerp.vSpeed = chronicaSpeed;
+			print (chronicaSpeed);
+			yield return new WaitForSeconds(0.2f);
+		}
+		*/
+		PatrolMultipleLerp.chronicaFlag = true;
+		yield return new WaitForSeconds (skillDuration);
+		PatrolMultipleLerp.chronicaFlag = false;
 	}
 
 	IEnumerator opthalosCR () {
@@ -147,7 +184,7 @@ public class MenuManager : MonoBehaviour {
 	IEnumerator pausse (float waitTime) {
 		yield return new WaitForSeconds (waitTime);
 		canvasPauseMenu.SetActive (true);
-		Time.timeScale = 0;
+		Time.timeScale = 0f;
 
 	}
 

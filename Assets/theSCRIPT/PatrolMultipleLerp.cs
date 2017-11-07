@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class PatrolMultipleLerp : MonoBehaviour {
 	public float speed;
+	public static float sSpeed;
 	public static float vSpeed;
-	public static float snaegelSpeed;
-	public static float chronicaSpeed;
 	public Transform startpos, endpos;
 	public Transform[] waypoints;
 	int currentStartPoint = 0;
 	private float startTime, journeyLength;
 	bool goBack = false;
+	public static bool chronicaFlag = false;
 
 	void Start () {
+		sSpeed = speed;
 		vSpeed = speed;
-		snaegelSpeed = vSpeed;
 		currentStartPoint = 0;
 		setPointsPlus();
 	}
@@ -36,11 +36,25 @@ public class PatrolMultipleLerp : MonoBehaviour {
 			(startpos.position, endpos.position);
 	}
 
+	IEnumerator setPointsChronica () {
+		//endpos = startpos = waypoints [currentStartPoint];
+		float distCovered = (Time.time - startTime) * vSpeed;
+		float fracJourney = distCovered / journeyLength;
+		while (fracJourney < 1f) {
+			transform.position = Vector3.Lerp 
+				(startpos.position, endpos.position, fracJourney);
+		}
+		yield return null;
+	}
+
 	void Update () {
+		//print (vSpeed);
 		float distCovered = (Time.time - startTime) * vSpeed;
 		float fracJourney = distCovered / journeyLength;
 
-		if (goBack) {
+		if (chronicaFlag) {
+			StartCoroutine (setPointsChronica ());
+		} else if (goBack) {
 			transform.position = Vector3.Lerp 
 				(startpos.position, endpos.position, fracJourney);
 			if (fracJourney >= 1f && currentStartPoint - 1 > 0) {
