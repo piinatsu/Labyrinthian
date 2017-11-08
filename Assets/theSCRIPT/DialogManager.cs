@@ -55,11 +55,13 @@ public class DialogManager : MonoBehaviour {
 	}
 
 	public static void canvasActivation (bool tof) {
+		/*
 		//GameObject obj = GameObject.Find ("CanvasDialogMenu");
 		//DialogManager dm = GetComponent<DialogManager> ();
 
 		//canvasDialogMenu.SetActive (tof);
 		//dm.canvasDialogMenu.SetActive (tof);
 		//obj.SetActive (tof);
+		*/
 	}
 }

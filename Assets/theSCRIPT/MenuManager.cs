@@ -10,6 +10,8 @@ public class MenuManager : MonoBehaviour {
 
 	//private GameObject canvasPauseMenu;
 	//private GameObject canvasSceneMenu;
+	Animator animor;
+	public GameObject theStar;
 
 	public GameObject canvasPauseMenu;
 	public GameObject canvasSceneMenu;
@@ -24,6 +26,8 @@ public class MenuManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		animor = theStar.GetComponent<Animator> ();
 
 		// only get one object
 		// pml = (PatrolMultipleLerp) FindObjectsOfType (typeof(PatrolMultipleLerp));
@@ -201,6 +205,16 @@ public class MenuManager : MonoBehaviour {
 
 	IEnumerator waitOneSecond () {
 		yield return new WaitForSecondsRealtime (1);
+	}
+
+	public void star1 () {
+		animor.SetInteger("AnimState", 1);
+	}
+	public void star2 () {
+		animor.SetInteger("AnimState", 2);
+	}
+	public void star9 () {
+		animor.SetInteger("AnimState", 9);
 	}
 
 }
