@@ -7,17 +7,23 @@ public class DialogManager : MonoBehaviour {
 
 	public GameObject canvasDialogMenu;
 
-	public Text theText;
+	public Text textHolder;
 
 	public TextAsset textFile;
-	public string[] textLines;
+	public TextAsset textFileAncient;
+	string[] textLines;
+	string[] textLinesAncient;
 
 	//public int currentLine;
 	//public int endAtLine;
 
 	public int startLine;
 	public int endLine;
+	public int startLineAncient;
+	public int endLineAncient;
 	int currentLine;
+	int currentLineAncient;
+	bool isAncientText = false;
 
 	// Use this for initialization
 	void Start () {
@@ -28,30 +34,49 @@ public class DialogManager : MonoBehaviour {
 		if (textFile != null) {
 			textLines = (textFile.text.Split ('\n'));
 		}
+		if (textFileAncient != null) {
+			textLinesAncient = (textFileAncient.text.Split ('\n'));
+		}
 
 		if (endLine == 0) {
 			endLine = textLines.Length - 1;
 		}
 
 		currentLine = startLine;
+		currentLineAncient = startLineAncient;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		theText.text = textLines [currentLine];
-
-		if (currentLine > endLine) {
-			Time.timeScale = 1;
-			canvasDialogMenu.SetActive (false);
+		if (isAncientText) {
+			textHolder.text = textLinesAncient [currentLineAncient];
+			if (currentLineAncient > endLineAncient) {
+				Time.timeScale = 1;
+				canvasDialogMenu.SetActive (false);
+			} else {
+				textHolder.text = textLines [currentLine];
+				if (currentLine > endLine) {
+					Time.timeScale = 1;
+					canvasDialogMenu.SetActive (false);
+				}
+			}
 		}
 	}
 
 	public void nextDialog () {
-		currentLine++;
+		if (isAncientText) {
+			currentLineAncient++;
+		} else {
+			currentLine++;
+		}
 	}
 
 	public void previousDialog () {
-		currentLine--;
+		if (isAncientText) {
+			currentLineAncient--;
+		} else {
+			currentLine--;
+		}
 	}
 
 	public static void canvasActivation (bool tof) {

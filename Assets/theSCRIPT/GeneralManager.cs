@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GeneralManager : MonoBehaviour {
-
+	
 	public GameObject theCam;
 	public GameObject theWall;
 	public GameObject thePlayer;
