@@ -10,6 +10,7 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: L1
+    4300002: Curve
     7400000: Default Take
     9500000: //RootNode
   externalObjects:
@@ -18,6 +19,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: SVGMat_001
     second: {fileID: 2100000, guid: 67fea17ae62eb0d4f8c30801d329885d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SVGMat_003
+    second: {fileID: 2100000, guid: b3ebfdc587df63549ba2183bddd1283f, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

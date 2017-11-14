@@ -9,6 +9,7 @@ public class GeneralManager : MonoBehaviour {
 	public GameObject thePlayer;
 
 	public static bool wallCollisionDisable = false;
+	Rigidbody rb;
 
 	//GameObject dialogManagerCanvas;
 
@@ -16,6 +17,7 @@ public class GeneralManager : MonoBehaviour {
 	void Start () {
 		StartCoroutine(rotateWorld(0.5f));
 		//dialogManagerCanvas = DialogManager.FindGameObjec
+		rb = thePlayer.GetComponent<Rigidbody>();
 	}
 
 	IEnumerator rotateWorld(float waitTime)
@@ -54,5 +56,14 @@ public class GeneralManager : MonoBehaviour {
 				theWall.GetComponent<MeshCollider> ().enabled = true;
 			}
 		}
+	}
+
+	public void increaseMass () {
+		rb.mass += 1f;
+	}
+
+	public void decreaseMass () {
+		if (rb.mass >= 2)
+			rb.mass -= 1f;
 	}
 }
