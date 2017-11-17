@@ -15,7 +15,10 @@ public class OuterBarrier : MonoBehaviour {
 	}
 
 	void OnTriggerExit (Collider coll) {
-		GameObject go = coll.gameObject;
-		Destroy (go);
+		//if (coll.gameObject.tag == "Fire") {
+			//Debug.Log ("Exited some collider");
+			GameObject go = coll.gameObject;
+			Destroy (go);
+		//}
 	}
 }

@@ -13,6 +13,7 @@ public class PatrolRaycast : MonoBehaviour {
 	RaycastHit hit;
 	public float raycastdist = 1.0f;
 	public string hOrV = "Horizontal";
+	Ray ray;
 
 	// Use this for initialization
 	void Start () {
@@ -72,7 +73,7 @@ public class PatrolRaycast : MonoBehaviour {
 				speed *= -1f;
 			}
 		}
-		//Debug.DrawLine (ray.origin, hit.point, Color.red);
+		Debug.DrawLine (transform.position, hit.point, Color.red);
 		//Debug.DrawLine (transform.position, new Vector3(0.5f,0,0), Color.red);
 
 		/*
