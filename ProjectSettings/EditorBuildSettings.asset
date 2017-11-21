@@ -5,6 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Trearchy.unity
-    guid: bfce7ee3c79032c4faa80e6cf520064e
+    path: Assets/MenuMain.unity
+    guid: 492db0beffac67347ada825a8d2be18f
+  - enabled: 1
+    path: Assets/MenuAboutHelp.unity
+    guid: 8caad002d3c80634998a0fa48a4d7557
