@@ -7,6 +7,7 @@ public class GeneralManager : MonoBehaviour {
 	public GameObject theCam;
 	public GameObject theWall;
 	public GameObject thePlayer;
+	public int theScore = 1000;
 
 	public static bool wallCollisionDisable = false;
 	Rigidbody rb;
@@ -16,6 +17,7 @@ public class GeneralManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		StartCoroutine(rotateWorld(0.5f));
+		InvokeRepeating ("scoring", 3f, 1f);
 		//dialogManagerCanvas = DialogManager.FindGameObjec
 		rb = thePlayer.GetComponent<Rigidbody>();
 	}
@@ -56,6 +58,16 @@ public class GeneralManager : MonoBehaviour {
 				theWall.GetComponent<MeshCollider> ().enabled = true;
 			}
 		}
+	}
+
+	void scoring () {
+		theScore -= 3;
+		print (theScore);
+	}
+
+	public void skillScoring (int skillPenalty) {
+		theScore -= skillPenalty;
+		print (theScore);
 	}
 
 	public void increaseMass () {

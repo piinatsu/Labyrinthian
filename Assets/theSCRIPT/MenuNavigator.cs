@@ -33,22 +33,26 @@ public class MenuNavigator: MonoBehaviour {
 	}
 
 	public void rightArrow () {
-		if (index + 1 < maxIndex) {
+		if (index + 1 <= maxIndex) {
 			index += 1;
 			right.SetActive (true);
-		} else if (index + 1 >= maxIndex) {
+			left.SetActive (true);
+		} if (index + 1 > maxIndex) {
 			right.SetActive (false);
 		}
+		print ("right arrow " + index);
 		gotoTherePlease (index);
 	}
 
 	public void leftArrow () {
-		if (index - 1 > minIndex) {
+		if (index - 1 >= minIndex) {
 			index -= 1;
 			left.SetActive (true);
-		} else if (index + 1 <= minIndex) {
-			left.SetActive (false);
-		}
+			right.SetActive (true);
+		} //if (index - 1 < minIndex) {
+			//left.SetActive (false);
+		//}
+		print ("left arrow " + index);
 		gotoTherePlease (index);
 	}
 
@@ -67,9 +71,23 @@ public class MenuNavigator: MonoBehaviour {
 	}
 
 	public void gotoAboutHelp () {
+		index = 1;
 		SceneManager.LoadScene("M1-AboutHelp");
 	}
 
+	public void gotoNewGame () {
+		//play intro
+		//ask for tutorial
+		//SceneManager.LoadScene("Neophyte");
+		//SceneManager.LoadScene (1);
+	}
+
+	public void gotoQuitGame () {
+	}
+
+	public void gotoLstPlayed () {
+		//refer to lastScene on MenuManager
+	}
 	//----------------------------------------------
 
 	public void gotoSelectRealm () {
@@ -90,4 +108,5 @@ public class MenuNavigator: MonoBehaviour {
 	public void gotoR4 () {
 		SceneManager.LoadScene ("R4-Trearchy");
 	}
+
 }

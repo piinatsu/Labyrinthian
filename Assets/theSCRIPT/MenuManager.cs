@@ -10,24 +10,33 @@ public class MenuManager : MonoBehaviour {
 
 	//private GameObject canvasPauseMenu;
 	//private GameObject canvasSceneMenu;
-	Animator animor;
-	public GameObject theStar;
+	Animator animor1;
+	Animator animor2;
+	Animator animor3;
+	public GameObject theStar1;
+	public GameObject theStar2;
+	public GameObject theStar3;
+
+	GeneralManager gm;
 
 	public GameObject canvasPauseMenu;
 	public GameObject canvasSceneMenu;
+	public GameObject canvasResultMenu;
 
 	private Transform panelOfSceneMenu;
 	private Image img;
 
 	public float skillDuration;
-	int lastScene;
 	float snaegelSpeed;
 	float chronicaSpeed;
+	int lastScene;
 
 	// Use this for initialization
 	void Start () {
-
-		animor = theStar.GetComponent<Animator> ();
+		gm = FindObjectOfType<GeneralManager> ();
+		animor1 = theStar1.GetComponent<Animator> ();
+		animor2 = theStar2.GetComponent<Animator> ();
+		animor3 = theStar3.GetComponent<Animator> ();
 
 		// only get one object
 		// pml = (PatrolMultipleLerp) FindObjectsOfType (typeof(PatrolMultipleLerp));
@@ -52,12 +61,14 @@ public class MenuManager : MonoBehaviour {
 	}
 	//-----------------------------------------------------
 	public void pauseTheGame () {
+		/*
 		//img.CrossFadeAlpha (190f, 0.5f, true);
 
 		//canvasPauseMenu.SetActive (true);
 
 		//canvasPauseMenu.transform.GetChild(0).gameObject.SetActive (true);
 		//Time.timeScale = 0;
+		*/
 		StartCoroutine(pausse(0.5f));
 	}
 
@@ -70,25 +81,6 @@ public class MenuManager : MonoBehaviour {
 		//canvasPauseMenu.transform.GetChild(0).gameObject.SetActive (false);
 		*/
 	}
-	//-----------------------------------------------------
-	public void newGame () {
-		//play intro
-		//ask for tutorial
-		//SceneManager.LoadScene("Neophyte");
-		SceneManager.LoadScene (1);
-	}
-
-	public void continueLastPlayed () {
-		SceneManager.LoadScene (lastScene);
-	}
-
-	public void selectLevel () {
-		//move to scene of level selection
-	}
-
-	public void viewAbout () {
-		//move to scene about/help
-	}
 
 	public void exitGame () {
 		//exit to main menu
@@ -98,21 +90,20 @@ public class MenuManager : MonoBehaviour {
 		SceneManager.LoadScene(0);
 		//SceneManager.LoadScene ("Main Menu", LoadSceneMode.Single);
 	}
-
-	public void quitGame () {
-		//exit the application
-	}
 	//-----------------------------------------------------	
 	public void snaegel () {
 		StartCoroutine (snaegelCR ());
+		gm.skillScoring (50);
 	}
 
 	public void chronica () {
 		StartCoroutine (chronicaCR ());
+		gm.skillScoring (100);
 	}
 
 	public void opthalos () {
 		StartCoroutine (opthalosCR ());
+		gm.skillScoring (200);
 	}
 	//-----------------------------------------------------	
 	IEnumerator snaegelCR () {
@@ -207,14 +198,31 @@ public class MenuManager : MonoBehaviour {
 		yield return new WaitForSecondsRealtime (1);
 	}
 
+	public void gameFinished (int fScore) {
+		canvasResultMenu.SetActive (true);
+		if (fScore >= 800) {
+			star3 ();
+		} else if (fScore >= 600) {
+			star2 ();
+		} else if (fScore >= 400) {
+			star1 ();
+		}
+	}
+
 	public void star1 () {
-		animor.SetInteger("AnimState", 1);
+		animor1.SetInteger("AnimState", 1);
+		animor2.SetInteger("AnimState", 2);
+		animor3.SetInteger("AnimState", 2);
 	}
 	public void star2 () {
-		animor.SetInteger("AnimState", 2);
+		animor1.SetInteger("AnimState", 1);
+		animor2.SetInteger("AnimState", 1);
+		animor3.SetInteger("AnimState", 2);
 	}
-	public void star9 () {
-		animor.SetInteger("AnimState", 9);
+	public void star3 () {
+		animor1.SetInteger("AnimState", 1);
+		animor2.SetInteger("AnimState", 1);
+		animor3.SetInteger("AnimState", 1);
 	}
 
 }

@@ -112,7 +112,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
             component.enabled = false;
 
 		Time.timeScale = 0;
-		Debug.Log ("Time0");
+		Debug.Log ("DefaultTrackableEventHandler: TimeScale 0");
     }
 
     #endregion // PRIVATE_METHODS

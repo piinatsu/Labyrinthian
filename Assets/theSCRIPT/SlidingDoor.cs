@@ -31,7 +31,7 @@ public class SlidingDoor : MonoBehaviour {
 			//if (fracJourney >= 1f)
 				//doorOpened = true;
 		} else if (!openTheDoor && !doorInit) {
-			Debug.Log ("aaa");
+			//Debug.Log ("aaa");
 			/*theSlidingDoor.transform.position = Vector3.Lerp 
 				(slidingDoorOpenedPos.position, slidingDoorClosedPos.position, 
 					fracJourney);*/
