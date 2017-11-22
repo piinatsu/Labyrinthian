@@ -9,19 +9,20 @@ public class MenuNavigator: MonoBehaviour {
 	public GameObject about;
 	public GameObject left;
 	public GameObject right;
-	private int index;
-	private int maxIndex;
-	private int minIndex;
+	private int index=1;
+	private int maxIndex=2;
+	private int minIndex=0;
 
 	// Use this for initialization
 	void Start () {
-		int index = 1;
-		int maxIndex = 2;
-		int minIndex = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		
+	}
+
+	public void gotoTherePlease (int index) {
 		if (index == 0) {
 			gotoHome ();
 		} else if (index == 1) {
@@ -38,6 +39,7 @@ public class MenuNavigator: MonoBehaviour {
 		} else if (index + 1 >= maxIndex) {
 			right.SetActive (false);
 		}
+		gotoTherePlease (index);
 	}
 
 	public void leftArrow () {
@@ -47,23 +49,45 @@ public class MenuNavigator: MonoBehaviour {
 		} else if (index + 1 <= minIndex) {
 			left.SetActive (false);
 		}
+		gotoTherePlease (index);
 	}
 
-	public void gotoHelp() {
+	void gotoHelp() {
 		help.SetActive(true);
 		about.SetActive(false);
 	}
 
-	public void gotoAbout() {
+	void gotoAbout() {
 		about.SetActive(true);
 		help.SetActive(false);
 	}
 
 	public void gotoHome() {
-		SceneManager.LoadScene ("MenuMain");
+		SceneManager.LoadScene ("M0-Home");
 	}
 
 	public void gotoAboutHelp () {
-		SceneManager.LoadScene("MenuAboutHelp");
+		SceneManager.LoadScene("M1-AboutHelp");
+	}
+
+	//----------------------------------------------
+
+	public void gotoSelectRealm () {
+		SceneManager.LoadScene("M2-SelectRealm");
+	}
+	public void gotoR0 () {
+		SceneManager.LoadScene ("R0-Tutorial");
+	}
+	public void gotoR1 () {
+		SceneManager.LoadScene ("R1-Neophyte");
+	}
+	public void gotoR2 () {
+		SceneManager.LoadScene ("R2-Solitore");
+	}
+	public void gotoR3 () {
+		SceneManager.LoadScene ("R3-Helixian");
+	}
+	public void gotoR4 () {
+		SceneManager.LoadScene ("R4-Trearchy");
 	}
 }

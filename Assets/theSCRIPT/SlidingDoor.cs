@@ -68,6 +68,7 @@ public class SlidingDoor : MonoBehaviour {
 
 	public void OnTriggerEnter (Collider coll) {
 		//openSesame ();
+		startTime = Time.time;
 		journeyLength = Vector3.Distance
 			(theSlidingDoor.transform.position, slidingDoorOpenedPos.position);
 		openTheDoor = true;
@@ -76,6 +77,7 @@ public class SlidingDoor : MonoBehaviour {
 
 	public void OnTriggerExit (Collider coll) {
 		//closeSesame ();
+		startTime = Time.time;
 		if (!oneTimeOnly) {
 		journeyLength = Vector3.Distance
 			(theSlidingDoor.transform.position, slidingDoorClosedPos.position);

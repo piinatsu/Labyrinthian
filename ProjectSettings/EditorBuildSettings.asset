@@ -5,12 +5,30 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/MenuMain.unity
-    guid: 492db0beffac67347ada825a8d2be18f
+    path: Assets/M0-Home.unity
+    guid: 4fcba92e05b01ef4d998ae61c42671e6
   - enabled: 1
-    path: Assets/MenuAboutHelp.unity
-    guid: 8caad002d3c80634998a0fa48a4d7557
+    path: Assets/M1-AboutHelp.unity
+    guid: 6aaf6c6fd94872f4989b7cb7254e9000
+  - enabled: 1
+    path: Assets/M2-SelectRealm.unity
+    guid: 0c23248b372aa374e901ef760ab1bbaf
+  - enabled: 1
+    path: Assets/R0-Tutorial.unity
+    guid: 245b59a9c69dac447a77c90ecb8ed020
+  - enabled: 1
+    path: Assets/R1-Neophyte.unity
+    guid: 776782fce3f9998498170302899e077b
+  - enabled: 1
+    path: Assets/R2-Solitore.unity
+    guid: 4a495a361339f8342a2030f281038b8b
+  - enabled: 1
+    path: Assets/R3-Helixian.unity
+    guid: 1c972f35d2f67f34cb72fd5413dc6f08
+  - enabled: 1
+    path: Assets/R4-Trearchy.unity
+    guid: 21b9f94241858254eb1658cc854b1dba
+  - enabled: 1
+    path: Assets/ScanningModule.unity
+    guid: a9b2096322fd9704fbbdaa56aad0bfa7
