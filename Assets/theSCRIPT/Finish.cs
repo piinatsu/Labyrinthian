@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Finish : MonoBehaviour {
 
-	public GameObject canvasDialogMenu;
+	//public GameObject canvasDialogMenu;
 	public GeneralManager gm;
 	public MenuManager mm;
 	int finishScore;
@@ -27,7 +27,7 @@ public class Finish : MonoBehaviour {
 	void OnTriggerEnter(Collider target) {
 		if (target.tag == "Player") {
 			finishScore = gm.theScore;
-			mm.gameFinished (finishScore);
+			mm.gameFinished (finishScore); //displays canvasResultMenu at MenuManager
 			//canvasDialogMenu.SetActive (true);
 			//DialogManager.canvasActivation(true);
 			Time.timeScale = 0;

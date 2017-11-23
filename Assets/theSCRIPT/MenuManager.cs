@@ -22,6 +22,10 @@ public class MenuManager : MonoBehaviour {
 	public GameObject canvasPauseMenu;
 	public GameObject canvasSceneMenu;
 	public GameObject canvasResultMenu;
+	public GameObject canvasDialogMenu;
+
+	public Text praiseText;
+	public Text scoreText;
 
 	private Transform panelOfSceneMenu;
 	private Image img;
@@ -29,7 +33,8 @@ public class MenuManager : MonoBehaviour {
 	public float skillDuration;
 	float snaegelSpeed;
 	float chronicaSpeed;
-	int lastScene;
+	public static int lastScene;
+	string praise;
 
 	// Use this for initialization
 	void Start () {
@@ -87,7 +92,7 @@ public class MenuManager : MonoBehaviour {
 		lastScene = SceneManager.GetActiveScene().buildIndex;
 		//string lastScene = SceneManager.GetActiveScene().name;
 
-		SceneManager.LoadScene(0);
+		SceneManager.LoadScene("M0-Home");
 		//SceneManager.LoadScene ("Main Menu", LoadSceneMode.Single);
 	}
 	//-----------------------------------------------------	
@@ -207,6 +212,26 @@ public class MenuManager : MonoBehaviour {
 		} else if (fScore >= 400) {
 			star1 ();
 		}
+
+		if (fScore >= 800) {
+			if (fScore >= 900) {
+				praise = "Magnifico!";
+			} else {
+				praise = "Excellent!";
+			}
+		} else if (fScore <= 800) {
+			if (fScore >= 700) {
+				praise = "Great!";
+			} else if (fScore >= 600) {
+				praise = "Nice!";
+			} else if (fScore < 200) {
+				praise = "My Grandma can do better than this";
+			} else {
+				praise = "Good";
+			}
+		}
+		praiseText.text = praise;
+		scoreText.text = fScore.ToString ();
 	}
 
 	public void star1 () {
@@ -223,6 +248,11 @@ public class MenuManager : MonoBehaviour {
 		animor1.SetInteger("AnimState", 1);
 		animor2.SetInteger("AnimState", 1);
 		animor3.SetInteger("AnimState", 1);
+	}
+
+	public void closeResult() {
+		canvasResultMenu.SetActive (false);
+		canvasDialogMenu.SetActive (true);
 	}
 
 }

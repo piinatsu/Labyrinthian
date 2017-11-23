@@ -85,8 +85,13 @@ public class MenuNavigator: MonoBehaviour {
 	public void gotoQuitGame () {
 	}
 
-	public void gotoLstPlayed () {
+	public void gotoLastPlayed () {
 		//refer to lastScene on MenuManager
+		SceneManager.LoadScene(MenuManager.lastScene);
+	}
+
+	public void closeResult () {
+
 	}
 	//----------------------------------------------
 

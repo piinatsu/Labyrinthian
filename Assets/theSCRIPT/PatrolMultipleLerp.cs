@@ -80,11 +80,19 @@ public class PatrolMultipleLerp : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider target) {
-		Debug.Log ("Collision Triggered");
+		string playerMat = target.gameObject.
+			GetComponent<Renderer> ().material.name;
+		string enemyMat = gameObject.
+			GetComponent<Renderer> ().material.name;
 		if (target.tag == "Player") {
-			string tgt = target.tag.ToString ();
-			Destroy (target.gameObject);
-			Debug.Log (tgt + " destroyed");
+			if (enemyMat == "Red (Instance)" && 
+				playerMat == "WoodSurface (Instance)") {
+				Destroy (target.gameObject);
+			} else if (enemyMat == "Yellow (Instance)" && 
+				playerMat == "MetalSurface (Instance)") {
+				Destroy (target.gameObject);
+			}
 		}
+
 	}
 }

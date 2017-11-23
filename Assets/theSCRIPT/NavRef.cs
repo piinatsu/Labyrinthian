@@ -5,6 +5,7 @@ using UnityEngine;
 public class NavRef : MonoBehaviour {
 
 	public MenuNavigator meNav;
+	public MenuManager meMan;
 	// Use this for initialization
 	void Start () {
 		

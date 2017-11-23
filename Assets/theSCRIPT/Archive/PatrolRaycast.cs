@@ -96,7 +96,19 @@ public class PatrolRaycast : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider target) {
-		if (target.tag == "Player") 
-			Destroy (target.gameObject);
+		string playerMat = target.gameObject.
+			GetComponent<Renderer> ().material.name;
+		string enemyMat = gameObject.
+			GetComponent<Renderer> ().material.name;
+		if (target.tag == "Player") {
+			if (enemyMat == "Red (Instance)" && 
+				playerMat == "WoodSurface (Instance)") {
+				Destroy (target.gameObject);
+			} else if (enemyMat == "Yellow (Instance)" && 
+				playerMat == "MetalSurface (Instance)") {
+				Destroy (target.gameObject);
+			}
+		}
+
 	}
 }
