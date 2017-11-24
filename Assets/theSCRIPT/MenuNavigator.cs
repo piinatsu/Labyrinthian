@@ -89,10 +89,6 @@ public class MenuNavigator: MonoBehaviour {
 		//refer to lastScene on MenuManager
 		SceneManager.LoadScene(MenuManager.lastScene);
 	}
-
-	public void closeResult () {
-
-	}
 	//----------------------------------------------
 
 	public void gotoSelectRealm () {

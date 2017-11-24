@@ -68,20 +68,28 @@ public class SlidingDoor : MonoBehaviour {
 
 	public void OnTriggerEnter (Collider coll) {
 		//openSesame ();
-		startTime = Time.time;
-		journeyLength = Vector3.Distance
+		//if (coll.tag == "Player") {
+		if (coll.gameObject.tag == "Aster" ||
+		    coll.gameObject.tag == "Player") {
+			startTime = Time.time;
+			journeyLength = Vector3.Distance
 			(theSlidingDoor.transform.position, slidingDoorOpenedPos.position);
-		openTheDoor = true;
-		doorInit = false;
+			openTheDoor = true;
+			doorInit = false;
+			print (coll.gameObject.name);
+		}
 	}
 
 	public void OnTriggerExit (Collider coll) {
 		//closeSesame ();
-		startTime = Time.time;
-		if (!oneTimeOnly) {
-		journeyLength = Vector3.Distance
+		if (coll.gameObject.tag == "Aster" ||
+		    coll.gameObject.tag == "Player") {
+			startTime = Time.time;
+			if (!oneTimeOnly) {
+				journeyLength = Vector3.Distance
 			(theSlidingDoor.transform.position, slidingDoorClosedPos.position);
-		openTheDoor = false;
+				openTheDoor = false;
+			}
 		}
 	}
 

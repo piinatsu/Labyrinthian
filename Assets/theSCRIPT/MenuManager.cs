@@ -87,13 +87,17 @@ public class MenuManager : MonoBehaviour {
 		*/
 	}
 
-	public void exitGame () {
+	public void exitTheGame () {
 		//exit to main menu
 		lastScene = SceneManager.GetActiveScene().buildIndex;
 		//string lastScene = SceneManager.GetActiveScene().name;
 
 		SceneManager.LoadScene("M0-Home");
 		//SceneManager.LoadScene ("Main Menu", LoadSceneMode.Single);
+	}
+
+	public void helpTheGame () {
+		
 	}
 	//-----------------------------------------------------	
 	public void snaegel () {
