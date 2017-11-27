@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43846723, g: 0.48655277, b: 0.5668258, a: 1}
+  m_IndirectSpecularColor: {r: 0.43846747, g: 0.48655325, b: 0.56682634, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -426,6 +426,49 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 3e04e62643d8b2b4aabf7e876feaf125, type: 3}
+--- !u!1 &210277490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 210277492}
+  - component: {fileID: 210277491}
+  m_Layer: 0
+  m_Name: GameControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &210277491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 210277490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee731c2212a016f49b53171547ccaa8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lastScene: 0
+  lastSceneString: 
+  playerLastPosition: {x: 0, y: 0, z: 0}
+--- !u!4 &210277492
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 210277490}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.172923, y: 4.657433, z: 13.547558}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &231101216
 Prefab:
   m_ObjectHideFlags: 0
@@ -1312,7 +1355,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 459605424}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -0.248, y: 0.072876, z: -0.303}
+  m_LocalPosition: {x: -0.408, y: 0.072876, z: 0.025}
   m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
   m_Children: []
   m_Father: {fileID: 1426301937}
@@ -4554,12 +4597,12 @@ Prefab:
     - target: {fileID: 224151364511993438, guid: c5cc0c384e6ea4345ba3111d38f5eb8f,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 319.5
+      value: 960
       objectReference: {fileID: 0}
     - target: {fileID: 224151364511993438, guid: c5cc0c384e6ea4345ba3111d38f5eb8f,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 454.5
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 224151364511993438, guid: c5cc0c384e6ea4345ba3111d38f5eb8f,
         type: 2}
@@ -4656,6 +4699,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2015556000}
+    - target: {fileID: 1145147383264262, guid: c5cc0c384e6ea4345ba3111d38f5eb8f, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c5cc0c384e6ea4345ba3111d38f5eb8f, type: 2}
   m_IsPrefabParent: 0
@@ -5164,6 +5211,7 @@ MonoBehaviour:
   canvasSceneMenu: {fileID: 692561530}
   canvasResultMenu: {fileID: 1559240587}
   canvasDialogMenu: {fileID: 674168011}
+  thePlayer: {fileID: 459605424}
   praiseText: {fileID: 1850488549}
   scoreText: {fileID: 1367858194}
   skillDuration: 5

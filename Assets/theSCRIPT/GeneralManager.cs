@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GeneralManager : MonoBehaviour {
-	
+
+	//public static GeneralManager genma;
+
 	public GameObject theCam;
 	public GameObject theWall;
 	public GameObject thePlayer;
 	public int theScore = 1000;
 
+	public static bool isContinueLast = false;
 	public static bool wallCollisionDisable = false;
 	Rigidbody rb;
 
@@ -20,6 +23,15 @@ public class GeneralManager : MonoBehaviour {
 		InvokeRepeating ("scoring", 3f, 1f);
 		//dialogManagerCanvas = DialogManager.FindGameObjec
 		rb = thePlayer.GetComponent<Rigidbody>();
+		Invoke ("transformLocalPosition", 1.0f);
+	}
+
+	void transformLocalPosition () {
+		if (isContinueLast == true) {
+			thePlayer.transform.localPosition = 
+				GameControl.control.playerLastPosition;
+			isContinueLast = false;
+		}
 	}
 
 	IEnumerator rotateWorld(float waitTime)

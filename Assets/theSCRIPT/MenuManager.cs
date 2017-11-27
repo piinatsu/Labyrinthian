@@ -24,6 +24,8 @@ public class MenuManager : MonoBehaviour {
 	public GameObject canvasResultMenu;
 	public GameObject canvasDialogMenu;
 
+	public GameObject thePlayer;
+
 	public Text praiseText;
 	public Text scoreText;
 
@@ -34,6 +36,10 @@ public class MenuManager : MonoBehaviour {
 	float snaegelSpeed;
 	float chronicaSpeed;
 	public static int lastScene;
+	//public static Vector3 lastPosition;
+	public static float lastPositionX;
+	public static float lastPositionY;
+	public static float lastPositionZ;
 	string praise;
 
 	// Use this for initialization
@@ -88,11 +94,27 @@ public class MenuManager : MonoBehaviour {
 	}
 
 	public void exitTheGame () {
-		//exit to main menu
+
+		lastPositionX = thePlayer.transform.localPosition.x;
+		lastPositionY = thePlayer.transform.localPosition.y;
+		lastPositionZ = thePlayer.transform.localPosition.z;
+		//lastPosition = thePlayer.transform.position;
 		lastScene = SceneManager.GetActiveScene().buildIndex;
 		//string lastScene = SceneManager.GetActiveScene().name;
 
+		//menmaLastData.lastScene = lastScene;
+		//menmaLastData.lastPosition = lastPosition;
+
+		GameControl.control.Save (lastScene, 
+			lastPositionX, lastPositionY, lastPositionZ);
+		//GameControl.control.Save(menmaLastData.lastScene, 
+			//menmaLastData.lastPosition);
+		Debug.Log ("Saved Last Scene: " + lastScene);
+		Debug.Log ("Saved Last Position: " + 
+			lastPositionX + " " + lastPositionY + " " +lastPositionZ);
+
 		SceneManager.LoadScene("M0-Home");
+		//SceneManager.LoadScene (0);
 		//SceneManager.LoadScene ("Main Menu", LoadSceneMode.Single);
 	}
 
@@ -259,4 +281,10 @@ public class MenuManager : MonoBehaviour {
 		canvasDialogMenu.SetActive (true);
 	}
 
+}
+
+[System.Serializable]
+class menmaLastData {
+	public int lastScene;
+	public Vector3 lastPosition;
 }
