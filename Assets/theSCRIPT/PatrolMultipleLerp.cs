@@ -80,7 +80,6 @@ public class PatrolMultipleLerp : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider target) {
-
 		if (target.tag == "Player") {
 			string playerMat = target.gameObject.
 				GetComponent<Renderer> ().material.name;
@@ -92,8 +91,10 @@ public class PatrolMultipleLerp : MonoBehaviour {
 			} else if (enemyMat == "Yellow (Instance)" && 
 				playerMat == "MetalSurface (Instance)") {
 				Destroy (target.gameObject);
+			} else if (enemyMat == "Light Blue (Instance)" && 
+				playerMat == "StoneSurface (Instance)") {
+				Destroy (target.gameObject);
 			}
 		}
-
 	}
 }

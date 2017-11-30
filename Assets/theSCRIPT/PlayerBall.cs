@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerBall : MonoBehaviour {
 
@@ -11,6 +12,8 @@ public class PlayerBall : MonoBehaviour {
 	public Material[] mats;
 	Material newMat;
 	int i = 1;
+
+	string currentMat;
 
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
@@ -43,6 +46,30 @@ public class PlayerBall : MonoBehaviour {
 	}
 
 	public void changeMaterial () {
+		GameObject go = EventSystem.current.currentSelectedGameObject;
+		if (go.name == "Button_Wood") {
+			if(currentMat == "Wood")
+				changeMatToDefault ();
+			rb.mass = 1;
+			currentMat = "Wooded";
+			gameObject.GetComponent<Renderer>().material = mats[1];
+			Debug.Log ("Clicked on wood");
+		} else if (go.name == "Button_Stone") {
+			if(currentMat == "Stone")
+				changeMatToDefault ();
+			rb.mass = 5;
+			currentMat = "Stone";
+			gameObject.GetComponent<Renderer>().material = mats[2];
+			Debug.Log ("Stoned");
+		} else if (go.name == "Button_Metal") {
+			if(currentMat == "Metal") 
+				changeMatToDefault ();
+			rb.mass = 10;
+			currentMat = "Metal";
+			gameObject.GetComponent<Renderer>().material = mats[3];
+			Debug.Log ("Metaled");
+		}
+		/*
 		if (i > mats.Length - 1) i = 0;
 		switch (i) {
 		case 0:
@@ -60,6 +87,13 @@ public class PlayerBall : MonoBehaviour {
 		//GetComponent<Renderer> ().material = mats [i];
 		gameObject.GetComponent<Renderer>().material = mats[i];
 		i++;
+		*/
 
+	}
+
+	void changeMatToDefault () {
+		gameObject.GetComponent<Renderer>().material = mats[0];
+		currentMat = "Default";
+		rb.mass = 1;
 	}
 }

@@ -82,6 +82,7 @@ public class GeneralManager : MonoBehaviour {
 		print (theScore);
 	}
 
+	/*
 	public void increaseMass () {
 		rb.mass += 1f;
 	}
@@ -90,4 +91,5 @@ public class GeneralManager : MonoBehaviour {
 		if (rb.mass >= 2)
 			rb.mass -= 1f;
 	}
+	*/
 }
