@@ -87,8 +87,8 @@ public class MenuNavigator: MonoBehaviour {
 
 	public void gotoLastPlayed () {
 		//refer to lastScene on MenuManager
-		GameControl.control.Load ();
-		int lastScene = GameControl.control.lastScene;
+		SaveLoadManager.saloma.Load ();
+		int lastScene = SaveLoadManager.saloma.lastScene;
 		//GeneralManager.genma.is
 		GeneralManager.isContinueLast = true;
 		SceneManager.LoadScene (lastScene);

@@ -88,7 +88,10 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         foreach (var component in canvasComponents)
             component.enabled = true;
 
-		Time.timeScale = 1;
+		if(mTrackableBehaviour.TrackableName != "ITRamp" ||
+			mTrackableBehaviour.TrackableName != "ITCoiledSpring" ||
+			mTrackableBehaviour.TrackableName != "ITArchBridge")
+			Time.timeScale = 1;
 		//Debug.Log ("Time1");
     }
 

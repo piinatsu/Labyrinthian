@@ -17,7 +17,7 @@ public class MenuManager : MonoBehaviour {
 	public GameObject theStar2;
 	public GameObject theStar3;
 
-	GeneralManager gm;
+	//GeneralManager gm;
 
 	public GameObject canvasPauseMenu;
 	public GameObject canvasSceneMenu;
@@ -29,6 +29,9 @@ public class MenuManager : MonoBehaviour {
 	public Text praiseText;
 	public Text scoreText;
 
+	//duplicate manaBar for canvasResultMenu
+	public Slider manaBar;
+
 	private Transform panelOfSceneMenu;
 	private Image img;
 
@@ -36,15 +39,17 @@ public class MenuManager : MonoBehaviour {
 	float snaegelSpeed;
 	float chronicaSpeed;
 	public static int lastScene;
+	public static string lastSceneString;
 	//public static Vector3 lastPosition;
 	public static float lastPositionX;
 	public static float lastPositionY;
 	public static float lastPositionZ;
+	bool scanModPause = false;
 	string praise;
 
 	// Use this for initialization
 	void Start () {
-		gm = FindObjectOfType<GeneralManager> ();
+		//gm = FindObjectOfType<GeneralManager> ();
 		animor1 = theStar1.GetComponent<Animator> ();
 		animor2 = theStar2.GetComponent<Animator> ();
 		animor3 = theStar3.GetComponent<Animator> ();
@@ -100,12 +105,13 @@ public class MenuManager : MonoBehaviour {
 		lastPositionZ = thePlayer.transform.localPosition.z;
 		//lastPosition = thePlayer.transform.position;
 		lastScene = SceneManager.GetActiveScene().buildIndex;
+		lastSceneString = SceneManager.GetActiveScene ().name;
 		//string lastScene = SceneManager.GetActiveScene().name;
 
 		//menmaLastData.lastScene = lastScene;
 		//menmaLastData.lastPosition = lastPosition;
 
-		GameControl.control.Save (lastScene, 
+		SaveLoadManager.saloma.Save (lastScene, lastSceneString,
 			lastPositionX, lastPositionY, lastPositionZ);
 		//GameControl.control.Save(menmaLastData.lastScene, 
 			//menmaLastData.lastPosition);
@@ -121,20 +127,28 @@ public class MenuManager : MonoBehaviour {
 	public void helpTheGame () {
 		
 	}
+
+	public void scanningModule () {
+		GlobalVariables.originScene = SceneManager.GetActiveScene ().name;
+		StartCoroutine(scanMod(0.5f));
+	}
 	//-----------------------------------------------------	
 	public void snaegel () {
 		StartCoroutine (snaegelCR ());
-		gm.skillScoring (50);
+		Mana.slashMana (35);
+		//gm.skillScoring (50);
 	}
 
 	public void chronica () {
 		StartCoroutine (chronicaCR ());
-		gm.skillScoring (100);
+		Mana.slashMana (75);
+		//gm.skillScoring (100);
 	}
 
 	public void opthalos () {
 		StartCoroutine (opthalosCR ());
-		gm.skillScoring (200);
+		Mana.slashMana (95);
+		//gm.skillScoring (200);
 	}
 	//-----------------------------------------------------	
 	IEnumerator snaegelCR () {
@@ -225,12 +239,32 @@ public class MenuManager : MonoBehaviour {
 		Time.timeScale = 1f;
 	}
 
+	IEnumerator scanMod (float waitTime) {
+		yield return new WaitForSecondsRealtime (waitTime);
+		if (!scanModPause) {
+			scanModPause = true;
+			Time.timeScale = 0;
+		} else if (scanModPause) {
+			scanModPause = false;
+			Time.timeScale = 1;
+		}
+		//SceneManager.LoadScene ("ScanningModule");
+	}
+
 	IEnumerator waitOneSecond () {
 		yield return new WaitForSecondsRealtime (1);
 	}
 
 	public void gameFinished (int fScore) {
 		canvasResultMenu.SetActive (true);
+		/*
+		while (Mana.mana > 0) {
+			Mana.mana -= 1.0f;
+			fScore += 1.0f;
+			scoreText.text = fScore.ToString ();
+			yield return null;
+		}
+		*/
 		if (fScore >= 800) {
 			star3 ();
 		} else if (fScore >= 600) {
@@ -260,6 +294,19 @@ public class MenuManager : MonoBehaviour {
 		scoreText.text = fScore.ToString ();
 	}
 
+	public IEnumerator gameFinisedIE (int fScore, int fMana) {
+		canvasResultMenu.SetActive (true);
+		manaBar.value = fMana;
+		while (fMana > 0) {
+			fMana -= 1;
+			manaBar.value = fMana;
+			fScore += 1;
+			scoreText.text = fScore.ToString ();
+			yield return new WaitForSecondsRealtime(0.025f);
+		}
+		gameFinished (fScore);
+	}
+
 	public void star1 () {
 		animor1.SetInteger("AnimState", 1);
 		animor2.SetInteger("AnimState", 2);
@@ -282,9 +329,8 @@ public class MenuManager : MonoBehaviour {
 	}
 
 }
-
 [System.Serializable]
 class menmaLastData {
-	public int lastScene;
-	public Vector3 lastPosition;
+	//public int lastScene;
+	//public Vector3 lastPosition;
 }

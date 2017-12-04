@@ -8,6 +8,7 @@ TagManager:
   - Fire
   - WindCorridor
   - Aster
+  - ActiveObject
   layers:
   - Default
   - TransparentFX

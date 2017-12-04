@@ -11,7 +11,7 @@ public class PlayerBall : MonoBehaviour {
 
 	public Material[] mats;
 	Material newMat;
-	int i = 1;
+	//int i = 1;
 
 	string currentMat;
 
@@ -47,16 +47,19 @@ public class PlayerBall : MonoBehaviour {
 
 	public void changeMaterial () {
 		GameObject go = EventSystem.current.currentSelectedGameObject;
+		Mana.canRegen = false;
 		if (go.name == "Button_Wood") {
 			if(currentMat == "Wood")
 				changeMatToDefault ();
+			Mana.manaRegenPerSec = -1.0f;
 			rb.mass = 1;
-			currentMat = "Wooded";
+			currentMat = "Wood";
 			gameObject.GetComponent<Renderer>().material = mats[1];
-			Debug.Log ("Clicked on wood");
+			Debug.Log ("Wooded");
 		} else if (go.name == "Button_Stone") {
 			if(currentMat == "Stone")
 				changeMatToDefault ();
+			Mana.manaRegenPerSec = -1.25f;
 			rb.mass = 5;
 			currentMat = "Stone";
 			gameObject.GetComponent<Renderer>().material = mats[2];
@@ -64,6 +67,7 @@ public class PlayerBall : MonoBehaviour {
 		} else if (go.name == "Button_Metal") {
 			if(currentMat == "Metal") 
 				changeMatToDefault ();
+			Mana.manaRegenPerSec = -1.5f;
 			rb.mass = 10;
 			currentMat = "Metal";
 			gameObject.GetComponent<Renderer>().material = mats[3];
@@ -95,5 +99,7 @@ public class PlayerBall : MonoBehaviour {
 		gameObject.GetComponent<Renderer>().material = mats[0];
 		currentMat = "Default";
 		rb.mass = 1;
+		Mana.manaRegenPerSec = 1.0f;
+		//Mana.canRegen = true;
 	}
 }

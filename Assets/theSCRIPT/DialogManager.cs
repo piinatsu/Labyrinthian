@@ -7,7 +7,7 @@ public class DialogManager : MonoBehaviour {
 
 	public GameObject canvasDialogMenu;
 
-	public Text textHolder;
+	public Text textContainer;
 
 	public TextAsset textFile;
 	public TextAsset textFileAncient;
@@ -49,12 +49,12 @@ public class DialogManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (isAncientText) {
-			textHolder.text = textLinesAncient [currentLineAncient];
+			textContainer.text = textLinesAncient [currentLineAncient];
 			if (currentLineAncient > endLineAncient) {
 				Time.timeScale = 1;
 				canvasDialogMenu.SetActive (false);
 			} else {
-				textHolder.text = textLines [currentLine];
+				textContainer.text = textLines [currentLine];
 				if (currentLine > endLine) {
 					Time.timeScale = 1;
 					canvasDialogMenu.SetActive (false);

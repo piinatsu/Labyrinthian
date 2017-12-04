@@ -9,6 +9,7 @@ public class Finish : MonoBehaviour {
 	public GeneralManager gm;
 	public MenuManager mm;
 	int finishScore;
+	int manaFinish;
 
 	// Use this for initialization
 	void Start () {
@@ -27,11 +28,20 @@ public class Finish : MonoBehaviour {
 	void OnTriggerEnter(Collider target) {
 		if (target.tag == "Player") {
 			finishScore = gm.theScore;
-			mm.gameFinished (finishScore); //displays canvasResultMenu at MenuManager
+			manaFinish = (int) Mana.mana;
+			//mm.gameFinished (finishScore); //displays canvasResultMenu at MenuManager
+			StartCoroutine(mm.gameFinisedIE(finishScore, manaFinish));
 			//canvasDialogMenu.SetActive (true);
 			//DialogManager.canvasActivation(true);
 			Time.timeScale = 0;
 		}
 		//SceneManager.LoadScene (1 + SceneManager.GetSceneByBuildIndex);
 	}
+	/*
+	IEnumerator drainManaToScore () {
+		while (Mana.mana > 0) {
+			Mana.mana -= 1f;
+		}
+	}
+	*/
 }

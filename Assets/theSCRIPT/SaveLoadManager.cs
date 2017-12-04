@@ -6,9 +6,9 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System;
 
-public class GameControl : MonoBehaviour {
+public class SaveLoadManager : MonoBehaviour {
 
-	public static GameControl control;
+	public static SaveLoadManager saloma;
 
 	public int lastScene;
 	public string lastSceneString;
@@ -16,21 +16,22 @@ public class GameControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-		if (control == null) {
+		if (saloma == null) {
 			DontDestroyOnLoad (gameObject);
-			control = this;
-		} else if (control != this) {
+			saloma = this;
+		} else if (saloma != this) {
 			Destroy (gameObject);
 		}
 	}
 
-	public void Save(int a, float x, float y, float z) {
+	public void Save(int a, string b, float x, float y, float z) {
 		BinaryFormatter bf = new BinaryFormatter ();
 		FileStream file = File.Create (Application.persistentDataPath + 
 			"/playerLastInfo.dat");
 
 		LastData data = new LastData ();
 		data.lastScene = a;
+		data.lastSceneString = b;
 		data.playerLastPositionX = x;
 		data.playerLastPositionY = y;
 		data.playerLastPositionZ = z;
@@ -52,6 +53,7 @@ public class GameControl : MonoBehaviour {
 			file.Close ();
 
 			lastScene = data.lastScene;
+			lastSceneString = data.lastSceneString;
 			playerLastPosition = new Vector3 (
 				data.playerLastPositionX,
 				data.playerLastPositionY,

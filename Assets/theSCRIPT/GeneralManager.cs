@@ -13,7 +13,7 @@ public class GeneralManager : MonoBehaviour {
 
 	public static bool isContinueLast = false;
 	public static bool wallCollisionDisable = false;
-	Rigidbody rb;
+	//Rigidbody rb;
 
 	//GameObject dialogManagerCanvas;
 
@@ -22,14 +22,14 @@ public class GeneralManager : MonoBehaviour {
 		StartCoroutine(rotateWorld(0.5f));
 		InvokeRepeating ("scoring", 3f, 1f);
 		//dialogManagerCanvas = DialogManager.FindGameObjec
-		rb = thePlayer.GetComponent<Rigidbody>();
+		//rb = thePlayer.GetComponent<Rigidbody>();
 		Invoke ("transformLocalPosition", 1.0f);
 	}
 
 	void transformLocalPosition () {
 		if (isContinueLast == true) {
 			thePlayer.transform.localPosition = 
-				GameControl.control.playerLastPosition;
+				SaveLoadManager.saloma.playerLastPosition;
 			isContinueLast = false;
 		}
 	}
