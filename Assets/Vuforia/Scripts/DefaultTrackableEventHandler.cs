@@ -17,6 +17,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
     #region PRIVATE_MEMBER_VARIABLES
 
     protected TrackableBehaviour mTrackableBehaviour;
+	string trackableName;
 
     #endregion // PRIVATE_MEMBER_VARIABLES
 
@@ -49,6 +50,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
         {
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
+			trackableName = mTrackableBehaviour.TrackableName;
             OnTrackingFound();
         }
         else if (previousStatus == TrackableBehaviour.Status.TRACKED &&
@@ -88,10 +90,15 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         foreach (var component in canvasComponents)
             component.enabled = true;
 
-		if(mTrackableBehaviour.TrackableName != "ITRamp" ||
-			mTrackableBehaviour.TrackableName != "ITCoiledSpring" ||
-			mTrackableBehaviour.TrackableName != "ITArchBridge")
+		if (trackableName == "object_ramp" ||
+		    trackableName == "object_coiled_spring" ||
+		    trackableName == "object_arch_bridge") {
+			Debug.Log ("aTimescale 0.01");
+			Time.timeScale = 0.01f;
+		} else {
+			Debug.Log ("Timescale 1");
 			Time.timeScale = 1;
+		}
 		//Debug.Log ("Time1");
     }
 

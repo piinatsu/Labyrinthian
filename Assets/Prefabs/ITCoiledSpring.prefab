@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23684941719251480}
   - component: {fileID: 95642953186940492}
   - component: {fileID: 64267236214529466}
+  - component: {fileID: 114872903664034996}
   m_Layer: 0
   m_Name: coiled_spring
   m_TagString: ActiveObject
@@ -218,6 +219,17 @@ MonoBehaviour:
   mImageTargetType: 0
   mWidth: 0.2
   mHeight: 0.133966
+--- !u!114 &114872903664034996
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1289846647524772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e0a34f1788d3cd42aac665f84b6f0f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114926306251319152
 MonoBehaviour:
   m_ObjectHideFlags: 1

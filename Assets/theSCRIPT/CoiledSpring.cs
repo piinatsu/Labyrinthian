@@ -19,8 +19,9 @@ public class CoiledSpring : MonoBehaviour {
 	void OnTriggerEnter (Collider coll) {
 		//GameObject go = coll.gameObject;
 		if (!isColliding) {
-			isColliding = true;
+			//isColliding = true;
 			if (coll.gameObject.tag == "Player") {
+				isColliding = true;
 				Rigidbody rb = coll.gameObject.GetComponent<Rigidbody> ();
 				//rb.velocity = new Vector3 (0, 50, 0);
 				rb.AddForce (new Vector3 (0, 750, 0), ForceMode.Force);
@@ -30,7 +31,9 @@ public class CoiledSpring : MonoBehaviour {
 
 	void OnTriggerExit (Collider coll) {
 		if (isColliding) {
-			isColliding = false;
+			if (coll.gameObject.tag == "Player") {
+				isColliding = false;
+			}
 		}
 	}
 }

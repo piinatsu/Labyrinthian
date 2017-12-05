@@ -20,9 +20,12 @@ public class ActiveObjectSpawner : MonoBehaviour {
 	void OnTriggerEnter (Collider coll) {
 		//Spawn.aos = this;
 		//Debug.Log(this.gameObject.transform);
-		thisAOSLocation = this.gameObject.transform;
-		//Spawn.triggeredAOSLocation = thisAOSLocation;
+		if(coll.gameObject.tag == "Player") {
+			Debug.Log("thisAOSLocation: " + this.gameObject.name);
+			thisAOSLocation = this.gameObject.transform;
+			//Spawn.triggeredAOSLocation = thisAOSLocation;
 		//Highlight.triggeredAOSLocation = thisAOSLocation;
+		}
 	}
 
 	void OnTriggerExit (Collider coll) {
@@ -35,7 +38,12 @@ public class ActiveObjectSpawner : MonoBehaviour {
 	public static void spawnObject (GameObject go) {
 		//Instantiate (go, a, b);
 		//Destroy(this.gameObject);
-		Instantiate(go, thisAOSLocation.transform.position, 
-			thisAOSLocation.transform.rotation);
+		//Instantiate(go, thisAOSLocation.transform.position, 
+			//thisAOSLocation.transform.rotation);
+		go.transform.eulerAngles = new Vector3(0,0,0);
+		Instantiate(go, 
+			thisAOSLocation.position,
+			thisAOSLocation.rotation, 
+			thisAOSLocation);
 	}
 }

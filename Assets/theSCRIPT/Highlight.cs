@@ -8,7 +8,7 @@ public class Highlight : MonoBehaviour {
 	public Material mat1;
 	public Material mat2;
 	public static Transform triggeredAOSLocation;
-	GameObject go;
+	public static GameObject go;
 	bool isActiveObject = false;
 
 	// Use this for initialization
