@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class PlayerBall : MonoBehaviour {
@@ -8,6 +9,8 @@ public class PlayerBall : MonoBehaviour {
 	public GameObject windCorr;
 	bool inWindCorridor = false;
 	Rigidbody rb;
+
+	public Text insufficientMana;
 
 	public Material[] mats;
 	Material newMat;
@@ -48,30 +51,43 @@ public class PlayerBall : MonoBehaviour {
 	public void changeMaterial () {
 		GameObject go = EventSystem.current.currentSelectedGameObject;
 		Mana.canRegen = false;
-		if (go.name == "Button_Wood") {
-			if(currentMat == "Wood")
-				changeMatToDefault ();
-			Mana.manaRegenPerSec = -1.0f;
-			rb.mass = 1;
-			currentMat = "Wood";
-			gameObject.GetComponent<Renderer>().material = mats[1];
-			Debug.Log ("Wooded");
-		} else if (go.name == "Button_Stone") {
-			if(currentMat == "Stone")
-				changeMatToDefault ();
-			Mana.manaRegenPerSec = -1.25f;
-			rb.mass = 5;
-			currentMat = "Stone";
-			gameObject.GetComponent<Renderer>().material = mats[2];
-			Debug.Log ("Stoned");
-		} else if (go.name == "Button_Metal") {
-			if(currentMat == "Metal") 
-				changeMatToDefault ();
-			Mana.manaRegenPerSec = -1.5f;
-			rb.mass = 10;
-			currentMat = "Metal";
-			gameObject.GetComponent<Renderer>().material = mats[3];
-			Debug.Log ("Metaled");
+		if (Mana.mana > 10) {
+			if (go.name == "Button_Wood") {
+				if (currentMat == "Wood") {
+					changeMatToDefault ();
+				} else {
+					Mana.slashMana (10);
+					Mana.manaRegenPerSec = -1.0f;
+					rb.mass = 1;
+					currentMat = "Wood";
+					gameObject.GetComponent<Renderer> ().material = mats [1];
+					Debug.Log ("Wooded");
+				}
+			} else if (go.name == "Button_Stone") {
+				if (currentMat == "Stone") {
+					changeMatToDefault ();
+				} else {
+					Mana.slashMana (10);
+					Mana.manaRegenPerSec = -1.25f;
+					rb.mass = 5;
+					currentMat = "Stone";
+					gameObject.GetComponent<Renderer> ().material = mats [2];
+					Debug.Log ("Stoned");
+				}
+			} else if (go.name == "Button_Metal") {
+				if (currentMat == "Metal") {
+					changeMatToDefault ();
+				} else {
+					Mana.slashMana (10);
+					Mana.manaRegenPerSec = -1.5f;
+					rb.mass = 10;
+					currentMat = "Metal";
+					gameObject.GetComponent<Renderer> ().material = mats [3];
+					Debug.Log ("Metaled");
+				}
+			}
+		} else {
+			StartCoroutine (glowInsufficientMana());
 		}
 		/*
 		if (i > mats.Length - 1) i = 0;
@@ -102,4 +118,14 @@ public class PlayerBall : MonoBehaviour {
 		Mana.manaRegenPerSec = 1.0f;
 		//Mana.canRegen = true;
 	}
+
+	IEnumerator glowInsufficientMana () {
+		if (Mana.mana < 10) {
+			insufficientMana.CrossFadeAlpha (0.5f, 1.0f, false);
+			yield return new WaitForSeconds (0.5f);
+			insufficientMana.CrossFadeAlpha (1.0f, 1.0f, false);
+		}
+		insufficientMana.CrossFadeAlpha (1.0f, 1.0f, false);
+	}
 }
+

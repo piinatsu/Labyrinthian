@@ -15,6 +15,7 @@ public class Mana : MonoBehaviour {
 	void Start () {
 		InvokeRepeating ("manaRegen", 1.0f, 1.0f);
 		mana = manaSlider.value;
+		manaRegenPerSec = 1.5f;
 	}
 
 	// Update is called once per frame
@@ -23,20 +24,22 @@ public class Mana : MonoBehaviour {
 	}
 		
 	void manaRegen () {
-		if (canRegen) {
+		//if (canRegen) {
 			mana += manaRegenPerSec;
 			//manaText.text = mana.ToString ();
 			manaSlider.value = mana;
-		}
-	}
-
-	public void shallNotRegen () {
-		canRegen = false;
+		//}
 	}
 
 	public static void slashMana (int amount) {
 		mana -= amount;
 	}
+/*
+	public void shallNotRegen () {
+		canRegen = false;
+	}
+*/
+
 	/*
 	IEnumerator drainManaToScore () {
 		while (mana > 0) {

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 65612373913761002}
   - component: {fileID: 114075531161004712}
   m_Layer: 0
-  m_Name: ActiveObjectSpawner
+  m_Name: ActiveObjectSpawner 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

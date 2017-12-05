@@ -18,6 +18,7 @@ public class MenuManager : MonoBehaviour {
 	public GameObject theStar3;
 
 	//GeneralManager gm;
+	SoundManager soma;
 
 	public GameObject canvasPauseMenu;
 	public GameObject canvasSceneMenu;
@@ -50,6 +51,7 @@ public class MenuManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//gm = FindObjectOfType<GeneralManager> ();
+		soma = FindObjectOfType<SoundManager>();
 		animor1 = theStar1.GetComponent<Animator> ();
 		animor2 = theStar2.GetComponent<Animator> ();
 		animor3 = theStar3.GetComponent<Animator> ();
@@ -85,11 +87,13 @@ public class MenuManager : MonoBehaviour {
 		//canvasPauseMenu.transform.GetChild(0).gameObject.SetActive (true);
 		//Time.timeScale = 0;
 		*/
+		soma.buttonSound ();
 		StartCoroutine(pausse(0.5f));
 	}
 
 	public void resumeTheGame () {
 		//Time.timeScale = 1;
+		soma.buttonSound ();
 		StartCoroutine(unpausse(0.5f));
 		/*
 		//img.CrossFadeAlpha (0.0f, 0.5f, true);
@@ -99,6 +103,7 @@ public class MenuManager : MonoBehaviour {
 	}
 
 	public void exitTheGame () {
+		soma.buttonSound ();
 
 		lastPositionX = thePlayer.transform.localPosition.x;
 		lastPositionY = thePlayer.transform.localPosition.y;
@@ -118,34 +123,38 @@ public class MenuManager : MonoBehaviour {
 		Debug.Log ("Saved Last Scene: " + lastScene);
 		Debug.Log ("Saved Last Position: " + 
 			lastPositionX + " " + lastPositionY + " " +lastPositionZ);
-
+		
 		SceneManager.LoadScene("M0-Home");
 		//SceneManager.LoadScene (0);
 		//SceneManager.LoadScene ("Main Menu", LoadSceneMode.Single);
 	}
 
 	public void helpTheGame () {
-		
+		soma.buttonSound ();
 	}
 
 	public void scanningModule () {
+		soma.buttonSound ();
 		GlobalVariables.originScene = SceneManager.GetActiveScene ().name;
 		StartCoroutine(scanMod(0.5f));
 	}
 	//-----------------------------------------------------	
 	public void snaegel () {
+		soma.buttonSound ();
 		StartCoroutine (snaegelCR ());
 		Mana.slashMana (35);
 		//gm.skillScoring (50);
 	}
 
 	public void chronica () {
+		soma.buttonSound ();
 		StartCoroutine (chronicaCR ());
 		Mana.slashMana (75);
 		//gm.skillScoring (100);
 	}
 
 	public void opthalos () {
+		soma.buttonSound ();
 		StartCoroutine (opthalosCR ());
 		Mana.slashMana (95);
 		//gm.skillScoring (200);
