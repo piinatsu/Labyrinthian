@@ -30,6 +30,10 @@ public class MenuManager : MonoBehaviour {
 	public Text praiseText;
 	public Text scoreText;
 
+	public GameObject pauseText;
+	public GameObject gameOverText;
+	public GameObject startLine;
+
 	//duplicate manaBar for canvasResultMenu
 	public Slider manaBar;
 
@@ -88,7 +92,7 @@ public class MenuManager : MonoBehaviour {
 		//Time.timeScale = 0;
 		*/
 		soma.buttonSound ();
-		StartCoroutine(pausse(0.5f));
+		StartCoroutine (pausse (0.5f));
 	}
 
 	public void resumeTheGame () {
@@ -105,9 +109,15 @@ public class MenuManager : MonoBehaviour {
 	public void exitTheGame () {
 		soma.buttonSound ();
 
-		lastPositionX = thePlayer.transform.localPosition.x;
-		lastPositionY = thePlayer.transform.localPosition.y;
-		lastPositionZ = thePlayer.transform.localPosition.z;
+		if (thePlayer == null) {
+			lastPositionX = startLine.transform.localPosition.x;
+			lastPositionY = startLine.transform.localPosition.y;
+			lastPositionZ = startLine.transform.localPosition.z;
+		} else if (thePlayer != null) {
+			lastPositionX = thePlayer.transform.localPosition.x;
+			lastPositionY = thePlayer.transform.localPosition.y;
+			lastPositionZ = thePlayer.transform.localPosition.z;
+		}
 		//lastPosition = thePlayer.transform.position;
 		lastScene = SceneManager.GetActiveScene().buildIndex;
 		lastSceneString = SceneManager.GetActiveScene ().name;
@@ -131,6 +141,24 @@ public class MenuManager : MonoBehaviour {
 
 	public void helpTheGame () {
 		soma.buttonSound ();
+	}
+
+	public void restartTheGame () {
+		soma.buttonSound ();
+		string currentSceneString = SceneManager.GetActiveScene ().name;
+		SceneManager.LoadScene (currentSceneString);
+	}
+
+	public void deathPause () {
+		//GameObject pauseText = 
+			//canvasPauseMenu.transform.Find ("PAUSED_Text").gameObject;
+			//GameObject.Find ("PAUSED_Text");
+		//GameObject gameoverText = 
+			//canvasPauseMenu.transform.Find("GAMEOVER_Text").gameObject;
+			//GameObject.Find("GAMEOVER_Text");
+		StartCoroutine (pausse (0.5f));
+		pauseText.SetActive (false);
+		gameOverText.SetActive (true);
 	}
 
 	public void scanningModule () {

@@ -51,9 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e2d106d919ef6940917a845cf269c72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasDialogMenu: {fileID: 1938562981381852, guid: 18c6932a80b77b34e908557bf10c5f8f,
-    type: 2}
-  textHolder: {fileID: 0}
+  canvasDialogMenu: {fileID: 0}
+  textContainer: {fileID: 0}
   textFile: {fileID: 4900000, guid: 594bef3bf9e5e7b4b839c1302aee601d, type: 3}
   textFileAncient: {fileID: 4900000, guid: e22b657ef83db7e429c7f5e13bc8176d, type: 3}
   startLine: 0

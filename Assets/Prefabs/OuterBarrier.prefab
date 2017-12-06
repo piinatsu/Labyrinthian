@@ -64,3 +64,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75434aef23a5ca64ead21c96c2e2b594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soma: {fileID: 114098680055033604, guid: 68da735f7f98b6a4eba872e0187634a7, type: 2}
+  menma: {fileID: 114235400679816322, guid: 34d41633a23a4e145bcae5dd7e2fb9ac, type: 2}

@@ -10,7 +10,9 @@ public class PlayerBall : MonoBehaviour {
 	bool inWindCorridor = false;
 	Rigidbody rb;
 
-	public Text insufficientMana;
+	//public Text insufficientMana;
+	public GameObject insufficientMana;
+	public static bool manaDepleted = false;
 
 	public Material[] mats;
 	Material newMat;
@@ -23,7 +25,10 @@ public class PlayerBall : MonoBehaviour {
 	}
 
 	void Update () {
-
+		if (manaDepleted) {
+			changeMatToDefault ();
+			manaDepleted = false;
+		}
 	}
 
 	void FixedUpdate () {
@@ -51,37 +56,37 @@ public class PlayerBall : MonoBehaviour {
 	public void changeMaterial () {
 		GameObject go = EventSystem.current.currentSelectedGameObject;
 		Mana.canRegen = false;
-		if (Mana.mana > 10) {
+		if (Mana.mana > 10 || (Mana.mana < 10 && go.name == currentMat)) {
 			if (go.name == "Button_Wood") {
-				if (currentMat == "Wood") {
+				if (currentMat == "Button_Wood") {
 					changeMatToDefault ();
 				} else {
 					Mana.slashMana (10);
-					Mana.manaRegenPerSec = -1.0f;
+					Mana.manaRegenPerSec = -.5f;
 					rb.mass = 1;
-					currentMat = "Wood";
+					currentMat = "Button_Wood";
 					gameObject.GetComponent<Renderer> ().material = mats [1];
 					Debug.Log ("Wooded");
 				}
 			} else if (go.name == "Button_Stone") {
-				if (currentMat == "Stone") {
+				if (currentMat == "Button_Stone") {
 					changeMatToDefault ();
 				} else {
 					Mana.slashMana (10);
-					Mana.manaRegenPerSec = -1.25f;
+					Mana.manaRegenPerSec = -.5f;
 					rb.mass = 5;
-					currentMat = "Stone";
+					currentMat = "Button_Stone";
 					gameObject.GetComponent<Renderer> ().material = mats [2];
 					Debug.Log ("Stoned");
 				}
 			} else if (go.name == "Button_Metal") {
-				if (currentMat == "Metal") {
+				if (currentMat == "Button_Metal") {
 					changeMatToDefault ();
 				} else {
 					Mana.slashMana (10);
-					Mana.manaRegenPerSec = -1.5f;
+					Mana.manaRegenPerSec = -.5f;
 					rb.mass = 10;
-					currentMat = "Metal";
+					currentMat = "Button_Metal";
 					gameObject.GetComponent<Renderer> ().material = mats [3];
 					Debug.Log ("Metaled");
 				}
@@ -119,13 +124,18 @@ public class PlayerBall : MonoBehaviour {
 		//Mana.canRegen = true;
 	}
 
+
 	IEnumerator glowInsufficientMana () {
 		if (Mana.mana < 10) {
-			insufficientMana.CrossFadeAlpha (0.5f, 1.0f, false);
-			yield return new WaitForSeconds (0.5f);
-			insufficientMana.CrossFadeAlpha (1.0f, 1.0f, false);
+			insufficientMana.SetActive (true);
+			//insufficientMana.CrossFadeAlpha (0.5f, 1.0f, false);
+			//yield return new WaitForSeconds (0.5f);
+			//insufficientMana.CrossFadeAlpha (1.0f, 1.0f, false);
+		} else {
+			insufficientMana.SetActive (false);
+			//insufficientMana.CrossFadeAlpha (1.0f, 1.0f, false);
 		}
-		insufficientMana.CrossFadeAlpha (1.0f, 1.0f, false);
+		yield return null;
 	}
 }
 

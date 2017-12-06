@@ -44,11 +44,11 @@ MonoBehaviour:
       ContainsMagnet: 0
   databaseLoad:
     dataSetsToLoad:
-    - Labyrinthian_DB_2
     - Labyrinthian
+    - Labyrinthian_DB_2
     dataSetsToActivate:
-    - Labyrinthian
     - Labyrinthian_DB_2
+    - Labyrinthian
   videoBackground:
     clippingMode: 0
     numDivisions: 2

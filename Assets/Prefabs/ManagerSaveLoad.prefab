@@ -51,3 +51,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef019af03cee44d4d8286caf39dc05f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastScene: 0
+  lastSceneString: 
+  playerLastPosition: {x: 0, y: 0, z: 0}

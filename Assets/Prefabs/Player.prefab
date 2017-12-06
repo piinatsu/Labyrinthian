@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 135255817553946240}
   - component: {fileID: 23477877717409076}
   - component: {fileID: 54603753460297774}
-  - component: {fileID: 114531986115180038}
+  - component: {fileID: 114360694256772514}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1088045628290400}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -0.245, y: 0.072876, z: -0.319}
+  m_LocalPosition: {x: 0.27, y: 0.072876, z: 1.036}
   m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,7 +100,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114531986115180038
+--- !u!114 &114360694256772514
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -108,10 +108,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1088045628290400}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7e87df7ace0f0e4d9fd61287d209aa7, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b46705e43c779a4d991d2154e2ffdd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  windCorr: {fileID: 0}
+  windCorr: {fileID: 1788711341767710, guid: 11e5b3a24426bc149944af967fb62ab2, type: 2}
+  insufficientMana: {fileID: 0}
   mats:
   - {fileID: 2100000, guid: c01f7de8545b51f42848fc61aaab200d, type: 2}
   - {fileID: 2100000, guid: ce4b77858ec6c0f469b07b034c21a85f, type: 2}

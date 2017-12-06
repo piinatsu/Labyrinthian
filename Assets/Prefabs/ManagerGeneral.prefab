@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8652df4a9e429ed409369776e0c22363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theCam: {fileID: 1587170272052300, guid: 9df73f864aea2c143a3fd51dc020c02d, type: 2}
+  theCam: {fileID: 0}
   theWall: {fileID: 0}
-  thePlayer: {fileID: 1088045628290400, guid: aaa520accde720447b7887375f089785, type: 2}
+  thePlayer: {fileID: 0}
   theScore: 1000

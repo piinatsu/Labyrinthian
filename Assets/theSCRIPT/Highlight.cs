@@ -9,7 +9,10 @@ public class Highlight : MonoBehaviour {
 	public Material mat2;
 	public static Transform triggeredAOSLocation;
 	public static GameObject go;
-	bool isActiveObject = false;
+	GameObject go2;
+	//bool isActiveObject = false;
+	public GameObject activeObjectHolder;
+	string stringGOToBeActivated;
 
 	// Use this for initialization
 	void Start () {
@@ -18,31 +21,40 @@ public class Highlight : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		if (Input.GetMouseButtonDown (0)) {
 			RaycastHit hit;
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 			if (!isHighlighted) {
 				if (Physics.Raycast (ray, out hit, Mathf.Infinity)) {
 					go = hit.collider.gameObject;
-					if (go.tag == "ActiveObject") {
+					if (go.CompareTag("ActiveObject")) {
+						stringGOToBeActivated = go.name;
 						go.GetComponent<Renderer> ().material = mat2;
 						isHighlighted = true;
-						isActiveObject = true;
+						//isActiveObject = true;
+						go2 = activeObjectHolder.transform.
+							Find (stringGOToBeActivated).gameObject;
+						go2.SetActive(true);
 					}
 				}
-				if(isActiveObject)
-					ActiveObjectSpawner.spawnObject (go);
+				//if(isActiveObject)
+					//ActiveObjectSpawner.spawnObject (go);
 			} else if (isHighlighted) {
 				if (Physics.Raycast (ray, out hit, Mathf.Infinity)) {
 					go = hit.collider.gameObject;
 					if (go.tag == "ActiveObject") {
+						stringGOToBeActivated = go.name;
 						go.GetComponent<Renderer> ().material = mat1;
 						isHighlighted = false;
-						isActiveObject = true;
+						//isActiveObject = true;
+						go2 = activeObjectHolder.transform.
+							Find (stringGOToBeActivated).gameObject;
+						go2.SetActive(false);
 					}
 				}
-				if(isActiveObject)
-					ActiveObjectSpawner.spawnObject (new GameObject());
+				//if(isActiveObject)
+					//ActiveObjectSpawner.spawnObject (new GameObject());
 			}
 		}
 	}

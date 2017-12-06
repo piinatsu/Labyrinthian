@@ -29,7 +29,7 @@ public class NavRef : MonoBehaviour {
 	}
 
 	public void meNav_gotoQuitGame () {
-		//exit the application
+		Application.Quit ();
 	}
 
 	public void meNav_gotoLastPlayed () {

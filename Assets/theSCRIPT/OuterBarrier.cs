@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class OuterBarrier : MonoBehaviour {
-
+	public SoundManager soma;
+	public MenuManager menma;
 	// Use this for initialization
 	void Start () {
 		
@@ -18,7 +19,13 @@ public class OuterBarrier : MonoBehaviour {
 		//if (coll.gameObject.tag == "Fire") {
 			//Debug.Log ("Exited some collider");
 			GameObject go = coll.gameObject;
+		if (go.CompareTag ("Player")) {
+			soma.deathSound ();
 			Destroy (go);
+			menma.deathPause ();
+		} else {
+			Destroy (go);
+		}
 		//}
 	}
 }

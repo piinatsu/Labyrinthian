@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class Mana : MonoBehaviour {
 
-	//public Text manaText;
 	public static float mana;
 	public static float manaRegenPerSec;
 	public static bool canRegen = true;
 	public Slider manaSlider;
+	public Text manaText;
 
 	// Use this for initialization
 	void Start () {
 		InvokeRepeating ("manaRegen", 1.0f, 1.0f);
 		mana = manaSlider.value;
-		manaRegenPerSec = 1.5f;
+		manaRegenPerSec = 1.0f;
 	}
 
 	// Update is called once per frame
@@ -26,7 +26,10 @@ public class Mana : MonoBehaviour {
 	void manaRegen () {
 		//if (canRegen) {
 			mana += manaRegenPerSec;
-			//manaText.text = mana.ToString ();
+		if (mana < 1.0f) {
+			PlayerBall.manaDepleted = true;
+		}
+			manaText.text = mana.ToString ();
 			manaSlider.value = mana;
 		//}
 	}

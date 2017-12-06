@@ -224,3 +224,4 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  soma: {fileID: 114098680055033604, guid: 68da735f7f98b6a4eba872e0187634a7, type: 2}

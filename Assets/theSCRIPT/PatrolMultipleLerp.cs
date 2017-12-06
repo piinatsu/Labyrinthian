@@ -12,6 +12,7 @@ public class PatrolMultipleLerp : MonoBehaviour {
 	private float startTime, journeyLength;
 	bool goBack = false;
 	public static bool chronicaFlag = false;
+	public SoundManager soma;
 
 	void Start () {
 		sSpeed = speed;
@@ -87,12 +88,15 @@ public class PatrolMultipleLerp : MonoBehaviour {
 				GetComponent<Renderer> ().material.name;
 			if (enemyMat == "Red (Instance)" && 
 				playerMat == "WoodSurface (Instance)") {
+				soma.deathSound ();
 				Destroy (target.gameObject);
 			} else if (enemyMat == "Yellow (Instance)" && 
 				playerMat == "MetalSurface (Instance)") {
+				soma.deathSound ();
 				Destroy (target.gameObject);
 			} else if (enemyMat == "Light Blue (Instance)" && 
 				playerMat == "StoneSurface (Instance)") {
+				soma.deathSound ();
 				Destroy (target.gameObject);
 			}
 		}
