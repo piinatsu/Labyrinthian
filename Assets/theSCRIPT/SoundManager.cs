@@ -5,7 +5,9 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour {
 	public AudioSource source;
 	public AudioClip[] buttonClip;
-	public AudioClip deathClip;
+
+	//public AudioSource deathSource;
+
 	// Use this for initialization
 	void Awake () {
 		//source = GetComponent<AudioSource> ();
@@ -22,12 +24,16 @@ public class SoundManager : MonoBehaviour {
 		source.PlayOneShot (buttonClip [i], volume);
 		//btnSnd();
 	}
-
+	/*
 	public void deathSound() {
-		Debug.Log ("11111111111");
-		source.PlayOneShot (deathClip, 1.0f);
-		Debug.Log ("22222222222");
-	}
+		//source.PlayOneShot (buttonClip[6], 1.0f);
+		deathSource.Play();
+	}*/
+	/*
+	public static void deathSound() {
+		deathSource.PlayOneShot (deathClip, 1.0f);
+		//source.PlayOneShot (deathClip, 1.0f);
+	}*/
 
 	/*
 	void btnSnd () {

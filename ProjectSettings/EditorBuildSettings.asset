@@ -32,3 +32,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ScanningModule.unity
     guid: a9b2096322fd9704fbbdaa56aad0bfa7
+  - enabled: 1
+    path: Assets/LoadingScene.unity
+    guid: ed0f4f3ab894a8d4da64412136f56549

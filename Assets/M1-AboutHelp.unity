@@ -1698,7 +1698,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1196974849}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 58.09471, z: 0}
+  m_LocalPosition: {x: 0, y: 184.55957, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2046876127}
@@ -1882,7 +1882,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1445234787}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 877.5, y: -406.5, z: 0}
+  m_LocalPosition: {x: 877.5, y: -776.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1694426472}
@@ -1925,8 +1925,43 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "asfjbsdobwe jfboudnosin\ndfisndivn\nsdfnweofn\nsoisidfjsdnfskdnflks\ndnfksldnflskdngslkdngf
-    qwjfndofibnO ERG 'odbnOERUTBWOTB;jd\ng bsad gadknnfgWENSDNAS\nOIUW809573498YTERUG\nYDAIUVHB;\nKJCBVZ;KJDBA;JGHA4W[O\nUTY3Q489Y5=[Q3\n49T0UA[DIOG\nPJFDZPK'JZ'KNDPJnnpiajt\n9q035u6\t9]0UJIERHJNIDFL\nKHNAE'IROPHJEA\nPIR0HJNEAPIRNGIPAG\nHASJLDGNSJFHOWIEH3\n8U4TIWPJFP[ASJF\n[PWOJEG9-HDSOUGB\nH[80H[08hdfgpinq4309\nug09WHEJGISHFJISHJ]9hjsdfjhpoekdfogkd\n\n"
+  m_Text: "You are somehow got transported and stranded in a universe not like your
+    own. You are tasked to navigate through a series of ancient ruin labyrinths and
+    find your way back home.\r\n\r\nBefore the Journey Begins:\r\nI.\tThe Rules Law
+    of the Jungle\r\n1.\tThere is no hit-point system, instead you have energy point
+    to spend on skills and it regenerates every second by a set amount.\r\n2.\tUse
+    your energy point wisely. Just because energy regenerates every second doesn\u2019t
+    mean you can spam skills like madman. You\u2019ll regret it when you urgently
+    need it down the line.\r\n3.\tBecause there is no such thing as hit points. Once
+    you die, you die and that\u2019s it. You lost all progress made in current stage
+    and you are then taken back to the very start of current stage.\r\n4.\tDespite
+    this permadeath-like system, you have infinite lives and can try (and die) again
+    as many time as you like without any repercussion whatsoever. Scoring will also
+    not be affected.\r\n5.\tYou can die by two ways: touching an enemy or going out
+    of bounds.\r\n6.\tThe clock is ticking. You are given a set amount of score point
+    prior to starting a stage and this score point ticks down every second spent in-game.\r\n7.\tBy
+    the end of a stage, any unspent energy points will be converted into your score.\r\n\r\nII.\tKnow
+    Yourself and Your Enemies Thyself and Thy Enemies\r\n1.\tYou have three skills
+    and each skill consumes energy. These skills are as follow:\r\n2.\tSnaegel \u2013
+    slows down all active enemies\u2019 movement and consumes 35 energy point.\r\n3.\tChronica
+    \u2013 halts all active enemies\u2019 movement and consumes 65 energy point.\r\n4.\tOpthalos
+    \u2013 grants temporary invulnerability against all kinds of damages and invisibility
+    to pass through walls. Consumes 95 energy points.\r\n5.\tYou can change into four
+    different materials each with its own unique attributes.\r\na.\tWood material
+    \u2013 fire vulnerability - resists water and lightning enemies \u2013 lightest
+    mass\r\nb.\tStone material \u2013 water vulnerability - resists fire and lightning
+    enemies\r\nc.\tMetal material \u2013 lightning vulnerability - resists fire and
+    water enemies \u2013 heaviest mass\r\nd.\tDefault material \u2013 same as wood
+    but resists nothing\r\n6.\tChanging into any other material than default material
+    will negate your energy regeneration and decrease it every second.\r\n7.\tIn-game
+    enemies can be separated into two broad categories: active and passive.\r\n8.\tActive
+    enemies move in predefined set of patterns while passive enemies are stationary.\r\n9.\tActive
+    enemies further divided by their unique attributes. These are:\r\na.\tRed enemy
+    \u2013 Fire attribute \u2013 destroys wood\r\nb.\tBlue enemy \u2013 Water attribute
+    \u2013 destroys stone\r\nc.\tYellow enemy \u2013 Lightning attribute \u2013 destroys
+    metal\r\n10.\tAs you probably can tell by their name and color alone, certain
+    enemies are useless against certain materials. Plan ahead carefully and counter
+    these enemies in conjunction with your material-changing ability.\r\n\r\nIII.\tPreparation\r\n"
 --- !u!222 &1445234790
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2107,7 +2142,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1196974850}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.8204182
+  m_Size: 0.4294913
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

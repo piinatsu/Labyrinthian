@@ -23,14 +23,18 @@ public class DialogManager : MonoBehaviour {
 	public int endLineAncient;
 	int currentLine;
 	int currentLineAncient;
-	bool isAncientText = false;
+	public static bool isAncientText = false;
 
 	// Use this for initialization
 	void Start () {
 		//canvasDialogMenu = GetComponent<Canvas> ();
 		//GameObject obj = GameObject.Find ("CanvasDialogMenu");
 		//DialogManager dmInstance = obj.GetComponent<DialogManager> ();
-		canvasDialogMenu.SetActive (false);
+
+		//canvasDialogMenu.SetActive (false);
+
+		//textContainer = gameObject.GetComponent<Text> ();
+
 		if (textFile != null) {
 			textLines = (textFile.text.Split ('\n'));
 		}
@@ -48,35 +52,62 @@ public class DialogManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (isAncientText) {
-			textContainer.text = textLinesAncient [currentLineAncient];
-			if (currentLineAncient > endLineAncient) {
-				Time.timeScale = 1;
-				canvasDialogMenu.SetActive (false);
-			} else {
-				textContainer.text = textLines [currentLine];
-				if (currentLine > endLine) {
+		/*
+		if (canvasDialogMenu.activeSelf) {
+			if (isAncientText) {
+				Debug.Log (textLinesAncient [currentLineAncient]);
+				textContainer.text = textLinesAncient [currentLineAncient];
+				if (currentLineAncient > endLineAncient) {
 					Time.timeScale = 1;
 					canvasDialogMenu.SetActive (false);
+				} else {
+					textContainer.text = textLines [currentLine];
+					if (currentLine > endLine) {
+						Time.timeScale = 1;
+						canvasDialogMenu.SetActive (false);
+					}
 				}
+			}
+		}
+		*/
+	}
+
+	void proceedDialog () {
+		if (isAncientText) {
+			if (currentLineAncient <= endLineAncient) {
+				textContainer.text = textLinesAncient [currentLineAncient];
+			} else if (currentLineAncient > endLineAncient) {
+				Time.timeScale = 1;
+				canvasDialogMenu.SetActive (false);
+			}
+
+		} else {
+			if (currentLine <= endLine) {
+				textContainer.text = textLines [currentLine];
+			} else if (currentLine > endLine) {
+				Time.timeScale = 1;
+				canvasDialogMenu.SetActive (false);
 			}
 		}
 	}
 
 	public void nextDialog () {
-		if (isAncientText) {
+		Debug.Log ("Next Dialog");
+		if (isAncientText)
 			currentLineAncient++;
-		} else {
+		else
 			currentLine++;
-		}
+		proceedDialog ();
 	}
 
 	public void previousDialog () {
+		Debug.Log ("Previous Dialog");
 		if (isAncientText) {
 			currentLineAncient--;
 		} else {
 			currentLine--;
 		}
+		proceedDialog ();
 	}
 
 	public static void canvasActivation (bool tof) {

@@ -224,4 +224,5 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  soma: {fileID: 114098680055033604, guid: 68da735f7f98b6a4eba872e0187634a7, type: 2}
+  soma: {fileID: 114285387025286814, guid: eed362e2a12a91844ba6786a5eb94e89, type: 2}
+  ausrc: {fileID: 82244636457653728, guid: 9457ab1deb6983b4ca45a173281bdb86, type: 2}

@@ -51,6 +51,7 @@ public class MenuManager : MonoBehaviour {
 	public static float lastPositionZ;
 	bool scanModPause = false;
 	string praise;
+	public static bool finishedScoring = false;
 
 	// Use this for initialization
 	void Start () {
@@ -292,6 +293,19 @@ public class MenuManager : MonoBehaviour {
 		yield return new WaitForSecondsRealtime (1);
 	}
 
+	public IEnumerator gameFinisedIE (int fScore, int fMana) {
+		canvasResultMenu.SetActive (true);
+		manaBar.value = fMana;
+		while (fMana > 0) {
+			fMana -= 1;
+			manaBar.value = fMana;
+			fScore += 1;
+			scoreText.text = fScore.ToString ();
+			yield return new WaitForSecondsRealtime(0.025f);
+		}
+		gameFinished (fScore);
+	}
+
 	public void gameFinished (int fScore) {
 		canvasResultMenu.SetActive (true);
 		/*
@@ -331,19 +345,6 @@ public class MenuManager : MonoBehaviour {
 		scoreText.text = fScore.ToString ();
 	}
 
-	public IEnumerator gameFinisedIE (int fScore, int fMana) {
-		canvasResultMenu.SetActive (true);
-		manaBar.value = fMana;
-		while (fMana > 0) {
-			fMana -= 1;
-			manaBar.value = fMana;
-			fScore += 1;
-			scoreText.text = fScore.ToString ();
-			yield return new WaitForSecondsRealtime(0.025f);
-		}
-		gameFinished (fScore);
-	}
-
 	public void star1 () {
 		animor1.SetInteger("AnimState", 1);
 		animor2.SetInteger("AnimState", 2);
@@ -361,10 +362,11 @@ public class MenuManager : MonoBehaviour {
 	}
 
 	public void closeResult() {
+		finishedScoring = true;
 		canvasResultMenu.SetActive (false);
 		canvasDialogMenu.SetActive (true);
+		DialogManager.isAncientText = true;
 	}
-
 }
 [System.Serializable]
 class menmaLastData {

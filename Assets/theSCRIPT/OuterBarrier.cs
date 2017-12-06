@@ -5,6 +5,7 @@ using UnityEngine;
 public class OuterBarrier : MonoBehaviour {
 	public SoundManager soma;
 	public MenuManager menma;
+	public AudioSource ausrc;
 	// Use this for initialization
 	void Start () {
 		
@@ -20,7 +21,8 @@ public class OuterBarrier : MonoBehaviour {
 			//Debug.Log ("Exited some collider");
 			GameObject go = coll.gameObject;
 		if (go.CompareTag ("Player")) {
-			soma.deathSound ();
+			ausrc.Play ();
+			//soma.deathSound ();
 			Destroy (go);
 			menma.deathPause ();
 		} else {

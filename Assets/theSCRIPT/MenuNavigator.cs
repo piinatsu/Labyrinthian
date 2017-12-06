@@ -66,6 +66,10 @@ public class MenuNavigator: MonoBehaviour {
 		help.SetActive(false);
 	}
 
+	void gotoQuit () {
+		Application.Quit ();
+	}
+
 	public void gotoHome() {
 		SceneManager.LoadScene ("M0-Home");
 	}
