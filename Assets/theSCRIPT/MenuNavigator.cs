@@ -87,6 +87,7 @@ public class MenuNavigator: MonoBehaviour {
 	}
 
 	public void gotoQuitGame () {
+		Application.Quit ();
 	}
 
 	public void gotoLastPlayed () {

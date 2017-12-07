@@ -35,3 +35,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/LoadingScene.unity
     guid: ed0f4f3ab894a8d4da64412136f56549
+  - enabled: 1
+    path: Assets/LoadScene.unity
+    guid: 00155b4094d3f354a873235c8cb469e1

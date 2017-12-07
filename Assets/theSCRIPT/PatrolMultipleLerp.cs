@@ -14,6 +14,7 @@ public class PatrolMultipleLerp : MonoBehaviour {
 	public static bool chronicaFlag = false;
 	public SoundManager soma;
 	public AudioSource ausrc;
+	public MenuManager menma;
 
 	void Start () {
 		sSpeed = speed;
@@ -83,6 +84,7 @@ public class PatrolMultipleLerp : MonoBehaviour {
 
 	void OnTriggerEnter(Collider target) {
 		if (target.tag == "Player") {
+			Debug.Log ("Player Detected");
 			string playerMat = target.gameObject.
 				GetComponent<Renderer> ().material.name;
 			string enemyMat = gameObject.
@@ -91,22 +93,28 @@ public class PatrolMultipleLerp : MonoBehaviour {
 				playerMat == "WoodSurface (Instance)") {
 				//soma.buttonSound ();
 				//soma.deathSound();
-				ausrc.Play ();
+				//ausrc.Play ();
+				Debug.Log ("Player Hit");
 				Destroy (target.gameObject);
+				menma.deathPause ();
 				//StartCoroutine(hideThenDestroy(target.gameObject));
 			} else if (enemyMat == "Yellow (Instance)" && 
 				playerMat == "MetalSurface (Instance)") {
 				//soma.buttonSound ();
 				//soma.deathSound();
-				ausrc.Play ();
+				//ausrc.Play ();
+				Debug.Log ("Player Hit");
 				Destroy (target.gameObject);
+				menma.deathPause ();
 				//StartCoroutine(hideThenDestroy(target.gameObject));
 			} else if (enemyMat == "Light Blue (Instance)" && 
 				playerMat == "StoneSurface (Instance)") {
 				//soma.buttonSound ();
 				//soma.deathSound();
-				ausrc.Play ();
+				//ausrc.Play ();
+				Debug.Log ("Player Hit");
 				Destroy (target.gameObject);
+				menma.deathPause ();
 				//StartCoroutine(hideThenDestroy(target.gameObject));
 			}
 		}

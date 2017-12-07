@@ -84,7 +84,7 @@ public class LoadingScreenManager : MonoBehaviour {
 		FadeOut();
 
 		yield return new WaitForSeconds(fadeDuration);
-
+		//diven modified UnloadScene to UnloadSceneAsync
 		if (loadSceneMode == LoadSceneMode.Additive)
 			SceneManager.UnloadScene(currentScene.name);
 		else

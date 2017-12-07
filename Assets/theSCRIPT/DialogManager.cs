@@ -93,19 +93,23 @@ public class DialogManager : MonoBehaviour {
 
 	public void nextDialog () {
 		Debug.Log ("Next Dialog");
-		if (isAncientText)
-			currentLineAncient++;
-		else
-			currentLine++;
-		proceedDialog ();
+		if ((currentLineAncient) - 1 > 0) {
+			if (isAncientText)
+				currentLineAncient++;
+			else
+				currentLine++;
+			proceedDialog ();
+		}
 	}
 
 	public void previousDialog () {
 		Debug.Log ("Previous Dialog");
-		if (isAncientText) {
-			currentLineAncient--;
-		} else {
-			currentLine--;
+		if ((currentLine - 1) > 0) {
+			if (isAncientText) {
+				currentLineAncient--;
+			} else {
+				currentLine--;
+			}
 		}
 		proceedDialog ();
 	}

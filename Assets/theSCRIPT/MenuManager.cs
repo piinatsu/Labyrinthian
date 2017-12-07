@@ -109,7 +109,7 @@ public class MenuManager : MonoBehaviour {
 
 	public void exitTheGame () {
 		soma.buttonSound ();
-
+		/*
 		if (thePlayer == null) {
 			lastPositionX = startLine.transform.localPosition.x;
 			lastPositionY = startLine.transform.localPosition.y;
@@ -134,7 +134,7 @@ public class MenuManager : MonoBehaviour {
 		Debug.Log ("Saved Last Scene: " + lastScene);
 		Debug.Log ("Saved Last Position: " + 
 			lastPositionX + " " + lastPositionY + " " +lastPositionZ);
-		
+		*/
 		SceneManager.LoadScene("M0-Home");
 		//SceneManager.LoadScene (0);
 		//SceneManager.LoadScene ("Main Menu", LoadSceneMode.Single);
