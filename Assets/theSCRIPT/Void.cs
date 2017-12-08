@@ -6,6 +6,7 @@ public class Void : MonoBehaviour {
 
 	public Vector3 Axis;
 	public float Velocity = 5f;
+	public MenuManager menma;
 
 	// Use this for initialization
 	void Start () {
@@ -21,5 +22,6 @@ public class Void : MonoBehaviour {
 	void OnTriggerEnter(Collider target) {
 		if (target.tag == "Player")
 			Destroy (target.gameObject);
+		menma.deathPause ();
 	}
 }

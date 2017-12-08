@@ -22,11 +22,11 @@ public class DialogManager : MonoBehaviour {
 	public int endLine;
 	public int startLineAncient;
 	public int endLineAncient;
-	int currentLine;
+	//int currentLine;
 	int currentLineAncient;
 	public static bool isAncientText = false;
 	public GameObject dialogEndArrowNextLevel;
-	bool canShowArrow = false;
+	//bool canShowArrow = false;
 
 	// Use this for initialization
 	void Start () {
@@ -49,16 +49,16 @@ public class DialogManager : MonoBehaviour {
 			endLine = textLines.Length - 1;
 		}
 
-		currentLine = startLine;
+		//currentLine = startLine;
 		currentLineAncient = startLineAncient;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(canShowArrow)
-			dialogEndArrowNextLevel.SetActive (true);
-		else if (!canShowArrow)
-			dialogEndArrowNextLevel.SetActive (false);
+		//if(canShowArrow)
+		//	dialogEndArrowNextLevel.SetActive (true);
+		//else if (!canShowArrow)
+		//	dialogEndArrowNextLevel.SetActive (false);
 		/*
 		if (canvasDialogMenu.activeSelf) {
 			if (isAncientText) {
@@ -80,38 +80,46 @@ public class DialogManager : MonoBehaviour {
 	}
 
 	void proceedDialog () {
-		if (isAncientText) {
-			if (currentLineAncient <= endLineAncient) {
-				textContainer.text = textLinesAncient [currentLineAncient];
-			} else if (currentLineAncient > endLineAncient) {
-				textContainer.text = "Touch the arrow if you're ready for next level.\n" +
-					"Touch me if you want me to repeat.";
-				canShowArrow = true;
-				//dialogEndArrowNextLevel.SetActive (true);
-
-				//Time.timeScale = 1;
-				//canvasDialogMenu.SetActive (false);
-			}
-
-		} else {
-			if (currentLine <= endLine) {
-				textContainer.text = textLines [currentLine];
-			} else if (currentLine > endLine) {
-				Time.timeScale = 1;
-				canvasDialogMenu.SetActive (false);
-			}
-		}
+		if (currentLineAncient <= endLineAncient) {
+			textContainer.text = textLinesAncient [currentLineAncient];
+		} //else if (currentLineAncient > endLineAncient) {
+			//textContainer.text = "Touch the arrow if you're ready.\nTouch me if you want me to repeat.";
+			//canShowArrow = true;
+		//}
+//		if (isAncientText) {
+//			if (currentLineAncient <= endLineAncient) {
+//				textContainer.text = textLinesAncient [currentLineAncient];
+//			} else if (currentLineAncient > endLineAncient) {
+//				textContainer.text = "Touch the arrow if you're ready for next level.\nTouch me if you want me to repeat.";
+//				canShowArrow = true;
+//				//dialogEndArrowNextLevel.SetActive (true);
+//
+//				//Time.timeScale = 1;
+//				//canvasDialogMenu.SetActive (false);
+//			}
+//
+//		} else {
+//			if (currentLine <= endLine) {
+//				textContainer.text = textLines [currentLine];
+//			} else if (currentLine > endLine) {
+//				Time.timeScale = 1;
+//				canvasDialogMenu.SetActive (false);
+//			}}
 	}
 
 	public void nextDialog () {
 		Debug.Log ("Next Dialog");
 		if ((currentLineAncient) - 1 > 0) {
-			if (isAncientText)
 				currentLineAncient++;
-			else
-				currentLine++;
 			proceedDialog ();
 		}
+//		if ((currentLineAncient) - 1 > 0) {
+//			if (isAncientText)
+//				currentLineAncient++;
+//			else
+//				currentLine++;
+//			proceedDialog ();
+//		}
 	}
 
 	public void previousDialog () {
@@ -137,6 +145,11 @@ public class DialogManager : MonoBehaviour {
 		currentScene += 1;
 		SceneManager.LoadScene (currentScene);
 		//GOTO next level?
+	}
+
+	public void closeDialog () {
+		//Time.timeScale = 1;
+		canvasDialogMenu.SetActive (false);
 	}
 
 	public static void canvasActivation (bool tof) {

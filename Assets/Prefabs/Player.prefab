@@ -114,7 +114,7 @@ MonoBehaviour:
   windCorr: {fileID: 1788711341767710, guid: 11e5b3a24426bc149944af967fb62ab2, type: 2}
   insufficientMana: {fileID: 0}
   mats:
-  - {fileID: 2100000, guid: c01f7de8545b51f42848fc61aaab200d, type: 2}
+  - {fileID: 2100000, guid: de67ec27a03b36f40b62ae4d154e0539, type: 2}
   - {fileID: 2100000, guid: ce4b77858ec6c0f469b07b034c21a85f, type: 2}
   - {fileID: 2100000, guid: 3eb079016c4106b41bc3f19de570f770, type: 2}
   - {fileID: 2100000, guid: 4f477167fc0be5e4dab9a125b37c42ad, type: 2}

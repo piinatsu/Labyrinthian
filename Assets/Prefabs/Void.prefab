@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23406449853215218}
   - component: {fileID: 328404826131567340}
   - component: {fileID: 114464833313200538}
+  - component: {fileID: 135829514331454032}
   m_Layer: 0
   m_Name: Void
   m_TagString: Untagged
@@ -57,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 394d38004b134fa43aede97183072964, type: 2}
+  - {fileID: 2100000, guid: 25cdb485e03246d488d6c68b53d32aea, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,6 +98,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Axis: {x: 0, y: 0, z: 0}
   Velocity: 0
+  menma: {fileID: 114235400679816322, guid: 34d41633a23a4e145bcae5dd7e2fb9ac, type: 2}
+--- !u!135 &135829514331454032
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1056595781320728}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.010004009
+  m_Center: {x: -0.0000000023283064, y: -0.000000004656613, z: 0}
 --- !u!328 &328404826131567340
 VideoPlayer:
   m_ObjectHideFlags: 1

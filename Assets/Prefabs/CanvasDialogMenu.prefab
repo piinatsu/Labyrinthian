@@ -153,7 +153,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &95113388107053340
 Animator:
   serializedVersion: 3
@@ -230,7 +230,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Well done. Lorem ipsum dolor sit amet.
+  m_Text: 'Touch the arrow when you''re ready.
+
+    Touch me if you want me to repeat.'
 --- !u!114 &114287030334572946
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -520,7 +522,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: dialogExhausted
+        m_MethodName: closeDialog
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

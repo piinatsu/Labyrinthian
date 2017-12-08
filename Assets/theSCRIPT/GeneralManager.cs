@@ -10,6 +10,7 @@ public class GeneralManager : MonoBehaviour {
 	public GameObject theWall;
 	public GameObject thePlayer;
 	public int theScore = 1000;
+	public GameObject startPosition;
 
 	public static bool isContinueLast = false;
 	public static bool wallCollisionDisable = false;
@@ -24,6 +25,7 @@ public class GeneralManager : MonoBehaviour {
 		//dialogManagerCanvas = DialogManager.FindGameObjec
 		//rb = thePlayer.GetComponent<Rigidbody>();
 		Invoke ("transformLocalPosition", 1.0f);
+		thePlayer.transform.localPosition = startPosition.transform.localPosition;
 	}
 
 	void transformLocalPosition () {

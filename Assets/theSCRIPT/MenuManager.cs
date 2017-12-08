@@ -26,6 +26,7 @@ public class MenuManager : MonoBehaviour {
 	public GameObject canvasDialogMenu;
 
 	public GameObject thePlayer;
+	public PlayerBall pb;
 
 	public Text praiseText;
 	public Text scoreText;
@@ -73,6 +74,7 @@ public class MenuManager : MonoBehaviour {
 		//panelOfSceneMenu = canvasSceneMenu.transform.GetChild (0);
 
 		canvasPauseMenu.SetActive (false);
+		canvasDialogMenu.SetActive (true);
 		//canvasPauseMenu.transform.GetChild(0).gameObject.SetActive (false);
 
 		//img = panelOfSceneMenu.gameObject.GetComponent<Image> ();
@@ -171,22 +173,37 @@ public class MenuManager : MonoBehaviour {
 	//-----------------------------------------------------	
 	public void snaegel () {
 		soma.buttonSound ();
-		StartCoroutine (snaegelCR ());
-		Mana.slashMana (35);
+		if (Mana.mana > 25) {
+			StartCoroutine (snaegelCR ());
+			Mana.slashMana (25);
+		} else if (Mana.mana - 75 < 1) {
+			pb.glowMana ();
+			//PlayerBall.glowMana ();
+		}
 		//gm.skillScoring (50);
 	}
 
 	public void chronica () {
 		soma.buttonSound ();
-		StartCoroutine (chronicaCR ());
-		Mana.slashMana (75);
+		if (Mana.mana > 50) {
+			StartCoroutine (chronicaCR ());
+			Mana.slashMana (50);
+		} else if (Mana.mana - 75 < 1) {
+			pb.glowMana ();
+			//PlayerBall.glowMana ();
+		}
 		//gm.skillScoring (100);
 	}
 
 	public void opthalos () {
 		soma.buttonSound ();
-		StartCoroutine (opthalosCR ());
-		Mana.slashMana (95);
+		if (Mana.mana - 75 > 1) {
+			StartCoroutine (opthalosCR ());
+			Mana.slashMana (75);
+		} else if (Mana.mana - 75 < 1) {
+			pb.glowMana ();
+			//PlayerBall.glowMana ();
+		}
 		//gm.skillScoring (200);
 	}
 	//-----------------------------------------------------	
@@ -373,6 +390,11 @@ public class MenuManager : MonoBehaviour {
 	public void GOTOcheatPos () {
 		//thePlayer.transform.localPosition = finishCheat.transform.localPosition;
 		thePlayer.transform.position = finishCheat.transform.GetChild (1).position;
+	}
+
+	public void showDialog() {
+		canvasDialogMenu.SetActive (true);
+		Time.timeScale = 0;
 	}
 }
 [System.Serializable]
