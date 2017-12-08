@@ -52,6 +52,7 @@ public class MenuManager : MonoBehaviour {
 	bool scanModPause = false;
 	string praise;
 	public static bool finishedScoring = false;
+	public GameObject finishCheat;
 
 	// Use this for initialization
 	void Start () {
@@ -364,8 +365,14 @@ public class MenuManager : MonoBehaviour {
 	public void closeResult() {
 		finishedScoring = true;
 		canvasResultMenu.SetActive (false);
+		canvasSceneMenu.SetActive (false);
 		canvasDialogMenu.SetActive (true);
 		DialogManager.isAncientText = true;
+	}
+
+	public void GOTOcheatPos () {
+		//thePlayer.transform.localPosition = finishCheat.transform.localPosition;
+		thePlayer.transform.position = finishCheat.transform.GetChild (1).position;
 	}
 }
 [System.Serializable]

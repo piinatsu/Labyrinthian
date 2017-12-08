@@ -53,6 +53,7 @@ MonoBehaviour:
   startLine: {fileID: 0}
   manaBar: {fileID: 0}
   skillDuration: 5
+  finishCheat: {fileID: 0}
 --- !u!224 &224324391477571740
 RectTransform:
   m_ObjectHideFlags: 1

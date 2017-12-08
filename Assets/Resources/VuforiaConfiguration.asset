@@ -44,8 +44,10 @@ MonoBehaviour:
       ContainsMagnet: 0
   databaseLoad:
     dataSetsToLoad:
+    - Labyrinthian
     - Labyrinthian_DB_2
     dataSetsToActivate:
+    - Labyrinthian
     - Labyrinthian_DB_2
   videoBackground:
     clippingMode: 0

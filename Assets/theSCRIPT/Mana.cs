@@ -25,13 +25,15 @@ public class Mana : MonoBehaviour {
 		
 	void manaRegen () {
 		//if (canRegen) {
+		if (mana < 100) {
 			mana += manaRegenPerSec;
-		if (mana < 1.0f) {
-			PlayerBall.manaDepleted = true;
-		}
+			if (mana < 2.0f) {
+				PlayerBall.manaDepleted = true;
+			}
 			manaText.text = mana.ToString ();
 			manaSlider.value = mana;
-		//}
+			//}
+		}
 	}
 
 	public static void slashMana (int amount) {

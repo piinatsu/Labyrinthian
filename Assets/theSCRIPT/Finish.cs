@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class Finish : MonoBehaviour {
 
 	//public GameObject canvasDialogMenu;
+
 	public GeneralManager gm;
 	public MenuManager mm;
+
 	int finishScore;
 	int manaFinish;
 
@@ -15,8 +17,9 @@ public class Finish : MonoBehaviour {
 	void Start () {
 		//GameObject obj = GameObject.Find ("CanvasDialogMenu");
 		//DialogManager dmInstance = obj.GetComponent<DialogManager> ();
-		gm = FindObjectOfType<GeneralManager>();
-		mm = FindObjectOfType<MenuManager>();
+
+		//gm = FindObjectOfType<GeneralManager>();
+		//mm = FindObjectOfType<MenuManager>();
 	}
 	
 	// Update is called once per frame

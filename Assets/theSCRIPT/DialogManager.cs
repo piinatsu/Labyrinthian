@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogManager : MonoBehaviour {
 
@@ -24,6 +25,8 @@ public class DialogManager : MonoBehaviour {
 	int currentLine;
 	int currentLineAncient;
 	public static bool isAncientText = false;
+	public GameObject dialogEndArrowNextLevel;
+	bool canShowArrow = false;
 
 	// Use this for initialization
 	void Start () {
@@ -52,6 +55,10 @@ public class DialogManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(canShowArrow)
+			dialogEndArrowNextLevel.SetActive (true);
+		else if (!canShowArrow)
+			dialogEndArrowNextLevel.SetActive (false);
 		/*
 		if (canvasDialogMenu.activeSelf) {
 			if (isAncientText) {
@@ -77,8 +84,13 @@ public class DialogManager : MonoBehaviour {
 			if (currentLineAncient <= endLineAncient) {
 				textContainer.text = textLinesAncient [currentLineAncient];
 			} else if (currentLineAncient > endLineAncient) {
-				Time.timeScale = 1;
-				canvasDialogMenu.SetActive (false);
+				textContainer.text = "Touch the arrow if you're ready for next level.\n" +
+					"Touch me if you want me to repeat.";
+				canShowArrow = true;
+				//dialogEndArrowNextLevel.SetActive (true);
+
+				//Time.timeScale = 1;
+				//canvasDialogMenu.SetActive (false);
 			}
 
 		} else {
@@ -104,14 +116,27 @@ public class DialogManager : MonoBehaviour {
 
 	public void previousDialog () {
 		Debug.Log ("Previous Dialog");
-		if ((currentLine - 1) > 0) {
+		currentLineAncient = startLineAncient;
+		/*
+		if ((currentLineAncient - 1) > 0) {
 			if (isAncientText) {
 				currentLineAncient--;
 			} else {
 				currentLine--;
 			}
 		}
+		*/
 		proceedDialog ();
+	}
+
+	public void dialogExhausted () {
+		Time.timeScale = 1;
+		canvasDialogMenu.SetActive (false);
+
+		int currentScene = SceneManager.GetActiveScene().buildIndex;
+		currentScene += 1;
+		SceneManager.LoadScene (currentScene);
+		//GOTO next level?
 	}
 
 	public static void canvasActivation (bool tof) {

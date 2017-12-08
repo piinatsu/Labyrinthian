@@ -55,7 +55,7 @@ public class PlayerBall : MonoBehaviour {
 
 	public void changeMaterial () {
 		GameObject go = EventSystem.current.currentSelectedGameObject;
-		Mana.canRegen = false;
+		//Mana.canRegen = false;
 		if (Mana.mana > 10 || (Mana.mana < 10 && go.name == currentMat)) {
 			if (go.name == "Button_Wood") {
 				if (currentMat == "Button_Wood") {

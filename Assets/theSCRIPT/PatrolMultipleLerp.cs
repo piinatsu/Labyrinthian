@@ -89,7 +89,10 @@ public class PatrolMultipleLerp : MonoBehaviour {
 				GetComponent<Renderer> ().material.name;
 			string enemyMat = gameObject.
 				GetComponent<Renderer> ().material.name;
-			if (enemyMat == "Red (Instance)" && 
+			if (playerMat == "White (Instance)") {
+				Destroy (target.gameObject);
+				menma.deathPause ();
+			} else if (enemyMat == "Red (Instance)" && 
 				playerMat == "WoodSurface (Instance)") {
 				//soma.buttonSound ();
 				//soma.deathSound();
