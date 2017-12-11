@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class DialogManager : MonoBehaviour {
 
 	public GameObject canvasDialogMenu;
+	public GameObject canvasSceneMenu;
 
 	public Text textContainer;
 
@@ -34,6 +35,8 @@ public class DialogManager : MonoBehaviour {
 		//GameObject obj = GameObject.Find ("CanvasDialogMenu");
 		//DialogManager dmInstance = obj.GetComponent<DialogManager> ();
 
+		canvasSceneMenu.SetActive (false);
+
 		//canvasDialogMenu.SetActive (false);
 
 		//textContainer = gameObject.GetComponent<Text> ();
@@ -51,6 +54,7 @@ public class DialogManager : MonoBehaviour {
 
 		//currentLine = startLine;
 		currentLineAncient = startLineAncient;
+		currentLineAncient--;
 	}
 	
 	// Update is called once per frame
@@ -82,6 +86,7 @@ public class DialogManager : MonoBehaviour {
 	void proceedDialog () {
 		if (currentLineAncient <= endLineAncient) {
 			textContainer.text = textLinesAncient [currentLineAncient];
+			//Debug.Log (currentLineAncient + textLinesAncient [currentLineAncient]);
 		} //else if (currentLineAncient > endLineAncient) {
 			//textContainer.text = "Touch the arrow if you're ready.\nTouch me if you want me to repeat.";
 			//canShowArrow = true;
@@ -109,10 +114,9 @@ public class DialogManager : MonoBehaviour {
 
 	public void nextDialog () {
 		Debug.Log ("Next Dialog");
-		if ((currentLineAncient) - 1 > 0) {
-				currentLineAncient++;
-			proceedDialog ();
-		}
+		currentLineAncient++;
+		proceedDialog ();
+
 //		if ((currentLineAncient) - 1 > 0) {
 //			if (isAncientText)
 //				currentLineAncient++;
@@ -150,6 +154,7 @@ public class DialogManager : MonoBehaviour {
 	public void closeDialog () {
 		//Time.timeScale = 1;
 		canvasDialogMenu.SetActive (false);
+		canvasSceneMenu.SetActive (true);
 	}
 
 	public static void canvasActivation (bool tof) {

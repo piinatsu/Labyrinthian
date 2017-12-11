@@ -7,15 +7,29 @@ using UnityEngine.UI;
 public class LoadingSceneControl : MonoBehaviour {
 
 	public GameObject loadingSceneCanvas;
-	public GameObject currentSceneCanvas;
+	//public Animator rotatingCube;
+	//public Animation rotatingCube2;
+	//public GameObject currentSceneCanvas;
 	public Slider slider;
 
 	AsyncOperation assync;
 
 	public void LoadSceneExample(int i) {
-		currentSceneCanvas.SetActive (false);
+		//currentSceneCanvas.SetActive (false);
+		//rotatingCube.Play();
+		//rotatingCube2.Play ();
 		loadingSceneCanvas.SetActive (true);
 		StartCoroutine (LoadingScreen(i));
+	}
+
+	public void LoadSceneAuto () {
+		int i = SceneManager.GetActiveScene ().buildIndex;
+		string s = SceneManager.GetActiveScene ().name;
+		if (s == "R4-Trearchy") {
+			StartCoroutine (LoadingScreen (11));
+		} else {
+			StartCoroutine (LoadingScreen (i + 1));
+		}
 	}
 
 	IEnumerator LoadingScreen(int i) {

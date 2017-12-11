@@ -24,6 +24,7 @@ public class MenuManager : MonoBehaviour {
 	public GameObject canvasSceneMenu;
 	public GameObject canvasResultMenu;
 	public GameObject canvasDialogMenu;
+	//public GameObject Loading;
 
 	public GameObject thePlayer;
 	public PlayerBall pb;
@@ -33,7 +34,8 @@ public class MenuManager : MonoBehaviour {
 
 	public GameObject pauseText;
 	public GameObject gameOverText;
-	public GameObject startLine;
+	//public GameObject startLine;
+	//startLine is for lasPosition in continuelastplayed
 
 	//duplicate manaBar for canvasResultMenu
 	public Slider manaBar;
@@ -95,6 +97,7 @@ public class MenuManager : MonoBehaviour {
 		//canvasPauseMenu.transform.GetChild(0).gameObject.SetActive (true);
 		//Time.timeScale = 0;
 		*/
+		Time.timeScale = 1;
 		soma.buttonSound ();
 		StartCoroutine (pausse (0.5f));
 	}
@@ -237,7 +240,7 @@ public class MenuManager : MonoBehaviour {
 			PatrolMultipleLerp.vSpeed = snaegelSpeed;
 			yield return new WaitForSeconds (0.2f);
 		}
-		yield return new WaitForSeconds (skillDuration);
+		yield return new WaitForSeconds (skillDuration*2);
 		for (float i = 0.5f; i <= 1f; i += 0.025f) {
 			snaegelSpeed = PatrolMultipleLerp.sSpeed;
 			snaegelSpeed *= i;
@@ -344,7 +347,7 @@ public class MenuManager : MonoBehaviour {
 
 		if (fScore >= 800) {
 			if (fScore >= 900) {
-				praise = "Magnifico!";
+				praise = "Magnificent!";
 			} else {
 				praise = "Excellent!";
 			}
@@ -383,8 +386,17 @@ public class MenuManager : MonoBehaviour {
 		finishedScoring = true;
 		canvasResultMenu.SetActive (false);
 		canvasSceneMenu.SetActive (false);
-		canvasDialogMenu.SetActive (true);
-		DialogManager.isAncientText = true;
+		//canvasDialogMenu.SetActive (true);
+		//DialogManager.isAncientText = true;
+
+		string currentSceneName = SceneManager.GetActiveScene().name;
+		int currentSceneIndex = SceneManager.GetActiveScene ().buildIndex;
+		if (currentSceneName == "R4-Trearchy") {
+			SceneManager.LoadScene ("Credits");
+		} else {
+			SceneManager.LoadScene (currentSceneIndex + 1);
+		}
+
 	}
 
 	public void GOTOcheatPos () {

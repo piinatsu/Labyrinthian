@@ -38,7 +38,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4740284bd9fb23142ba436d3cbf75534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadingScreenObject: {fileID: 1655164412134288, guid: 30a14301cce327949bd2934a9c1bf221,
+  loadingSceneCanvas: {fileID: 1655164412134288, guid: 30a14301cce327949bd2934a9c1bf221,
     type: 2}
   slider: {fileID: 114298967317259776, guid: 30a14301cce327949bd2934a9c1bf221, type: 2}
 --- !u!224 &224621113424128532

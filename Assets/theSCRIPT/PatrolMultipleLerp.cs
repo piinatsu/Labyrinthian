@@ -89,7 +89,7 @@ public class PatrolMultipleLerp : MonoBehaviour {
 				GetComponent<Renderer> ().material.name;
 			string enemyMat = gameObject.
 				GetComponent<Renderer> ().material.name;
-			if (playerMat == "White (Instance)") {
+			if (playerMat == "White (Instance)" || enemyMat == "Purlple (Instance)") {
 				Destroy (target.gameObject);
 				menma.deathPause ();
 			} else if (enemyMat == "Red (Instance)" && 
