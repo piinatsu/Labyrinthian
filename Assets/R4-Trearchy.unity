@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43846747, g: 0.48655325, b: 0.56682634, a: 1}
+  m_IndirectSpecularColor: {r: 0.43846723, g: 0.48655277, b: 0.5668258, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1664,6 +1664,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.6666666
       objectReference: {fileID: 0}
+    - target: {fileID: 114254769451162080, guid: 3c594b04783073e4b820c9b13ccf4ea9,
+        type: 2}
+      propertyPath: menma
+      value: 
+      objectReference: {fileID: 2015556000}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c594b04783073e4b820c9b13ccf4ea9, type: 2}
   m_IsPrefabParent: 0
@@ -2471,6 +2476,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.6666666
       objectReference: {fileID: 0}
+    - target: {fileID: 114254769451162080, guid: 3c594b04783073e4b820c9b13ccf4ea9,
+        type: 2}
+      propertyPath: menma
+      value: 
+      objectReference: {fileID: 2015556000}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c594b04783073e4b820c9b13ccf4ea9, type: 2}
   m_IsPrefabParent: 0
@@ -2761,6 +2771,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.6666666
       objectReference: {fileID: 0}
+    - target: {fileID: 114254769451162080, guid: 3c594b04783073e4b820c9b13ccf4ea9,
+        type: 2}
+      propertyPath: menma
+      value: 
+      objectReference: {fileID: 2015556000}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c594b04783073e4b820c9b13ccf4ea9, type: 2}
   m_IsPrefabParent: 0
@@ -3212,6 +3227,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.6666666
       objectReference: {fileID: 0}
+    - target: {fileID: 114254769451162080, guid: 3c594b04783073e4b820c9b13ccf4ea9,
+        type: 2}
+      propertyPath: menma
+      value: 
+      objectReference: {fileID: 2015556000}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c594b04783073e4b820c9b13ccf4ea9, type: 2}
   m_IsPrefabParent: 0
@@ -5009,6 +5029,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.6666666
       objectReference: {fileID: 0}
+    - target: {fileID: 114254769451162080, guid: 3c594b04783073e4b820c9b13ccf4ea9,
+        type: 2}
+      propertyPath: menma
+      value: 
+      objectReference: {fileID: 2015556000}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c594b04783073e4b820c9b13ccf4ea9, type: 2}
   m_IsPrefabParent: 0
@@ -5133,6 +5158,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.6666666
       objectReference: {fileID: 0}
+    - target: {fileID: 114254769451162080, guid: 3c594b04783073e4b820c9b13ccf4ea9,
+        type: 2}
+      propertyPath: menma
+      value: 
+      objectReference: {fileID: 2015556000}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c594b04783073e4b820c9b13ccf4ea9, type: 2}
   m_IsPrefabParent: 0
