@@ -1616,7 +1616,7 @@ Prefab:
     - target: {fileID: 114253233819224212, guid: 20c5e410703334e48b5ca8f5182a78ab,
         type: 2}
       propertyPath: m_Text
-      value: Tutorial
+      value: Stage 1
       objectReference: {fileID: 0}
     - target: {fileID: 114731875368722280, guid: 20c5e410703334e48b5ca8f5182a78ab,
         type: 2}
@@ -3793,12 +3793,12 @@ Prefab:
     - target: {fileID: 224151364511993438, guid: c5cc0c384e6ea4345ba3111d38f5eb8f,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 319.5
+      value: 960
       objectReference: {fileID: 0}
     - target: {fileID: 224151364511993438, guid: c5cc0c384e6ea4345ba3111d38f5eb8f,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 454.5
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 224151364511993438, guid: c5cc0c384e6ea4345ba3111d38f5eb8f,
         type: 2}
@@ -3929,6 +3929,10 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: helpTheGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145147383264262, guid: c5cc0c384e6ea4345ba3111d38f5eb8f, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c5cc0c384e6ea4345ba3111d38f5eb8f, type: 2}

@@ -244,7 +244,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &151974952
 RectTransform:
   m_ObjectHideFlags: 0
@@ -258,7 +258,7 @@ RectTransform:
   - {fileID: 1602243173}
   - {fileID: 1114539402}
   m_Father: {fileID: 1139230188}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -320,7 +320,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 196327880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: -340, z: 0}
+  m_LocalPosition: {x: -10, y: -331.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 488179153}
@@ -414,6 +414,74 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
+--- !u!1 &240063519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 240063520}
+  - component: {fileID: 240063522}
+  - component: {fileID: 240063521}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &240063520
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 240063519}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1139230188}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &240063521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 240063519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 7c02d7f7cc634c941ae09e15de17df4a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &240063522
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 240063519}
 --- !u!1 &273332484
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,7 +593,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 294936220}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 740, y: 10, z: 0}
+  m_LocalPosition: {x: 731.5, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1148642376}
@@ -553,7 +621,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &327011912
 RectTransform:
   m_ObjectHideFlags: 0
@@ -567,7 +635,7 @@ RectTransform:
   - {fileID: 1106201152}
   - {fileID: 273332485}
   m_Father: {fileID: 1139230188}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -586,7 +654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -722,79 +790,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &430209298
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 430209299}
-  - component: {fileID: 430209300}
-  m_Layer: 0
-  m_Name: fti
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &430209299
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 430209298}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -74, y: -882, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1694426472}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &430209300
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 430209298}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f1499e53ded569f49b9c29b3c0c1e498, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 2.74, y: 1.24}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!1 &488179152
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,7 +875,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &605326420
 RectTransform:
   m_ObjectHideFlags: 0
@@ -892,7 +887,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1139230188}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1157,7 +1152,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 800851848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 877.5, y: 10, z: 0}
+  m_LocalPosition: {x: 886, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 729295246}
@@ -1409,18 +1404,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 64
+    m_FontSize: 70
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 64
+    m_MinSize: 7
+    m_MaxSize: 70
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ABOUT
+  m_Text: A B O U T
 --- !u!222 &1114539404
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1526,10 +1521,12 @@ RectTransform:
   m_LocalPosition: {x: 960, y: 540, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 240063520}
   - {fileID: 327011912}
   - {fileID: 151974952}
   - {fileID: 605326420}
   - {fileID: 2031759840}
+  - {fileID: 1502011307}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1630,7 +1627,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1185530561}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 740, y: -481, z: 0}
+  m_LocalPosition: {x: 731.5, y: -472.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 641877252}
@@ -1698,7 +1695,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1196974849}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 184.55957, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2046876127}
@@ -1882,7 +1879,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1445234787}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 877.5, y: -776.5, z: 0}
+  m_LocalPosition: {x: 894.5, y: -250, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1694426472}
@@ -1905,7 +1902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1925,43 +1922,63 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "You are somehow got transported and stranded in a universe not like your
-    own. You are tasked to navigate through a series of ancient ruin labyrinths and
-    find your way back home.\r\n\r\nBefore the Journey Begins:\r\nI.\tThe Rules Law
-    of the Jungle\r\n1.\tThere is no hit-point system, instead you have energy point
-    to spend on skills and it regenerates every second by a set amount.\r\n2.\tUse
-    your energy point wisely. Just because energy regenerates every second doesn\u2019t
-    mean you can spam skills like madman. You\u2019ll regret it when you urgently
-    need it down the line.\r\n3.\tBecause there is no such thing as hit points. Once
-    you die, you die and that\u2019s it. You lost all progress made in current stage
-    and you are then taken back to the very start of current stage.\r\n4.\tDespite
+  m_Text: "I.\tHOW TO PLAY\r\n    1. To access a level, you need to place a marker
+    under the phone\u2019s camera for it to be scanned and identified by the game.
+    The game then displays appropriate level accordingly.\r\n2.\tTo access the next
+    level after you\u2019ve finish current one, you will be presented with a puzzle
+    or a clue as to what you have to do to the Base Marker.\r\n3.\tMake modifications
+    to the Base Marker properly based on the clue you have been given. Do it well
+    and you\u2019ll be granted access to the next level.\r\n4.\tActive Objects can
+    come in handy under the right circumstances sometimes. They are placed across
+    the labyrinth in a fixed strategic position and will grant your extra ability
+    to vault walls and add new exciting ways navigating the labyrinths. \r\na.\tBridge
+    Ramp is used to cross hostile ground without traversing it. Not really for wall-vaulting.\r\nb.\tCoiled
+    Spring can be difficult to master but can send you high above the wall and potentially
+    reach far places provided you have the conditions right.\r\nc.\tRamp is much safer
+    bet but it can only help you vault two to three walls at best under the right
+    condition.\r\n\r\n\r\n\r\n5.\tPlace the Base Marker right under your phone. The
+    Base Marker conveniently act as Tutorial Marker.\r\n6.\tThe next three sections
+    can be ignored at your own risk if you\u2019re feeling adventurous and so keen
+    on playing already.\r\n\r\nV.\tThe Rules\r\nBefore we get into the hot actions,
+    there are some important things you should know.\r\n1.\tThere is no hit-point
+    system, instead you have energy point to spend on skills and it regenerates every
+    second by a set amount.\r\n2.\tBecause there are no such thing as hit points,
+    once you die, you die and that\u2019s it. You lost all progress made in current
+    stage and you are then taken back to the very start of current stage.\r\n3.\tDespite
     this permadeath-like system, you have infinite lives and can try (and die) again
     as many time as you like without any repercussion whatsoever. Scoring will also
-    not be affected.\r\n5.\tYou can die by two ways: touching an enemy or going out
-    of bounds.\r\n6.\tThe clock is ticking. You are given a set amount of score point
-    prior to starting a stage and this score point ticks down every second spent in-game.\r\n7.\tBy
-    the end of a stage, any unspent energy points will be converted into your score.\r\n\r\nII.\tKnow
-    Yourself and Your Enemies Thyself and Thy Enemies\r\n1.\tYou have three skills
-    and each skill consumes energy. These skills are as follow:\r\n2.\tSnaegel \u2013
-    slows down all active enemies\u2019 movement and consumes 35 energy point.\r\n3.\tChronica
-    \u2013 halts all active enemies\u2019 movement and consumes 65 energy point.\r\n4.\tOpthalos
-    \u2013 grants temporary invulnerability against all kinds of damages and invisibility
-    to pass through walls. Consumes 95 energy points.\r\n5.\tYou can change into four
-    different materials each with its own unique attributes.\r\na.\tWood material
-    \u2013 fire vulnerability - resists water and lightning enemies \u2013 lightest
-    mass\r\nb.\tStone material \u2013 water vulnerability - resists fire and lightning
-    enemies\r\nc.\tMetal material \u2013 lightning vulnerability - resists fire and
-    water enemies \u2013 heaviest mass\r\nd.\tDefault material \u2013 same as wood
-    but resists nothing\r\n6.\tChanging into any other material than default material
-    will negate your energy regeneration and decrease it every second.\r\n7.\tIn-game
-    enemies can be separated into two broad categories: active and passive.\r\n8.\tActive
-    enemies move in predefined set of patterns while passive enemies are stationary.\r\n9.\tActive
-    enemies further divided by their unique attributes. These are:\r\na.\tRed enemy
-    \u2013 Fire attribute \u2013 destroys wood\r\nb.\tBlue enemy \u2013 Water attribute
-    \u2013 destroys stone\r\nc.\tYellow enemy \u2013 Lightning attribute \u2013 destroys
-    metal\r\n10.\tAs you probably can tell by their name and color alone, certain
-    enemies are useless against certain materials. Plan ahead carefully and counter
-    these enemies in conjunction with your material-changing ability.\r\n\r\nIII.\tPreparation\r\n"
+    not be affected.\r\n4.\tYou can die by two ways: touching an enemy or going out
+    of bounds.\r\n5.\tThe clock is ticking. You are given a set amount of score point
+    prior to starting a stage and this score point ticks down every second spent in-game.\r\n6.\tBy
+    the end of a stage, any unspent energy points will be converted into your score.\r\n\r\nVI.\tKnow
+    thy self, know thy enemy\r\nIf you know the enemy and know yourself you need not
+    fear the results of a hundred battles.\r\n1.\tYou have three skills and each skill
+    consumes energy. These skills are as follow:\r\na.\tSnaegel \u2013 slows down
+    all active enemies\u2019 movement and consumes small amount of energy point.\r\nb.\tChronica
+    \u2013 halts all active enemies\u2019 movement and consumes medium amount energy
+    point.\r\nc.\tOpthalos \u2013 grants temporary invulnerability against all kinds
+    of enemies and invisibility to pass through walls. Consumes large amount of energy
+    points.\r\n\r\n\r\n\r\n\r\n\r\n2.\tYou can change into four different materials
+    each with its own unique attributes.\r\na.\tWood material \u2013 fire vulnerability
+    - resists water and lightning enemies \u2013 lightest mass\r\nb.\tStone material
+    \u2013 water vulnerability - resists fire and lightning enemies\r\nc.\tMetal material
+    \u2013 lightning vulnerability - resists fire and water enemies \u2013 heaviest
+    mass\r\nd.\tDefault material \u2013 resists nothing \u2013 lightest mass\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n3.\tChanging
+    into any other material than default material will negate your energy regeneration
+    and decrease it every second.\r\n4.\tIn-game enemies can be separated into two
+    broad categories: active and passive.\r\n5.\tActive enemies move in predefined
+    set of patterns while passive enemies are stationary.\r\n6.\tActive enemies further
+    divided by their unique attributes. These are:\r\na.\tRed enemy \u2013 Fire attribute
+    \u2013 destroys wood\r\nb.\tBlue enemy \u2013 Water attribute \u2013 destroys
+    stone\r\nc.\tYellow enemy \u2013 Lightning attribute \u2013 destroys metal\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n7.\tAs
+    you probably can tell by their name and color alone, certain enemies are useless
+    against certain materials. Plan ahead carefully and counter these enemies in conjunction
+    with your material-changing ability.\r\n\tWood\tStone\tMetal\tDefault\r\nRed\t\r\n-\t-\t\r\r\nBlue\t-\t\r\n-\t\r\r\nYellow\t-\t-\t\r\n\r\r\nPurple\t\r\n\r\n\r\n\r\r\n\r\n\r\n\r\n\r\nVII.\tSome
+    Friendly Tips\r\n1.\tUse your energy point wisely. Just because energy regenerates
+    every second doesn\u2019t mean you can spam skills like madman. You\u2019ll regret
+    it when you urgently need it down the line.\r\n2.\tHold your horses! Don\u2019t
+    go charging the finish line like there\u2019s no tomorrow. Study enemy movement,
+    memorize it, and plan your next move based on that information.\r\n\r\n"
 --- !u!222 &1445234790
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2066,6 +2083,142 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1502011306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1502011307}
+  - component: {fileID: 1502011311}
+  - component: {fileID: 1502011310}
+  - component: {fileID: 1502011309}
+  - component: {fileID: 1502011308}
+  m_Layer: 5
+  m_Name: Bcak
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1502011307
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1502011306}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -440, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1139230188}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 100}
+  m_SizeDelta: {x: 150, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1502011308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1502011306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!114 &1502011309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1502011306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1502011310}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 388567077}
+        m_MethodName: gotoHome
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1502011310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1502011306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: f24f28f98280343b0a3efbade43a6805, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1502011311
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1502011306}
 --- !u!1 &1508754755
 GameObject:
   m_ObjectHideFlags: 0
@@ -2142,7 +2295,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1196974850}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.4294913
+  m_Size: 0.18783441
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2378,7 +2531,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1445234788}
-  - {fileID: 430209299}
   m_Father: {fileID: 237014069}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2446,7 +2598,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1723207118}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 748.5, y: -250, z: 0}
+  m_LocalPosition: {x: 731.5, y: -191.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 353474948}
@@ -2469,7 +2621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2698,7 +2850,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2031759840
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2710,7 +2862,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1139230188}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -2824,7 +2976,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2046876126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: -333.5, z: 0}
+  m_LocalPosition: {x: -10, y: -342, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1196974850}
