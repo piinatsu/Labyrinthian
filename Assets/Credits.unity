@@ -950,6 +950,8 @@ MonoBehaviour:
   creditsText: {fileID: 1794207189}
   accelerateButton: {fileID: 1359026060}
   goBackButton: {fileID: 692121879}
+  pullStepMin: 2
+  pullStepMax: 8
 --- !u!224 &1617021015
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1044,12 +1046,15 @@ MonoBehaviour:
     and creation centuries past.\r\nI suppose this will be our redemption and now
     we left this messages as warning for new generations to come so they won't have
     the same fate as us. Join your hands together and pave a great future for you
-    know not of the harsh reality that is the true existence of the Abyss...\r\n\n\nEureka
-    is a augmented reality-powered puzzle game developed by Diven Alberian Adrie (535130011),
-    a Game Development student of Tarumanagara University.\nThis game was developed
-    under the supervision and guidance of\nLina M.Kom., Ph.D. and Darius Andana Haris,
-    MTI.,\nthe former of whom act as a primary mentor and the latter act as secondary
-    mentor."
+    know not of the harsh reality that is the true existence of the Abyss...\r\n\n\n\n\nGame
+    Design & Programming\nDiven Alberian Adrie\n\nGraphics Design\nDiven Alberian
+    Adrie\n\nSound Effect\nVolodymyr Dzitsiuk\nSonic Labs\n\nMusic\nKevin MacLeod\n\nSpecial
+    Thanks\nLina\nDarius\n\nPlaytesters: (listed out)\n\nEureka is a augmented reality-powered
+    puzzle game developed by Diven Alberian Adrie (535130011), a Game Development
+    student of Tarumanagara University.\nThis game was developed under the supervision
+    and guidance of\nLina M.Kom., Ph.D. and Darius Andana Haris, MTI.,\nthe former
+    of whom act as a primary mentor and the latter as secondary mentor.\n\nThank YOU
+    for playing this game!"
 --- !u!222 &1794207191
 CanvasRenderer:
   m_ObjectHideFlags: 0

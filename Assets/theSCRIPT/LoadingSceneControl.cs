@@ -25,8 +25,8 @@ public class LoadingSceneControl : MonoBehaviour {
 	public void LoadSceneAuto () {
 		int i = SceneManager.GetActiveScene ().buildIndex;
 		string s = SceneManager.GetActiveScene ().name;
-		if (s == "R4-Trearchy") {
-			StartCoroutine (LoadingScreen (11));
+		if (s == "Prefinal") {
+			StartCoroutine (LoadingScreen (12));
 		} else {
 			StartCoroutine (LoadingScreen (i + 1));
 		}

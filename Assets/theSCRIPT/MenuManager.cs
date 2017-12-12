@@ -24,7 +24,7 @@ public class MenuManager : MonoBehaviour {
 	public GameObject canvasSceneMenu;
 	public GameObject canvasResultMenu;
 	public GameObject canvasDialogMenu;
-	//public GameObject Loading;
+	public LoadingSceneControl Loading;
 
 	public GameObject thePlayer;
 	public PlayerBall pb;
@@ -389,13 +389,15 @@ public class MenuManager : MonoBehaviour {
 		//canvasDialogMenu.SetActive (true);
 		//DialogManager.isAncientText = true;
 
-		string currentSceneName = SceneManager.GetActiveScene().name;
-		int currentSceneIndex = SceneManager.GetActiveScene ().buildIndex;
-		if (currentSceneName == "R4-Trearchy") {
-			SceneManager.LoadScene ("Credits");
-		} else {
-			SceneManager.LoadScene (currentSceneIndex + 1);
-		}
+		//string currentSceneName = SceneManager.GetActiveScene().name;
+		//int currentSceneIndex = SceneManager.GetActiveScene ().buildIndex;
+		//if (currentSceneName == "R4-Trearchy") {
+		//	SceneManager.LoadScene ("Credits");
+		//} else {
+		//	SceneManager.LoadScene (currentSceneIndex + 1);
+		//}
+
+		Loading.LoadSceneAuto ();
 
 	}
 

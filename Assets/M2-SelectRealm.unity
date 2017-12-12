@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -477,12 +477,12 @@ Prefab:
     - target: {fileID: 224986488723061454, guid: 30a14301cce327949bd2934a9c1bf221,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 960
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224986488723061454, guid: 30a14301cce327949bd2934a9c1bf221,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 540
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224986488723061454, guid: 30a14301cce327949bd2934a9c1bf221,
         type: 2}
@@ -748,7 +748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4740284bd9fb23142ba436d3cbf75534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadingSceneCanvas: {fileID: 516999783}
+  loadingSceneCanvas: {fileID: 1744915398}
   slider: {fileID: 2074783000}
 --- !u!224 &304202331
 RectTransform:
@@ -924,11 +924,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 489376529}
---- !u!1 &516999783 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1655164412134288, guid: 30a14301cce327949bd2934a9c1bf221,
-    type: 2}
-  m_PrefabInternal: {fileID: 165367190}
 --- !u!1 &636291608
 GameObject:
   m_ObjectHideFlags: 0

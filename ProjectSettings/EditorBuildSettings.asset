@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/R4-Trearchy.unity
     guid: 21b9f94241858254eb1658cc854b1dba
   - enabled: 1
+    path: Assets/Prefinal.unity
+    guid: b2324207b2066d44db9e73eff544e05c
+  - enabled: 1
     path: Assets/ScanningModule.unity
     guid: a9b2096322fd9704fbbdaa56aad0bfa7
   - enabled: 1
