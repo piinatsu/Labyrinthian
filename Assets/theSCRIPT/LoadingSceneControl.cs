@@ -19,6 +19,11 @@ public class LoadingSceneControl : MonoBehaviour {
 		//rotatingCube.Play();
 		//rotatingCube2.Play ();
 		loadingSceneCanvas.SetActive (true);
+		loadingSceneCanvas.SetActive (true);
+		loadingSceneCanvas.SetActive (true);
+		loadingSceneCanvas.SetActive (true);
+		loadingSceneCanvas.SetActive (true);
+		loadingSceneCanvas.SetActive (true);
 		StartCoroutine (LoadingScreen(i));
 	}
 
@@ -26,10 +31,17 @@ public class LoadingSceneControl : MonoBehaviour {
 		int i = SceneManager.GetActiveScene ().buildIndex;
 		string s = SceneManager.GetActiveScene ().name;
 		if (s == "Prefinal") {
+			loadingSceneCanvas.SetActive (true);
 			StartCoroutine (LoadingScreen (12));
 		} else {
+			loadingSceneCanvas.SetActive (true);
 			StartCoroutine (LoadingScreen (i + 1));
 		}
+	}
+
+	public void startFromScratch () {
+		loadingSceneCanvas.SetActive (true);
+		StartCoroutine (LoadingScreen (3));
 	}
 
 	IEnumerator LoadingScreen(int i) {

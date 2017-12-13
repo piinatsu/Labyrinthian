@@ -410,6 +410,10 @@ public class MenuManager : MonoBehaviour {
 		canvasDialogMenu.SetActive (true);
 		Time.timeScale = 0;
 	}
+
+	public void StartFromScratch () {
+		Loading.startFromScratch();
+	}
 }
 [System.Serializable]
 class menmaLastData {
