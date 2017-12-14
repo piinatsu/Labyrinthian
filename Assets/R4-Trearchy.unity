@@ -847,22 +847,22 @@ Prefab:
     - target: {fileID: 114457696767225102, guid: 0fe05c5da1633184bbec409fb7c435ff,
         type: 2}
       propertyPath: startLineAncient
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 114457696767225102, guid: 0fe05c5da1633184bbec409fb7c435ff,
         type: 2}
       propertyPath: endLineAncient
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 114457696767225102, guid: 0fe05c5da1633184bbec409fb7c435ff,
-        type: 2}
-      propertyPath: startLine
       value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 114457696767225102, guid: 0fe05c5da1633184bbec409fb7c435ff,
         type: 2}
+      propertyPath: startLine
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457696767225102, guid: 0fe05c5da1633184bbec409fb7c435ff,
+        type: 2}
       propertyPath: endLine
-      value: 16
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1308436018468558, guid: 0fe05c5da1633184bbec409fb7c435ff, type: 2}
       propertyPath: m_IsActive

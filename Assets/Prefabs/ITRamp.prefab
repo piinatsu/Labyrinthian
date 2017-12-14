@@ -215,7 +215,7 @@ MonoBehaviour:
   mTrackableName: object_ramp
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/Laby.xml
+  mDataSetPath: Vuforia/LabySquareOne.xml
   mExtendedTracking: 0
   mInitializeSmartTerrain: 0
   mReconstructionToInitialize: {fileID: 0}

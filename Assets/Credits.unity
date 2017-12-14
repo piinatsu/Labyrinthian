@@ -1003,7 +1003,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -1080}
-  m_SizeDelta: {x: 720, y: 1080}
+  m_SizeDelta: {x: 1440, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1794207190
 MonoBehaviour:
@@ -1029,7 +1029,7 @@ MonoBehaviour:
     m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 32
+    m_MinSize: 24
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -1046,15 +1046,15 @@ MonoBehaviour:
     and creation centuries past.\r\nI suppose this will be our redemption and now
     we left this messages as warning for new generations to come so they won't have
     the same fate as us. Join your hands together and pave a great future for you
-    know not of the harsh reality that is the true existence of the Abyss...\r\n\n\n\n\nGame
+    know not of the harsh reality that is the true existence of the Abyss...\r\n\n\n\nGame
     Design & Programming\nDiven Alberian Adrie\n\nGraphics Design\nDiven Alberian
     Adrie\n\nSound Effect\nVolodymyr Dzitsiuk\nSonic Labs\n\nMusic\nKevin MacLeod\n\nSpecial
     Thanks\nLina\nDarius\n\nPlaytesters: (listed out)\n\nEureka is a augmented reality-powered
-    puzzle game developed by Diven Alberian Adrie (535130011), a Game Development
-    student of Tarumanagara University.\nThis game was developed under the supervision
-    and guidance of\nLina M.Kom., Ph.D. and Darius Andana Haris, MTI.,\nthe former
-    of whom act as a primary mentor and the latter as secondary mentor.\n\nThank YOU
-    for playing this game!"
+    puzzle game developed by Diven Alberian Adrie, \na Game Development student of
+    Tarumanagara University.\nThis game was developed under the supervision and guidance
+    of\nLina M.Kom., Ph.D. and Darius Andana Haris, MTI.,\nthe former of whom act
+    as a primary mentor and the latter as secondary mentor.\n\nThank YOU for playing
+    this game!"
 --- !u!222 &1794207191
 CanvasRenderer:
   m_ObjectHideFlags: 0
