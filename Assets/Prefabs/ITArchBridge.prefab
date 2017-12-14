@@ -71,7 +71,7 @@ Transform:
   m_GameObject: {fileID: 1769188287450428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.25, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 4013360719285310}
   m_Father: {fileID: 0}
@@ -204,7 +204,7 @@ MonoBehaviour:
   mTrackableName: object_arch_bridge
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/Labyrinthian_DB_2.xml
+  mDataSetPath: Vuforia/Laby.xml
   mExtendedTracking: 0
   mInitializeSmartTerrain: 0
   mReconstructionToInitialize: {fileID: 0}
@@ -214,10 +214,10 @@ MonoBehaviour:
   mSmartTerrainOccluderOffset: {x: 0, y: 0, z: 0}
   mSmartTerrainOccluderRotation: {x: 0, y: 0, z: 0, w: 0}
   mAutoSetOccluderFromTargetSize: 0
-  mAspectRatio: 0.669275
+  mAspectRatio: 0.6692733
   mImageTargetType: 0
-  mWidth: 0.2
-  mHeight: 0.133855
+  mWidth: 0.15
+  mHeight: 0.100391
 --- !u!114 &114562992171960898
 MonoBehaviour:
   m_ObjectHideFlags: 1

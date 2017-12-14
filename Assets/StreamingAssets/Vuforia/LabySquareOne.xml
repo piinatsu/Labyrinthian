@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Doppler31SB" size="0.150000 0.143977" />
+    <ImageTarget name="Doppler21SB" size="0.150000 0.143977" />
+    <ImageTarget name="L4" size="0.150000 0.143977" />
+    <ImageTarget name="L3" size="0.150000 0.143977" />
+    <ImageTarget name="L2" size="0.150000 0.143977" />
+    <ImageTarget name="L1" size="0.150000 0.143977" />
+    <ImageTarget name="object_ramp" size="0.150000 0.100391" />
+    <ImageTarget name="object_coiled_spring" size="0.150000 0.100475" />
+    <ImageTarget name="object_arch_bridge" size="0.150000 0.100391" />
+  </Tracking>
+</QCARConfig>

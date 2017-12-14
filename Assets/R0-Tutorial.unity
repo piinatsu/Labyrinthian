@@ -128,7 +128,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.3346375}
+      m_Extent: {x: 0.5, y: 0, z: 0.33463666}
   m_Shapes:
     vertices: []
     shapes: []
@@ -180,7 +180,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 000000bf000000009b55abbe00000000ffff7f3f000000000000000000000000000000bf000000009b55ab3e00000000ffff7f3f00000000000000000000803f0000003f000000009b55abbe00000000ffff7f3f000000000000803f000000000000003f000000009b55ab3e00000000ffff7f3f000000000000803f0000803f
+    _typelessdata: 000000bf000000007f55abbe000000000000803f000000000000000000000000000000bf000000007f55ab3e000000000000803f00000000000000000000803f0000003f000000007f55abbe000000000000803f000000000000803f000000000000003f000000007f55ab3e000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -510,7 +510,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 29ed04af5b9e43a9b3c289a3324dd75f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0c392f77d97b4676a220aae474015954, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -532,7 +532,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.42542}
+      m_Extent: {x: 0.5, y: 0, z: 0.4799233}
   m_Shapes:
     vertices: []
     shapes: []
@@ -584,7 +584,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 000000bf00000000a6d0d9be000000000000803f000000000000000000000000000000bf00000000a6d0d93e000000000000803f00000000000000000000803f0000003f00000000a6d0d9be000000000000803f000000000000803f000000000000003f00000000a6d0d93e000000000000803f000000000000803f0000803f
+    _typelessdata: 000000bf0000000082b8f5be000000000000803f000000000000000000000000000000bf0000000082b8f53e000000000000803f00000000000000000000803f0000003f0000000082b8f5be000000000000803f000000000000803f000000000000003f0000000082b8f53e000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -1061,7 +1061,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: fb47fe53236740959f6dda8bd7a9df14, type: 3}
+        m_Texture: {fileID: 2800000, guid: 697b595b59ab4f4a94a7d4432154fc6f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -1198,6 +1198,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 1629384490}
+    - target: {fileID: 1769188287450428, guid: 36366caa08b4e264fb68c355ed33dc0f, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36366caa08b4e264fb68c355ed33dc0f, type: 2}
   m_IsPrefabParent: 0
@@ -1217,7 +1221,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.3346375}
+      m_Extent: {x: 0.5, y: 0, z: 0.33463666}
   m_Shapes:
     vertices: []
     shapes: []
@@ -1269,7 +1273,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 000000bf000000009b55abbe00000000ffff7f3f000000000000000000000000000000bf000000009b55ab3e00000000ffff7f3f00000000000000000000803f0000003f000000009b55abbe00000000ffff7f3f000000000000803f000000000000003f000000009b55ab3e00000000ffff7f3f000000000000803f0000803f
+    _typelessdata: 000000bf000000007f55abbe000000000000803f000000000000000000000000000000bf000000007f55ab3e000000000000803f00000000000000000000803f0000003f000000007f55abbe000000000000803f000000000000803f000000000000003f000000007f55ab3e000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -2064,7 +2068,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.33491498}
+      m_Extent: {x: 0.5, y: 0, z: 0.33491665}
   m_Shapes:
     vertices: []
     shapes: []
@@ -2116,7 +2120,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 000000bf00000000fa79abbe000000000000803f000000000000000000000000000000bf00000000fa79ab3e000000000000803f00000000000000000000803f0000003f00000000fa79abbe000000000000803f000000000000803f000000000000003f00000000fa79ab3e000000000000803f000000000000803f0000803f
+    _typelessdata: 000000bf00000000327aabbe000000000000803f000000000000000000000000000000bf00000000327aab3e000000000000803f00000000000000000000803f0000003f00000000327aabbe000000000000803f000000000000803f000000000000003f00000000327aab3e000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -2261,6 +2265,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 501978953}
+    - target: {fileID: 1030041970234744, guid: ed7535d0e9a8e3340b3b0452f5fa7396, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed7535d0e9a8e3340b3b0452f5fa7396, type: 2}
   m_IsPrefabParent: 0
@@ -2980,7 +2988,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: EquilateralMaterial
+  m_Name: L1Material
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -2993,7 +3001,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a299220085ef4cf283e956c8d0671923, type: 3}
+        m_Texture: {fileID: 2800000, guid: ca55f401f9fb42fdbf0f795ad4293a98, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -3597,10 +3605,10 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: Equilateral
+  mTrackableName: L1
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/Labyrinthian.xml
+  mDataSetPath: Vuforia/LabySquareOne.xml
   mExtendedTracking: 0
   mInitializeSmartTerrain: 0
   mReconstructionToInitialize: {fileID: 0}
@@ -3610,10 +3618,10 @@ MonoBehaviour:
   mSmartTerrainOccluderOffset: {x: 0, y: 0, z: 0}
   mSmartTerrainOccluderRotation: {x: 0, y: 0, z: 0, w: 0}
   mAutoSetOccluderFromTargetSize: 0
-  mAspectRatio: 0.85084
+  mAspectRatio: 0.9598466
   mImageTargetType: 0
   mWidth: 25
-  mHeight: 21.271
+  mHeight: 23.996166
 --- !u!4 &1426301937
 Transform:
   m_ObjectHideFlags: 0
@@ -4173,7 +4181,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: af2801fb2e1843439c6d9c5cd5033b13, type: 3}
+        m_Texture: {fileID: 2800000, guid: c4c276d193964f49adfc515d75f68470, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -4845,6 +4853,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 70273225}
+    - target: {fileID: 1985390708480440, guid: 573ffc81456b81f41a286ca808af1909, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 573ffc81456b81f41a286ca808af1909, type: 2}
   m_IsPrefabParent: 0
