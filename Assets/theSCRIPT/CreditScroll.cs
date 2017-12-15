@@ -22,6 +22,7 @@ public class CreditScroll : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Time.timeScale = 1;
 		//InvokeRepeating("scrollDown", 1.0f, 0.1f);
 		//InvokeRepeating("pullCreditsUp", 1.0f, 0.1f);
 		//StartCoroutine(pullCreditsUp(pullSpeed));
