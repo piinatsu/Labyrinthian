@@ -9,6 +9,11 @@ TagManager:
   - WindCorridor
   - Aster
   - ActiveObject
+  - Invincible
+  - coiled_spring
+  - bridge_ramp
+  - ramp
+  - ActiveObjectHolder
   layers:
   - Default
   - TransparentFX

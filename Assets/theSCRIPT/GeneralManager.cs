@@ -26,6 +26,7 @@ public class GeneralManager : MonoBehaviour {
 		//rb = thePlayer.GetComponent<Rigidbody>();
 		Invoke ("transformLocalPosition", 1.0f);
 		thePlayer.transform.localPosition = startPosition.transform.localPosition;
+		wallCollisionDisable = false;
 	}
 
 	void transformLocalPosition () {

@@ -13,7 +13,7 @@ public class Mana : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		InvokeRepeating ("manaRegen", 1.0f, 1.0f);
+		InvokeRepeating ("manaRegen", 1.0f, 0.75f);
 		mana = manaSlider.value;
 		manaRegenPerSec = 1.0f;
 	}
@@ -24,14 +24,17 @@ public class Mana : MonoBehaviour {
 	}
 		
 	void manaRegen () {
+		manaText.text = mana.ToString ();
+		manaSlider.value = mana;
 		//if (canRegen) {
 		if (mana < 100) {
 			mana += manaRegenPerSec;
 			if (mana < 2.0f) {
 				PlayerBall.manaDepleted = true;
 			}
-			manaText.text = mana.ToString ();
-			manaSlider.value = mana;
+			//manaText.text = mana.ToString ();
+			//manaSlider.value = mana;
+
 			//}
 		}
 	}

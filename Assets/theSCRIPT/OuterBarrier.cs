@@ -20,9 +20,10 @@ public class OuterBarrier : MonoBehaviour {
 		//if (coll.gameObject.tag == "Fire") {
 			//Debug.Log ("Exited some collider");
 			GameObject go = coll.gameObject;
-		if (go.CompareTag ("Player")) {
+		if (go.CompareTag ("Player") || go.CompareTag("Invincible")) {
 			//ausrc.Play ();
 			//soma.deathSound ();
+			Debug.Log("!!!!!!!!!!PLAYERDESTROYEDBYOUTERBARRIER!!!!!!!!!!");
 			Destroy (go);
 			menma.deathPause ();
 		} else {

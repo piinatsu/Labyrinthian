@@ -17,23 +17,36 @@ public class CoiledSpring : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider coll) {
+		/*
 		//GameObject go = coll.gameObject;
 		if (!isColliding) {
 			//isColliding = true;
-			if (coll.gameObject.tag == "Player") {
+			if (coll.gameObject.tag == "Player" || coll.CompareTag("Invincible")) {
 				isColliding = true;
 				Rigidbody rb = coll.gameObject.GetComponent<Rigidbody> ();
 				//rb.velocity = new Vector3 (0, 50, 0);
-				rb.AddForce (new Vector3 (0, 750, 0), ForceMode.Force);
+				rb.AddForce (new Vector3 (0, 1000, 0), ForceMode.Force);
 			}
+		}
+		*/
+
+
+		if (coll.gameObject.tag == "Player" || coll.CompareTag ("Invincible")) {
+			Debug.Log ("AOUOUOUOUOUOUOUOUOUOOOOOOO.....");
+			Rigidbody rb = coll.gameObject.GetComponent<Rigidbody> ();
+			rb.AddForce (new Vector3 (0, 1000, 0), ForceMode.Force);
+
+
 		}
 	}
 
+	/*
 	void OnTriggerExit (Collider coll) {
 		if (isColliding) {
-			if (coll.gameObject.tag == "Player") {
+			if (coll.gameObject.tag == "Player" || coll.CompareTag("Invincible")) {
 				isColliding = false;
 			}
 		}
 	}
+	*/
 }

@@ -18,6 +18,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 
     protected TrackableBehaviour mTrackableBehaviour;
 	string trackableName;
+	bool aohIsHidden = false;
 
     #endregion // PRIVATE_MEMBER_VARIABLES
 
@@ -77,6 +78,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         var colliderComponents = GetComponentsInChildren<Collider>(true);
         var canvasComponents = GetComponentsInChildren<Canvas>(true);
+		GameObject aoh;
 
         // Enable rendering:
         foreach (var component in rendererComponents)
@@ -89,6 +91,21 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         // Enable canvas':
         foreach (var component in canvasComponents)
             component.enabled = true;
+		/*
+		aoh = GameObject.FindGameObjectWithTag ("ActiveObjectHolder");
+
+		if(!aohIsHidden) {
+			if (aoh != null) {
+				Debug.Log ("aohishere");
+				foreach (Transform child in aoh.transform) {
+					//child.gameObject.GetComponent<Renderer> ().enabled = false;
+					//child.gameObject.GetComponent<MeshCollider> ().enabled = false;
+					child.gameObject.SetActive(false);
+				}
+			}
+			aohIsHidden = true;
+		}
+		*/
 
 		if (trackableName == "object_ramp" ||
 		    trackableName == "object_coiled_spring" ||
@@ -121,8 +138,18 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         foreach (var component in canvasComponents)
             component.enabled = false;
 
-		Time.timeScale = 0;
-		Debug.Log ("DefaultTrackableEventHandler: TimeScale 0");
+		if (trackableName == "object_ramp" ||
+		    trackableName == "object_coiled_spring" ||
+		    trackableName == "object_arch_bridge") {
+			Debug.Log ("aTimescale 1");
+			Time.timeScale = 1f;
+		} else {
+			Time.timeScale = 0;
+			Debug.Log ("DefaultTrackableEventHandler: TimeScale 0");
+		}
+
+		//Time.timeScale = 0;
+		//Debug.Log ("DefaultTrackableEventHandler: TimeScale 0");
     }
 
     #endregion // PRIVATE_METHODS

@@ -80,8 +80,6 @@ public class MenuManager : MonoBehaviour {
 		//GeneralManager.wallCollisionDisable = false;
 		//canvasPauseMenu.transform.GetChild(0).gameObject.SetActive (false);
 
-		GeneralManager.wallCollisionDisable = false;
-
 		//img = panelOfSceneMenu.gameObject.GetComponent<Image> ();
 		//img.CrossFadeAlpha (0.0f, 1f, true);
 	}
