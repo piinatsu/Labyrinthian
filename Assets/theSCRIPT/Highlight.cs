@@ -5,6 +5,7 @@ using UnityEngine;
 public class Highlight : MonoBehaviour {
 
 	bool isHighlighted = false;
+	bool isHighlightedRed = false;
 	public Material mat1;
 	public Material mat2;
 	public Material mat3;
@@ -14,18 +15,60 @@ public class Highlight : MonoBehaviour {
 	//bool isActiveObject = false;
 	public GameObject activeObjectHolder;
 	string stringGOToBeActivated;
-
+	public static bool manaDepleted = false;
+	//public static int[] activeAO = new bool[3] { false, false, false };
+	public static int activeAO = 0;
 	//public GameObject[] goao;
 	//int counter = 0;
 
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 
+		if (manaDepleted) {
+			foreach (Transform child in activeObjectHolder.transform) {
+				child.gameObject.SetActive (false);
+			}
+			activeAO = 0;
+			manaDepleted = false;
+		}
+
+		if (Input.GetMouseButtonDown (0)) {
+			RaycastHit hit;
+			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+			if (Physics.Raycast (ray, out hit, Mathf.Infinity)) {
+				go = hit.collider.gameObject;
+				stringGOToBeActivated = go.name;
+				if (go.CompareTag ("ActiveObject") && go.GetComponent<Renderer> ().material.name == "Orange (Instance)") {
+					if ((Mana.mana - 30) > 1) { 
+						go.GetComponent<Renderer> ().material = mat2;
+						activeAO += 1;
+						foreach (Transform child in activeObjectHolder.transform)
+							if (child.CompareTag (stringGOToBeActivated))
+								child.gameObject.SetActive (true);
+						Mana.slashMana (30);
+					} else if ((Mana.mana - 30) < 1)
+						go.GetComponent<Renderer> ().material = mat3;
+					
+				} else if (go.CompareTag ("ActiveObject") && go.GetComponent<Renderer> ().material.name == "Light Green (Instance)") {
+					go.GetComponent<Renderer> ().material = mat1;
+					activeAO -= 1;
+					foreach (Transform child in activeObjectHolder.transform)
+						if (child.CompareTag (stringGOToBeActivated))
+							child.gameObject.SetActive (false);
+				} else if (go.CompareTag ("ActiveObject") && go.GetComponent<Renderer> ().material.name == "Red (Instance)") {
+					go.GetComponent<Renderer> ().material = mat1;
+				}
+			}
+		}
+	}
+}
+		/*
 		if (Input.GetMouseButtonDown (0)) {
 			RaycastHit hit;
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
@@ -39,7 +82,17 @@ public class Highlight : MonoBehaviour {
 							isHighlighted = true;
 							//isActiveObject = true;
 							//go2 = activeObjectHolder.transform.Find (stringGOToBeActivated).gameObject;
-							//go2.SetActive (true);
+                              
+							activeAO += 1;
+
+
+							if (stringGOToBeActivated == "coiled_spring")
+								activeAO [0] = true;
+							else if (stringGOToBeActivated == "ramp")
+								activeAO [1] = true;
+							else if (stringGOToBeActivated == "bridge_ramp")
+								activeAO [2] = true;
+							
 							foreach (Transform child in activeObjectHolder.transform) {
 								if(child.CompareTag(stringGOToBeActivated)) {
 									child.gameObject.SetActive(true);
@@ -47,11 +100,27 @@ public class Highlight : MonoBehaviour {
 									//child.gameObject.GetComponent<MeshCollider> ().enabled = true;
 								}
 							}
+
+							//if (Mana.manaRegenPerSec == 1f)
+							//	Mana.manaRegenPerSec = -.25f;
+							//else
+							//	Mana.manaRegenPerSec += -0.25f;
+							//
+
+
+							if(Mana.manaRegenPerSec < 0) {
+								Mana.manaRegenPerSec -= 0.25f;
+							} else if (Mana.manaRegenPerSec > 0 ) {
+								Mana.manaRegenPerSec = -0.25f;
+							}
+
+
 							Mana.slashMana(30);
 						} else if ((Mana.mana - 30) < 1) {
 							stringGOToBeActivated = go.name;
 							go.GetComponent<Renderer> ().material = mat3;
 							isHighlighted = true;
+							isHighlightedRed = true;
 						}
 						//StartCoroutine (refreshAWhile ());
 					}
@@ -68,68 +137,30 @@ public class Highlight : MonoBehaviour {
 						//isActiveObject = true;
 						//go2 = activeObjectHolder.transform.Find (stringGOToBeActivated).gameObject;
 						//go2.SetActive(false);
-						foreach (Transform child in activeObjectHolder.transform)
-							if(child.CompareTag(stringGOToBeActivated))
-								child.gameObject.SetActive(false);
+						if (!isHighlightedRed) {
+							activeAO -= 1;
+							isHighlightedRed = false;
+						}
+
+						
+						//if (stringGOToBeActivated == "coiled_spring")
+						//	activeAO [0] = false;
+						//else if (stringGOToBeActivated == "ramp")
+						//	activeAO [1] = false;
+						//else if (stringGOToBeActivated == "bridge_ramp")
+						//	activeAO [2] = false;
+
+
+						foreach (Transform child in activeObjectHolder.transform) {
+							if (child.CompareTag (stringGOToBeActivated)) {
+								child.gameObject.SetActive (false);
+							}
+						}
 					}
 				}
 				//if(isActiveObject)
 					//ActiveObjectSpawner.spawnObject (new GameObject());
 			}
-
-
-		}
-	}
-	/*
-	void OnMouseDown () {
-		isHighlighted = !isHighlighted;
-		if (gameObject.name == "ramp")
-			Debug.Log ("Ramp");
-		else if (gameObject.name == "bridge_ramp")
-			Debug.Log ("Ramp");
-		else if (gameObject.name == "coiled_spring")
-			Debug.Log ("Ramp");
-		// if no one is highlighted turn off all
-		if (isHighlighted) 
-			gameObject.GetComponent<Renderer> ().material = mat1;
-		else if(!isHighlighted) 
-			gameObject.GetComponent<Renderer> ().material = mat2;
-		//Instantiate (go, triggeredAOSLocation.transform.position,
-			//triggeredAOSLocation.transform.rotation);
-		
-	}
-	*/	
-	/*
-	IEnumerator refreshAWhile () {
-		while (counter < 5) {
-			Debug.Log ("AAAAAAAAAAAAAAAAAAA");
-			for (int i = 0; i < goao.Length; i++) {
-				if (goao [i].CompareTag ("coiled_spring")) {
-					goao [i].GetComponent<Collider> ().isTrigger = false;
-					goao [i].GetComponent<Collider> ().enabled = false;
-					goao [i].GetComponent<Collider> ().enabled = true;
-					goao [i].GetComponent<Collider> ().isTrigger = true;
-				} else if (goao [i].CompareTag ("ramp") || goao [i].CompareTag ("bridge_ramp")) {
-					goao [i].GetComponent<MeshCollider> ().convex = false;
-					goao [i].GetComponent<MeshCollider> ().enabled = false;
-					goao [i].GetComponent<MeshCollider> ().enabled = true;
-					goao [i].GetComponent<MeshCollider> ().convex = true;
-				}
-			}
-			counter++;
-			yield return new WaitForSecondsRealtime (2.0f);
 		}
 	}
 	*/
-	/*
-	if (stringGOToBeActivated == "coiled_spring") {
-		child.gameObject.GetComponent<Collider> ().isTrigger = false;
-		child.gameObject.GetComponent<Collider> ().enabled = false;
-		child.gameObject.GetComponent<Collider> ().enabled = true;
-		child.gameObject.GetComponent<Collider> ().isTrigger = true;
-	} else {
-		child.gameObject.GetComponent<MeshCollider> ().convex = false;
-		child.gameObject.GetComponent<MeshCollider> ().convex = true;
-	}
-	*/
-}

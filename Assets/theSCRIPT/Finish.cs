@@ -29,7 +29,7 @@ public class Finish : MonoBehaviour {
 
 
 	void OnTriggerEnter(Collider target) {
-		if (target.tag == "Player") {
+		if (target.tag == "Player" || target.CompareTag("Invincible")) {
 			finishScore = gm.theScore;
 			manaFinish = (int) Mana.mana;
 			//mm.gameFinished (finishScore); //displays canvasResultMenu at MenuManager

@@ -62,8 +62,14 @@ public class PlayerBall : MonoBehaviour {
 				changeMatToDefault ();
 			} else if (Mana.mana - 10 > 1) {
 				Mana.slashMana (5);
-				Mana.manaRegenPerSec = -.25f;
-				rb.mass = 1;
+				//Mana.manaRegenPerSec = -.25f;
+				/*
+				if(Mana.manaRegenPerSec == 1f)
+					Mana.manaRegenPerSec = -.25f;
+				else
+					Mana.manaRegenPerSec += -0.25f;
+				*/
+				rb.mass = 2;
 				currentMat = "Button_Wood";
 				gameObject.GetComponent<Renderer> ().material = mats [1];
 				Debug.Log ("Wooded");
@@ -74,12 +80,18 @@ public class PlayerBall : MonoBehaviour {
 			if (currentMat == "Button_Stone") {
 					changeMatToDefault ();
 			} else if(Mana.mana - 10 > 1) {
-					Mana.slashMana (5);
+				Mana.slashMana (5);
+				//Mana.manaRegenPerSec = -.25f;
+				/*
+				if(Mana.manaRegenPerSec == 1f)
 					Mana.manaRegenPerSec = -.25f;
-					rb.mass = 5;
-					currentMat = "Button_Stone";
-					gameObject.GetComponent<Renderer> ().material = mats [2];
-					Debug.Log ("Stoned");
+				else
+					Mana.manaRegenPerSec += -0.25f;
+				*/
+				rb.mass = 5;
+				currentMat = "Button_Stone";
+				gameObject.GetComponent<Renderer> ().material = mats [2];
+				Debug.Log ("Stoned");
 			} else if (Mana.mana - 10 < 1) {
 				glowMana ();
 			}
@@ -88,7 +100,13 @@ public class PlayerBall : MonoBehaviour {
 				changeMatToDefault ();
 			} else if(Mana.mana - 10 > 1) {
 				Mana.slashMana (5);
-				Mana.manaRegenPerSec = -.25f;
+				//Mana.manaRegenPerSec = -.25f;
+				/*
+				if(Mana.manaRegenPerSec == 1f)
+					Mana.manaRegenPerSec = -.25f;
+				else
+					Mana.manaRegenPerSec += -0.25f;
+				*/
 				rb.mass = 10;
 				currentMat = "Button_Metal";
 				gameObject.GetComponent<Renderer> ().material = mats [3];
@@ -97,6 +115,7 @@ public class PlayerBall : MonoBehaviour {
 				glowMana ();
 			}
 		}
+
 	}
 		/*
 		if (i > mats.Length - 1) i = 0;
@@ -122,7 +141,7 @@ public class PlayerBall : MonoBehaviour {
 		gameObject.GetComponent<Renderer>().material = mats[0];
 		currentMat = "Default";
 		rb.mass = 1;
-		Mana.manaRegenPerSec = 1.0f;
+		Mana.manaRegenPerSec += 1.25f;
 		//Mana.canRegen = true;
 	}
 

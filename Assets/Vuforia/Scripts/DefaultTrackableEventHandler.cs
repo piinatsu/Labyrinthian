@@ -18,7 +18,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 
     protected TrackableBehaviour mTrackableBehaviour;
 	string trackableName;
-	bool aohIsHidden = false;
+	//bool aohIsHidden = false;
 
     #endregion // PRIVATE_MEMBER_VARIABLES
 
