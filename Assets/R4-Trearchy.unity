@@ -1296,6 +1296,21 @@ Prefab:
       propertyPath: mat1
       value: 
       objectReference: {fileID: 2100000, guid: 8ee708399529ca346b51e4841decb0f0, type: 2}
+    - target: {fileID: 114254679655514098, guid: 6c9f536d7d537f34e9c05536ad14e959,
+        type: 2}
+      propertyPath: br
+      value: 
+      objectReference: {fileID: 1132489545}
+    - target: {fileID: 114254679655514098, guid: 6c9f536d7d537f34e9c05536ad14e959,
+        type: 2}
+      propertyPath: cs
+      value: 
+      objectReference: {fileID: 1975354678}
+    - target: {fileID: 114254679655514098, guid: 6c9f536d7d537f34e9c05536ad14e959,
+        type: 2}
+      propertyPath: r
+      value: 
+      objectReference: {fileID: 1081586676}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c9f536d7d537f34e9c05536ad14e959, type: 2}
   m_IsPrefabParent: 0
@@ -1524,7 +1539,7 @@ Prefab:
     - target: {fileID: 224260621331252012, guid: 20c5e410703334e48b5ca8f5182a78ab,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: -168
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114253233819224212, guid: 20c5e410703334e48b5ca8f5182a78ab,
         type: 2}
@@ -4554,6 +4569,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed7535d0e9a8e3340b3b0452f5fa7396, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1081586676 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1377216529478078, guid: ed7535d0e9a8e3340b3b0452f5fa7396,
+    type: 2}
+  m_PrefabInternal: {fileID: 1081586675}
 --- !u!1 &1121494990 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1788711341767710, guid: 11e5b3a24426bc149944af967fb62ab2,
@@ -4616,6 +4636,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36366caa08b4e264fb68c355ed33dc0f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1132489545 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1003567434894818, guid: 36366caa08b4e264fb68c355ed33dc0f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1132489544}
 --- !u!4 &1150192656 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4588547156220108, guid: 11e5b3a24426bc149944af967fb62ab2,
@@ -6735,12 +6760,12 @@ Prefab:
     - target: {fileID: 224151364511993438, guid: c5cc0c384e6ea4345ba3111d38f5eb8f,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 319.5
+      value: 960
       objectReference: {fileID: 0}
     - target: {fileID: 224151364511993438, guid: c5cc0c384e6ea4345ba3111d38f5eb8f,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 454.5
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 224151364511993438, guid: c5cc0c384e6ea4345ba3111d38f5eb8f,
         type: 2}
@@ -6894,7 +6919,46 @@ Prefab:
     - target: {fileID: 114687029907204416, guid: c5cc0c384e6ea4345ba3111d38f5eb8f,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: thousandMana
+      objectReference: {fileID: 0}
+    - target: {fileID: 224601966543540426, guid: c5cc0c384e6ea4345ba3111d38f5eb8f,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1150
+      objectReference: {fileID: 0}
+    - target: {fileID: 224601966543540426, guid: c5cc0c384e6ea4345ba3111d38f5eb8f,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 1200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114345184806257988, guid: c5cc0c384e6ea4345ba3111d38f5eb8f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 431032374}
+    - target: {fileID: 114345184806257988, guid: c5cc0c384e6ea4345ba3111d38f5eb8f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: manaPlusPlus
+      objectReference: {fileID: 0}
+    - target: {fileID: 114611444978488008, guid: c5cc0c384e6ea4345ba3111d38f5eb8f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 431032374}
+    - target: {fileID: 114611444978488008, guid: c5cc0c384e6ea4345ba3111d38f5eb8f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: thePlayerInvincibility
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817257598091220, guid: c5cc0c384e6ea4345ba3111d38f5eb8f, type: 2}
+      propertyPath: m_Name
+      value: CheatManaPlusPlus
+      objectReference: {fileID: 0}
+    - target: {fileID: 114498276981095264, guid: c5cc0c384e6ea4345ba3111d38f5eb8f,
+        type: 2}
+      propertyPath: m_Text
+      value: Mana++
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c5cc0c384e6ea4345ba3111d38f5eb8f, type: 2}

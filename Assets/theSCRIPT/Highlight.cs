@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Highlight : MonoBehaviour {
 
-	bool isHighlighted = false;
-	bool isHighlightedRed = false;
+	//bool isHighlighted = false;
+	//bool isHighlightedRed = false;
 	public Material mat1;
 	public Material mat2;
 	public Material mat3;
+	public GameObject cs;
+	public GameObject br;
+	public GameObject r;
 	public static Transform triggeredAOSLocation;
 	public static GameObject go;
 	GameObject go2;
@@ -23,7 +26,10 @@ public class Highlight : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		cs.GetComponent<Renderer> ().material = mat1;
+		br.GetComponent<Renderer> ().material = mat1;
+		r.GetComponent<Renderer> ().material = mat1;
+		activeAO = 0;
 	}
 	
 	// Update is called once per frame

@@ -31,6 +31,10 @@ public class CheatyMcCheatface : MonoBehaviour {
 		Mana.mana = 1000;
 	}
 
+	public void manaPlusPlus () {
+		Mana.mana += 20;
+	}
+
 	public void spawnNearCoiledSpring () {
 		thePlayer.transform.position = coiledSpringPos.transform.position;
 	}
