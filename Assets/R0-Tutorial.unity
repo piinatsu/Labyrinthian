@@ -379,7 +379,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.4799233}
+      m_Extent: {x: 0.5, y: 0, z: 0.47992355}
   m_Shapes:
     vertices: []
     shapes: []
@@ -431,7 +431,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 000000bf0000000082b8f5be000000000000803f000000000000000000000000000000bf0000000082b8f53e000000000000803f00000000000000000000803f0000003f0000000082b8f5be000000000000803f000000000000803f000000000000003f0000000082b8f53e000000000000803f000000000000803f0000803f
+    _typelessdata: 000000bf000000008ab8f5be00000000ffff7f3f000000000000000000000000000000bf000000008ab8f53e00000000ffff7f3f00000000000000000000803f0000003f000000008ab8f5be00000000ffff7f3f000000000000803f000000000000003f000000008ab8f53e00000000ffff7f3f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -548,7 +548,7 @@ Prefab:
     - target: {fileID: 114254769451162080, guid: 3c594b04783073e4b820c9b13ccf4ea9,
         type: 2}
       propertyPath: speed
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114254769451162080, guid: 3c594b04783073e4b820c9b13ccf4ea9,
         type: 2}
@@ -1182,7 +1182,7 @@ Prefab:
     - target: {fileID: 114253233819224212, guid: 20c5e410703334e48b5ca8f5182a78ab,
         type: 2}
       propertyPath: m_Text
-      value: Tutorial
+      value: Stage I
       objectReference: {fileID: 0}
     - target: {fileID: 114731875368722280, guid: 20c5e410703334e48b5ca8f5182a78ab,
         type: 2}
@@ -2447,7 +2447,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: L1Material
+  m_Name: L1SBMaterial
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -2460,7 +2460,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ca55f401f9fb42fdbf0f795ad4293a98, type: 3}
+        m_Texture: {fileID: 2800000, guid: 13b1ffbec81945a392dd7cc6de06eead, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -2699,7 +2699,7 @@ Prefab:
     - target: {fileID: 114457696767225102, guid: 0fe05c5da1633184bbec409fb7c435ff,
         type: 2}
       propertyPath: endLine
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 114457696767225102, guid: 0fe05c5da1633184bbec409fb7c435ff,
         type: 2}
@@ -2709,7 +2709,7 @@ Prefab:
     - target: {fileID: 114457696767225102, guid: 0fe05c5da1633184bbec409fb7c435ff,
         type: 2}
       propertyPath: endLineAncient
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fe05c5da1633184bbec409fb7c435ff, type: 2}
@@ -3022,10 +3022,10 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: L1
+  mTrackableName: L1SB
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/LabySquareOne.xml
+  mDataSetPath: Vuforia/LabySquareOneS2Test.xml
   mExtendedTracking: 0
   mInitializeSmartTerrain: 0
   mReconstructionToInitialize: {fileID: 0}
@@ -3035,10 +3035,10 @@ MonoBehaviour:
   mSmartTerrainOccluderOffset: {x: 0, y: 0, z: 0}
   mSmartTerrainOccluderRotation: {x: 0, y: 0, z: 0, w: 0}
   mAutoSetOccluderFromTargetSize: 0
-  mAspectRatio: 0.9598466
+  mAspectRatio: 0.9598471
   mImageTargetType: 0
   mWidth: 25
-  mHeight: 23.996166
+  mHeight: 23.996178
 --- !u!4 &1426301937
 Transform:
   m_ObjectHideFlags: 0
@@ -4662,7 +4662,7 @@ Prefab:
     - target: {fileID: 114254769451162080, guid: 3c594b04783073e4b820c9b13ccf4ea9,
         type: 2}
       propertyPath: speed
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1564919264486584, guid: 3c594b04783073e4b820c9b13ccf4ea9, type: 2}
       propertyPath: m_IsActive

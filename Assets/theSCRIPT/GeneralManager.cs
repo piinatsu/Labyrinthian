@@ -52,7 +52,7 @@ public class GeneralManager : MonoBehaviour {
 			Mana.manaRegenPerSec = -0.25f;
 		else if (thePlayer.GetComponent<Renderer> ().material.name == "White (Instance)" && x != 0)
 			Mana.manaRegenPerSec = x * -0.25f;
-		Debug.Log (x);
+		//Debug.Log (x);
 	}
 
 	/*

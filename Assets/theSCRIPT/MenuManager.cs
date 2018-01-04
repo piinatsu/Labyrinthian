@@ -177,10 +177,10 @@ public class MenuManager : MonoBehaviour {
 	//-----------------------------------------------------	
 	public void snaegel () {
 		soma.buttonSound ();
-		if (Mana.mana > 25) {
+		if (Mana.mana > 20) {
 			StartCoroutine (snaegelCR ());
-			Mana.slashMana (25);
-		} else if (Mana.mana - 75 < 1) {
+			Mana.slashMana (20);
+		} else if (Mana.mana < 20) {
 			pb.glowMana ();
 			//PlayerBall.glowMana ();
 		}
@@ -189,10 +189,10 @@ public class MenuManager : MonoBehaviour {
 
 	public void chronica () {
 		soma.buttonSound ();
-		if (Mana.mana > 50) {
+		if (Mana.mana > 40) {
 			StartCoroutine (chronicaCR ());
-			Mana.slashMana (50);
-		} else if (Mana.mana - 75 < 1) {
+			Mana.slashMana (40);
+		} else if (Mana.mana < 40) {
 			pb.glowMana ();
 			//PlayerBall.glowMana ();
 		}
@@ -201,10 +201,10 @@ public class MenuManager : MonoBehaviour {
 
 	public void opthalos () {
 		soma.buttonSound ();
-		if (Mana.mana - 75 > 1) {
+		if (Mana.mana > 70) {
 			StartCoroutine (opthalosCR ());
-			Mana.slashMana (75);
-		} else if (Mana.mana - 75 < 1) {
+			Mana.slashMana (70);
+		} else if (Mana.mana < 70) {
 			pb.glowMana ();
 			//PlayerBall.glowMana ();
 		}
@@ -241,7 +241,7 @@ public class MenuManager : MonoBehaviour {
 			PatrolMultipleLerp.vSpeed = snaegelSpeed;
 			yield return new WaitForSeconds (0.2f);
 		}
-		yield return new WaitForSeconds (skillDuration*2);
+		yield return new WaitForSeconds (10f);
 		for (float i = 0.5f; i <= 1f; i += 0.025f) {
 			snaegelSpeed = PatrolMultipleLerp.sSpeed;
 			snaegelSpeed *= i;
@@ -271,7 +271,7 @@ public class MenuManager : MonoBehaviour {
 		}
 		*/
 		PatrolMultipleLerp.chronicaFlag = true;
-		yield return new WaitForSeconds (skillDuration);
+		yield return new WaitForSeconds (7f);
 		PatrolMultipleLerp.chronicaFlag = false;
 	}
 
@@ -282,7 +282,7 @@ public class MenuManager : MonoBehaviour {
 		GeneralManager.toggleWallMesh (false);
 		*/
 		GeneralManager.wallCollisionDisable = true;
-		yield return new WaitForSeconds (skillDuration);
+		yield return new WaitForSeconds (5f);
 		GeneralManager.wallCollisionDisable = false;
 	}
 	//-----------------------------------------------------

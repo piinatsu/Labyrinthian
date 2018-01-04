@@ -38,7 +38,7 @@ public class Mana : MonoBehaviour {
 
 			//}
 		}
-		Debug.Log (manaRegenPerSec);
+		//Debug.Log (manaRegenPerSec);
 	}
 
 	public static void slashMana (int amount) {

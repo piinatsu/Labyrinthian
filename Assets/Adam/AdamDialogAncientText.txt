@@ -3,7 +3,10 @@ But I know not of the exact circumstances that lead to their demise. Only at the
 By the looks of you, I gather that you are not from these parts. I know not of your origin or any kind of transportation that might take you home. 
 I really do pity you, little one. But, this might offer some consolation: One thing I can say for certain is that my creators left some advanced piece of technology.
 I surmise these technologies might be able to aid you finding your way back home. According to my archive, they lie deep in the ruins of my creator's civilization.
-Should you find any of their relics, bring them to me. I am capable of understanding them and am certain they can provide us some clue about past history and technology.
+Your goal is to make your way to the finish line which is marked with a checkered pattern with a green gate nearby. To open the gate blocking it, you have to put an object on top of the gate trigger which is marked with a green circle.
+Beware of enemies. Each type of enemy has their own element and color. You can change your material accordingly to resist them or spawn objects to get around them.
+Activating any skill or spawning objects each time will consume your energy and also continously sap energy while the skill or objects is active. Your energy will regenerate back if you have no skill activated.
+I have fully surveyed the outer area and one beyond it, they require the same marker to be accessed. It should be realtively safe for you to test the waters.-
 Since ancient times, there exists four domains harboring all matter tangible or otherwise serving as base ground supporting our universe. Void of any life and yet to be filled.
 Three on the outer-rim and in-between a single inverted world.- 
 Primordial energy, the precursor of life, converged at the lower outer-rim outskirts and so began life itself.

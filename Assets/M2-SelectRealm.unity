@@ -179,7 +179,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stage 0
+  m_Text: Stage I
 --- !u!222 &17728030
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -321,7 +321,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stage IV
+  m_Text: Stage V
 --- !u!222 &61127539
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -909,7 +909,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stage II
+  m_Text: Stage III
 --- !u!222 &489376532
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2537,7 +2537,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stage I
+  m_Text: Stage II
 --- !u!222 &1830960313
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2611,7 +2611,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stage III
+  m_Text: Stage IV
 --- !u!222 &1979871545
 CanvasRenderer:
   m_ObjectHideFlags: 0
