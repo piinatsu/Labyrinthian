@@ -14,6 +14,8 @@ TagManager:
   - bridge_ramp
   - ramp
   - ActiveObjectHolder
+  - BGMMain
+  - BGMGame
   layers:
   - Default
   - TransparentFX

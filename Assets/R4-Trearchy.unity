@@ -203,7 +203,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 17d11bca723e43f79489a4a688ccc4ad, type: 3}
+        m_Texture: {fileID: 2800000, guid: b19ab519ae7f43ada8032944ccfbd254, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -332,7 +332,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.33352}
+      m_Extent: {x: 0.5, y: 0, z: 0.33463666}
   m_Shapes:
     vertices: []
     shapes: []
@@ -384,7 +384,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 000000bf0000000022c3aabe000000000000803f000000000000000000000000000000bf0000000022c3aa3e000000000000803f00000000000000000000803f0000003f0000000022c3aabe000000000000803f000000000000803f000000000000003f0000000022c3aa3e000000000000803f000000000000803f0000803f
+    _typelessdata: 000000bf000000007f55abbe000000000000803f000000000000000000000000000000bf000000007f55ab3e000000000000803f00000000000000000000803f0000003f000000007f55abbe000000000000803f000000000000803f000000000000003f000000007f55ab3e000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -465,7 +465,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.47992355}
+      m_Extent: {x: 0.5, y: 0, z: 0.4799233}
   m_Shapes:
     vertices: []
     shapes: []
@@ -517,7 +517,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 000000bf000000008ab8f5be00000000ffff7f3f000000000000000000000000000000bf000000008ab8f53e00000000ffff7f3f00000000000000000000803f0000003f000000008ab8f5be00000000ffff7f3f000000000000803f000000000000003f000000008ab8f53e00000000ffff7f3f000000000000803f0000803f
+    _typelessdata: 000000bf0000000082b8f5be000000000000803f000000000000000000000000000000bf0000000082b8f53e000000000000803f00000000000000000000803f0000003f0000000082b8f5be000000000000803f000000000000803f000000000000003f0000000082b8f53e000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -593,7 +593,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.3333333}
+      m_Extent: {x: 0.5, y: 0, z: 0.33491665}
   m_Shapes:
     vertices: []
     shapes: []
@@ -645,7 +645,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 000000bf00000000aaaaaabe000000000000803f000000000000000000000000000000bf00000000aaaaaa3e000000000000803f00000000000000000000803f0000003f00000000aaaaaabe000000000000803f000000000000803f000000000000003f00000000aaaaaa3e000000000000803f000000000000803f0000803f
+    _typelessdata: 000000bf00000000327aabbe000000000000803f000000000000000000000000000000bf00000000327aab3e000000000000803f00000000000000000000803f0000003f00000000327aabbe000000000000803f000000000000803f000000000000003f00000000327aab3e000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -1689,7 +1689,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 9b3d596457b14e9294c2a4fe923e89be, type: 3}
+        m_Texture: {fileID: 2800000, guid: e3b6b694c09245e1a6eb46aaad68ea73, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -1832,12 +1832,17 @@ Prefab:
     - target: {fileID: 114307902701603474, guid: 573ffc81456b81f41a286ca808af1909,
         type: 2}
       propertyPath: mDataSetPath
-      value: Vuforia/LabySquareOneS2Test.xml
+      value: Vuforia/LabySquareOne.xml
       objectReference: {fileID: 0}
     - target: {fileID: 114307902701603474, guid: 573ffc81456b81f41a286ca808af1909,
         type: 2}
       propertyPath: mAspectRatio
-      value: 0.6666666
+      value: 0.6698333
+      objectReference: {fileID: 0}
+    - target: {fileID: 114307902701603474, guid: 573ffc81456b81f41a286ca808af1909,
+        type: 2}
+      propertyPath: mHeight
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 64267236214529466, guid: 573ffc81456b81f41a286ca808af1909, type: 2}
@@ -2392,12 +2397,12 @@ Prefab:
     - target: {fileID: 224751932967437078, guid: 3a3b4e95bcaf45f4da615839c6048196,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 960
       objectReference: {fileID: 0}
     - target: {fileID: 224751932967437078, guid: 3a3b4e95bcaf45f4da615839c6048196,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 224751932967437078, guid: 3a3b4e95bcaf45f4da615839c6048196,
         type: 2}
@@ -2502,6 +2507,26 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: restartTheGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 114124864002912518, guid: 3a3b4e95bcaf45f4da615839c6048196,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 114124864002912518, guid: 3a3b4e95bcaf45f4da615839c6048196,
+        type: 2}
+      propertyPath: m_FontData.m_MinSize
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114124864002912518, guid: 3a3b4e95bcaf45f4da615839c6048196,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224261688354145482, guid: 3a3b4e95bcaf45f4da615839c6048196,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 160
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a3b4e95bcaf45f4da615839c6048196, type: 2}
@@ -2729,7 +2754,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.33352}
+      m_Extent: {x: 0.5, y: 0, z: 0.33463666}
   m_Shapes:
     vertices: []
     shapes: []
@@ -2781,7 +2806,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 000000bf0000000022c3aabe000000000000803f000000000000000000000000000000bf0000000022c3aa3e000000000000803f00000000000000000000803f0000003f0000000022c3aabe000000000000803f000000000000803f000000000000003f0000000022c3aa3e000000000000803f000000000000803f0000803f
+    _typelessdata: 000000bf000000007f55abbe000000000000803f000000000000000000000000000000bf000000007f55ab3e000000000000803f00000000000000000000803f0000003f000000007f55abbe000000000000803f000000000000803f000000000000003f000000007f55ab3e000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -4671,7 +4696,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: bf6b18eb7c824eacafcc2e7d1c845c36, type: 3}
+        m_Texture: {fileID: 2800000, guid: 31499e89490045aeabdc75868221397c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -4764,12 +4789,22 @@ Prefab:
     - target: {fileID: 114385696978356782, guid: ed7535d0e9a8e3340b3b0452f5fa7396,
         type: 2}
       propertyPath: mDataSetPath
-      value: Vuforia/LabySquareOneS2Test.xml
+      value: Vuforia/LabySquareOne.xml
       objectReference: {fileID: 0}
     - target: {fileID: 114385696978356782, guid: ed7535d0e9a8e3340b3b0452f5fa7396,
         type: 2}
       propertyPath: mAspectRatio
-      value: 0.66704
+      value: 0.6692733
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385696978356782, guid: ed7535d0e9a8e3340b3b0452f5fa7396,
+        type: 2}
+      propertyPath: mTrackableName
+      value: object_ramp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385696978356782, guid: ed7535d0e9a8e3340b3b0452f5fa7396,
+        type: 2}
+      propertyPath: mHeight
+      value: 0.100056
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed7535d0e9a8e3340b3b0452f5fa7396, type: 2}
@@ -4846,12 +4881,17 @@ Prefab:
     - target: {fileID: 114337857591075000, guid: 36366caa08b4e264fb68c355ed33dc0f,
         type: 2}
       propertyPath: mDataSetPath
-      value: Vuforia/LabySquareOneS2Test.xml
+      value: Vuforia/LabySquareOne.xml
       objectReference: {fileID: 0}
     - target: {fileID: 114337857591075000, guid: 36366caa08b4e264fb68c355ed33dc0f,
         type: 2}
       propertyPath: mAspectRatio
-      value: 0.66704
+      value: 0.6692733
+      objectReference: {fileID: 0}
+    - target: {fileID: 114337857591075000, guid: 36366caa08b4e264fb68c355ed33dc0f,
+        type: 2}
+      propertyPath: mHeight
+      value: 0.100056
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36366caa08b4e264fb68c355ed33dc0f, type: 2}
@@ -4902,7 +4942,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: L4SBMaterial
+  m_Name: L4Material
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -4915,7 +4955,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: af3c47b2f6274d818e25e431c1792dd6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0bf13119946244fbbc9a90db7d1490b9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -5875,10 +5915,10 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: L4SB
+  mTrackableName: L4
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/LabySquareOneS2Test.xml
+  mDataSetPath: Vuforia/LabySquareOne.xml
   mExtendedTracking: 0
   mInitializeSmartTerrain: 0
   mReconstructionToInitialize: {fileID: 0}
@@ -5888,10 +5928,10 @@ MonoBehaviour:
   mSmartTerrainOccluderOffset: {x: 0, y: 0, z: 0}
   mSmartTerrainOccluderRotation: {x: 0, y: 0, z: 0, w: 0}
   mAutoSetOccluderFromTargetSize: 0
-  mAspectRatio: 0.9598471
+  mAspectRatio: 0.9598466
   mImageTargetType: 0
   mWidth: 90
-  mHeight: 86.38624
+  mHeight: 86.38619
 --- !u!4 &1426301937
 Transform:
   m_ObjectHideFlags: 0
@@ -6567,9 +6607,32 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 1828289931099766, guid: 350be82b67c45984c9fb7fcedcfac465, type: 2}
+      propertyPath: m_TagString
+      value: BGMGame
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 350be82b67c45984c9fb7fcedcfac465, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1636207997 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1828289931099766, guid: 350be82b67c45984c9fb7fcedcfac465,
+    type: 2}
+  m_PrefabInternal: {fileID: 1636207996}
+--- !u!114 &1636207998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1636207997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c7412b589f8171498233b2bec0ebe5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asr: {fileID: 0}
+  ac1: {fileID: 0}
+  ac2: {fileID: 0}
 --- !u!1 &1661077391
 GameObject:
   m_ObjectHideFlags: 0

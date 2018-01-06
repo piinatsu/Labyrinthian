@@ -57,6 +57,9 @@ public class MenuManager : MonoBehaviour {
 	public static bool finishedScoring = false;
 	public GameObject finishCheat;
 
+	//int hs;
+	bool recordBroken = false;
+
 	// Use this for initialization
 	void Start () {
 		//gm = FindObjectOfType<GeneralManager> ();
@@ -325,11 +328,46 @@ public class MenuManager : MonoBehaviour {
 			scoreText.text = fScore.ToString ();
 			yield return new WaitForSecondsRealtime(0.025f);
 		}
+			
+		//if (PlayerPrefs.GetInt ("HighestScore") == null) {
+		//	Debug.Log ("PlayerPrefs HighestScore is null");
+		//} else if (PlayerPrefs.GetInt ("HighestScore") != null) {
+		//	Debug.Log ("PlayerPrefs HighestScore is not null");
+		//	int hs = PlayerPrefs.GetInt ("HighestScore");
+		//	Debug.Log (hs);
+		//}
+
+		int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+		/*
+		if (currentSceneIndex == 7) {
+			if (fScore > PlayerPrefs.GetInt ("HighestScore7"))
+				PlayerPrefs.SetInt ("HighestScore", fScore);
+		} else if (currentSceneIndex == 6) {
+			if (fScore > PlayerPrefs.GetInt ("HighestScore6"))
+				PlayerPrefs.SetInt ("HighestScore", fScore);
+		} else if (currentSceneIndex == 5) {
+			if (fScore > PlayerPrefs.GetInt ("HighestScore5"))
+				PlayerPrefs.SetInt ("HighestScore", fScore);
+		} else if (currentSceneIndex == 4) {
+			if (fScore > PlayerPrefs.GetInt ("HighestScore4"))
+				PlayerPrefs.SetInt ("HighestScore", fScore);
+		} else if (currentSceneIndex == 3) {
+			if (fScore > PlayerPrefs.GetInt ("HighestScore3"))
+				PlayerPrefs.SetInt ("HighestScore", fScore);
+		}
+		*/
+
+		if (fScore > PlayerPrefs.GetInt ("HighestScore" + currentSceneIndex)) {
+			PlayerPrefs.SetInt ("HighestScore" + currentSceneIndex, fScore);
+			recordBroken = true;
+		}
+
 		gameFinished (fScore);
 	}
 
 	public void gameFinished (int fScore) {
 		canvasResultMenu.SetActive (true);
+		int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 		/*
 		while (Mana.mana > 0) {
 			Mana.mana -= 1.0f;
@@ -345,7 +383,7 @@ public class MenuManager : MonoBehaviour {
 		} else if (fScore >= 400) {
 			star1 ();
 		}
-
+			
 		if (fScore >= 800) {
 			if (fScore >= 900) {
 				praise = "Magnificent!";
@@ -363,8 +401,16 @@ public class MenuManager : MonoBehaviour {
 				praise = "Good";
 			}
 		}
+
+		if (recordBroken) {
+			Debug.Log("You set a new record!!");
+			praise = "You've set a new record!!";
+		}
+		recordBroken = false;
+
 		praiseText.text = praise;
 		scoreText.text = fScore.ToString ();
+		scoreText.text = "Score: " + fScore + "\nHighest: " + PlayerPrefs.GetInt ("HighestScore"+currentSceneIndex);
 	}
 
 	public void star1 () {

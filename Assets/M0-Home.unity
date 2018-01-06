@@ -2123,9 +2123,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1472796204}
   - component: {fileID: 1472796203}
+  - component: {fileID: 1472796205}
   m_Layer: 0
-  m_Name: Audio Source
-  m_TagString: Untagged
+  m_Name: BGM_Bittersweet
+  m_TagString: BGMMain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2223,6 +2224,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1472796205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1472796202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c7412b589f8171498233b2bec0ebe5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asr: {fileID: 1472796203}
+  ac1: {fileID: 8300000, guid: 83c27efeae4997f46aaf024b0e237132, type: 3}
+  ac2: {fileID: 8300000, guid: dd412ca3992bcff4a85b1c9ed93aa84d, type: 3}
 --- !u!1 &1586536052
 GameObject:
   m_ObjectHideFlags: 0

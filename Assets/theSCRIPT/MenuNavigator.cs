@@ -72,6 +72,24 @@ public class MenuNavigator: MonoBehaviour {
 
 	public void gotoHome() {
 		SceneManager.LoadScene ("M0-Home");
+		for (int i = 3; i <= 7; i++) {
+			PlayerPrefs.SetInt ("HighestScore"+i, 1);
+		}
+		//PlayerPrefs.SetInt ("HighestScore3", 1);
+		//PlayerPrefs.SetInt ("HighestScore4", 1);
+		//PlayerPrefs.SetInt ("HighestScore5", 1);
+		//PlayerPrefs.SetInt ("HighestScore6", 1);
+		//PlayerPrefs.SetInt ("HighestScore7", 1);
+	}
+
+	public void unlockStage() {
+		for (int i = 2; i <= 5; i++)
+			PlayerPrefs.SetString ("StageUnlocked"+i, "true");
+	}
+
+	public void lockStage() {
+		for (int i = 2; i <= 5; i++)
+			PlayerPrefs.SetString ("StageUnlocked"+i, "false");
 	}
 
 	public void gotoAboutHelp () {

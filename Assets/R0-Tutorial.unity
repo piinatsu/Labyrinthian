@@ -379,7 +379,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.47992355}
+      m_Extent: {x: 0.5, y: 0, z: 0.4799233}
   m_Shapes:
     vertices: []
     shapes: []
@@ -431,7 +431,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 000000bf000000008ab8f5be00000000ffff7f3f000000000000000000000000000000bf000000008ab8f53e00000000ffff7f3f00000000000000000000803f0000003f000000008ab8f5be00000000ffff7f3f000000000000803f000000000000003f000000008ab8f53e00000000ffff7f3f000000000000803f0000803f
+    _typelessdata: 000000bf0000000082b8f5be000000000000803f000000000000000000000000000000bf0000000082b8f53e000000000000803f00000000000000000000803f0000003f0000000082b8f5be000000000000803f000000000000803f000000000000003f0000000082b8f53e000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -1692,9 +1692,41 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1828289931099766, guid: 350be82b67c45984c9fb7fcedcfac465, type: 2}
+      propertyPath: m_Name
+      value: BGM_EverMindful
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828289931099766, guid: 350be82b67c45984c9fb7fcedcfac465, type: 2}
+      propertyPath: m_TagString
+      value: BGMGame
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 350be82b67c45984c9fb7fcedcfac465, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &713827767 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1828289931099766, guid: 350be82b67c45984c9fb7fcedcfac465,
+    type: 2}
+  m_PrefabInternal: {fileID: 713827766}
+--- !u!82 &713827768 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82915690940600432, guid: 350be82b67c45984c9fb7fcedcfac465,
+    type: 2}
+  m_PrefabInternal: {fileID: 713827766}
+--- !u!114 &713827769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 713827767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c7412b589f8171498233b2bec0ebe5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asr: {fileID: 713827768}
+  ac1: {fileID: 8300000, guid: 83c27efeae4997f46aaf024b0e237132, type: 3}
+  ac2: {fileID: 8300000, guid: dd412ca3992bcff4a85b1c9ed93aa84d, type: 3}
 --- !u!1 &836848406
 GameObject:
   m_ObjectHideFlags: 0
@@ -2447,7 +2479,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: L1SBMaterial
+  m_Name: L1Material
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -2460,7 +2492,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 13b1ffbec81945a392dd7cc6de06eead, type: 3}
+        m_Texture: {fileID: 2800000, guid: ca55f401f9fb42fdbf0f795ad4293a98, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -3022,10 +3054,10 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: L1SB
+  mTrackableName: L1
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/LabySquareOneS2Test.xml
+  mDataSetPath: Vuforia/LabySquareOne.xml
   mExtendedTracking: 0
   mInitializeSmartTerrain: 0
   mReconstructionToInitialize: {fileID: 0}
@@ -3035,10 +3067,10 @@ MonoBehaviour:
   mSmartTerrainOccluderOffset: {x: 0, y: 0, z: 0}
   mSmartTerrainOccluderRotation: {x: 0, y: 0, z: 0, w: 0}
   mAutoSetOccluderFromTargetSize: 0
-  mAspectRatio: 0.9598471
+  mAspectRatio: 0.9598466
   mImageTargetType: 0
   mWidth: 25
-  mHeight: 23.996178
+  mHeight: 23.996166
 --- !u!4 &1426301937
 Transform:
   m_ObjectHideFlags: 0
@@ -4330,7 +4362,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4953898389384218, guid: 12c8f9510c720b0469e01fb519c8a230, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.2583
+      value: -0.2457
       objectReference: {fileID: 0}
     - target: {fileID: 4953898389384218, guid: 12c8f9510c720b0469e01fb519c8a230, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4419,12 +4451,12 @@ Prefab:
     - target: {fileID: 224751932967437078, guid: 3a3b4e95bcaf45f4da615839c6048196,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 960
       objectReference: {fileID: 0}
     - target: {fileID: 224751932967437078, guid: 3a3b4e95bcaf45f4da615839c6048196,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 224751932967437078, guid: 3a3b4e95bcaf45f4da615839c6048196,
         type: 2}
@@ -4544,6 +4576,36 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: restartTheGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 114124864002912518, guid: 3a3b4e95bcaf45f4da615839c6048196,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 114124864002912518, guid: 3a3b4e95bcaf45f4da615839c6048196,
+        type: 2}
+      propertyPath: m_FontData.m_MinSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224261688354145482, guid: 3a3b4e95bcaf45f4da615839c6048196,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 224261688354145482, guid: 3a3b4e95bcaf45f4da615839c6048196,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114124864002912518, guid: 3a3b4e95bcaf45f4da615839c6048196,
+        type: 2}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114124864002912518, guid: 3a3b4e95bcaf45f4da615839c6048196,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a3b4e95bcaf45f4da615839c6048196, type: 2}

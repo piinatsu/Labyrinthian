@@ -44,9 +44,9 @@ MonoBehaviour:
       ContainsMagnet: 0
   databaseLoad:
     dataSetsToLoad:
-    - LabySquareOneS2Test
+    - LabySquareOne
     dataSetsToActivate:
-    - LabySquareOneS2Test
+    - LabySquareOne
   videoBackground:
     clippingMode: 0
     numDivisions: 2
