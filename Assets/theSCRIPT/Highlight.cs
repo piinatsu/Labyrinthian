@@ -51,14 +51,14 @@ public class Highlight : MonoBehaviour {
 				go = hit.collider.gameObject;
 				stringGOToBeActivated = go.name;
 				if (go.CompareTag ("ActiveObject") && go.GetComponent<Renderer> ().material.name == "Orange (Instance)") {
-					if ((Mana.mana - 30) > 1) { 
+					if ((Mana.mana - 20) > 1) { 
 						go.GetComponent<Renderer> ().material = mat2;
 						activeAO += 1;
 						foreach (Transform child in activeObjectHolder.transform)
 							if (child.CompareTag (stringGOToBeActivated))
 								child.gameObject.SetActive (true);
-						Mana.slashMana (30);
-					} else if ((Mana.mana - 30) < 1)
+						Mana.slashMana (20);
+					} else if ((Mana.mana - 20) < 1)
 						go.GetComponent<Renderer> ().material = mat3;
 					
 				} else if (go.CompareTag ("ActiveObject") && go.GetComponent<Renderer> ().material.name == "Light Green (Instance)") {

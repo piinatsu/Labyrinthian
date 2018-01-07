@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class OuterBarrier : MonoBehaviour {
-	//public SoundManager soma;
+	public SoundManager soma;
 	public MenuManager menma;
 	//public AudioSource ausrc;
 	// Use this for initialization
@@ -24,6 +24,7 @@ public class OuterBarrier : MonoBehaviour {
 			//ausrc.Play ();
 			//soma.deathSound ();
 			Debug.Log("!!!!!!!!!!PLAYERDESTROYEDBYOUTERBARRIER!!!!!!!!!!");
+			soma.deathSound ();
 			Destroy (go);
 			menma.deathPause ();
 		} else {

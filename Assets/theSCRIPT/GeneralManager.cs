@@ -43,6 +43,7 @@ public class GeneralManager : MonoBehaviour {
 			}
 		}
 		*/
+		if (thePlayer != null) {
 		x = Highlight.activeAO;
 		if (thePlayer.GetComponent<Renderer> ().material.name == "White (Instance)" && x == 0)
 			Mana.manaRegenPerSec = 1;
@@ -53,6 +54,7 @@ public class GeneralManager : MonoBehaviour {
 		else if (thePlayer.GetComponent<Renderer> ().material.name == "White (Instance)" && x != 0)
 			Mana.manaRegenPerSec = x * -0.25f;
 		//Debug.Log (x);
+		}
 	}
 
 	/*

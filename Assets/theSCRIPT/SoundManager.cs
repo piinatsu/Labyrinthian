@@ -24,11 +24,11 @@ public class SoundManager : MonoBehaviour {
 		source.PlayOneShot (buttonClip [i], volume);
 		//btnSnd();
 	}
-	/*
+
 	public void deathSound() {
-		//source.PlayOneShot (buttonClip[6], 1.0f);
-		deathSource.Play();
-	}*/
+		source.PlayOneShot (buttonClip[6], 1.0f);
+		//deathSource.Play();
+	}
 	/*
 	public static void deathSound() {
 		deathSource.PlayOneShot (deathClip, 1.0f);

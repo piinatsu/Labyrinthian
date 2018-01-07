@@ -13,8 +13,8 @@ public class PatrolMultipleLerp : MonoBehaviour {
 	bool goBack = false;
 	public static bool chronicaFlag = false;
 	public SoundManager soma;
-	public AudioSource ausrc;
 	public MenuManager menma;
+	public AudioSource ausrc;
 
 	void Start () {
 		sSpeed = speed;
@@ -90,10 +90,12 @@ public class PatrolMultipleLerp : MonoBehaviour {
 			string enemyMat = gameObject.
 				GetComponent<Renderer> ().material.name;
 			if (playerMat == "White (Instance)" || enemyMat == "Purple (Instance)") {
+				soma.deathSound ();
 				Destroy (target.gameObject);
 				menma.deathPause ();
 			} else if (enemyMat == "Red (Instance)" && 
 				playerMat == "WoodSurface (Instance)") {
+				soma.deathSound ();
 				//soma.buttonSound ();
 				//soma.deathSound();
 				//ausrc.Play ();
@@ -103,6 +105,7 @@ public class PatrolMultipleLerp : MonoBehaviour {
 				//StartCoroutine(hideThenDestroy(target.gameObject));
 			} else if (enemyMat == "Yellow (Instance)" && 
 				playerMat == "MetalSurface (Instance)") {
+				soma.deathSound ();
 				//soma.buttonSound ();
 				//soma.deathSound();
 				//ausrc.Play ();
@@ -112,6 +115,7 @@ public class PatrolMultipleLerp : MonoBehaviour {
 				//StartCoroutine(hideThenDestroy(target.gameObject));
 			} else if (enemyMat == "Light Blue (Instance)" && 
 				playerMat == "StoneSurface (Instance)") {
+				soma.deathSound ();
 				//soma.buttonSound ();
 				//soma.deathSound();
 				//ausrc.Play ();
