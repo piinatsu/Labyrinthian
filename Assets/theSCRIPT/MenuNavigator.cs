@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuNavigator: MonoBehaviour {
 
@@ -12,9 +13,21 @@ public class MenuNavigator: MonoBehaviour {
 	private int index=1;
 	private int maxIndex=2;
 	private int minIndex=0;
+	public Sprite lockIMG;
+	public Sprite unlockIMG;
+	public Button stageUnlockerBtn;
+
+	public Button[] stageButton;
 
 	// Use this for initialization
 	void Start () {
+		for (int i = 2; i <= 5; i++) {
+			if (PlayerPrefs.GetString ("StageUnlocked"+i) == "true") {
+				stageButton [i - 2].interactable = true;
+			} else if (PlayerPrefs.GetString ("StageUnlocked"+i) == "false") {
+				stageButton [i - 2].interactable = false;
+			}
+		}
 	}
 	
 	// Update is called once per frame
@@ -72,6 +85,9 @@ public class MenuNavigator: MonoBehaviour {
 
 	public void gotoHome() {
 		SceneManager.LoadScene ("M0-Home");
+	}
+
+	public void resetScore () {
 		for (int i = 3; i <= 7; i++) {
 			PlayerPrefs.SetInt ("HighestScore"+i, 1);
 		}
@@ -80,6 +96,28 @@ public class MenuNavigator: MonoBehaviour {
 		//PlayerPrefs.SetInt ("HighestScore5", 1);
 		//PlayerPrefs.SetInt ("HighestScore6", 1);
 		//PlayerPrefs.SetInt ("HighestScore7", 1);
+	}
+
+	public void stageUnlocker () {
+		if (PlayerPrefs.GetInt ("StageUnlocked") == 0) {
+			for (int i = 2; i <= 5; i++)
+				PlayerPrefs.SetString ("StageUnlocked"+i, "true");
+			PlayerPrefs.SetInt ("StageUnlocked", 1);
+			stageUnlockerBtn.image.sprite = unlockIMG;
+		} else if (PlayerPrefs.GetInt ("StageUnlocked") == 1) {
+			for (int i = 2; i <= 5; i++)
+				PlayerPrefs.SetString ("StageUnlocked"+i, "false");
+			PlayerPrefs.SetInt ("StageUnlocked", 0);
+			stageUnlockerBtn.image.sprite = lockIMG;
+		}
+
+		for (int i = 2; i <= 5; i++) {
+			if (PlayerPrefs.GetString ("StageUnlocked"+i) == "true") {
+				stageButton [i - 2].interactable = true;
+			} else if (PlayerPrefs.GetString ("StageUnlocked"+i) == "false") {
+				stageButton [i - 2].interactable = false;
+			}
+		}
 	}
 
 	public void unlockStage() {

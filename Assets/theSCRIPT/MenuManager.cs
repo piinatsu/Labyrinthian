@@ -85,6 +85,7 @@ public class MenuManager : MonoBehaviour {
 
 		//img = panelOfSceneMenu.gameObject.GetComponent<Image> ();
 		//img.CrossFadeAlpha (0.0f, 1f, true);
+		PatrolMultipleLerp.chronicaFlag = false;
 	}
 	
 	// Update is called once per frame
@@ -411,6 +412,19 @@ public class MenuManager : MonoBehaviour {
 		praiseText.text = praise;
 		scoreText.text = fScore.ToString ();
 		scoreText.text = "Score: " + fScore + "\nHighest: " + PlayerPrefs.GetInt ("HighestScore"+currentSceneIndex);
+
+		PlayerPrefs.SetString ("StageUnlocked" + (currentSceneIndex-1), "true");
+	}
+
+	public void resetScore () {
+		for (int i = 3; i <= 7; i++) {
+			PlayerPrefs.SetInt ("HighestScore"+i, 1);
+		}
+		//PlayerPrefs.SetInt ("HighestScore3", 1);
+		//PlayerPrefs.SetInt ("HighestScore4", 1);
+		//PlayerPrefs.SetInt ("HighestScore5", 1);
+		//PlayerPrefs.SetInt ("HighestScore6", 1);
+		//PlayerPrefs.SetInt ("HighestScore7", 1);
 	}
 
 	public void star1 () {
