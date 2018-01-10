@@ -112,9 +112,9 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 		    trackableName == "object_arch_bridge") {
 			Debug.Log ("aTimescale 0.01");
 			Time.timeScale = 0.01f;
-		} else if (trackableName == "Doppler12SB" || trackableName == "Doppler13SB") {
+		} /*else if (trackableName == "Doppler12SB" || trackableName == "Doppler13SB") {
 			Time.timeScale = 0;
-		} else {
+		}*/ else {
 			Debug.Log ("Timescale 1");
 			Time.timeScale = 1;
 		}

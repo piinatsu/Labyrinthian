@@ -41,7 +41,7 @@ public class PatrolMultipleLerp : MonoBehaviour {
 
 	void setPointsChronica () {
 		//endpos = startpos = waypoints [currentStartPoint];
-		float distCovered = (Time.time - startTime) * vSpeed;
+		float distCovered = (Time.time - startTime) * speed;
 		float fracJourney = distCovered / journeyLength;
 		if (fracJourney < 1f) {
 			transform.position = Vector3.Lerp 
@@ -51,7 +51,7 @@ public class PatrolMultipleLerp : MonoBehaviour {
 
 	void Update () {
 		//print (vSpeed);
-		float distCovered = (Time.time - startTime) * vSpeed;
+		float distCovered = (Time.time - startTime) * speed;
 		float fracJourney = distCovered / journeyLength;
 
 		if (chronicaFlag == true) {
